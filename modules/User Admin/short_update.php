@@ -38,7 +38,7 @@ else {
 		}	
 	}
 ?>
-<h3>Change Roll Number: </h3>
+<h3>SHORT UPDATE: </h3>
 			<form method="POST" action="">
 				<table width='100%' style='border: 2px solid #7030a0;'>
 					<tr>
@@ -90,7 +90,7 @@ else {
 <?php	
 try {
 	$data=array("gibbonSchoolYearID"=>$filterYear);
-	$sql="SELECT gibbonperson.gibbonPersonID, status, gibbonStudentEnrolmentID, surname, preferredName,officialName,gibbonstudentenrolment.gibbonYearGroupID, gibbonperson.boarder,`gibbonperson`.`phone1`,`gibbonperson`.`enrollment_date`, gibbonyeargroup.name AS yearGroup, gibbonrollgroup.nameShort AS rollGroup,`gibbonstudentenrolment`.`gibbonRollGroupID`,account_number,gibbonstudentenrolment.rollOrder FROM gibbonperson, gibbonstudentenrolment, gibbonyeargroup, gibbonrollgroup WHERE (gibbonperson.gibbonPersonID=gibbonstudentenrolment.gibbonPersonID) AND (gibbonstudentenrolment.gibbonYearGroupID=gibbonyeargroup.gibbonYearGroupID) AND (gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID) AND gibbonstudentenrolment.gibbonSchoolYearID={$filterYear} AND (dateStart IS NULL OR dateStart<='" . date("Y-m-d") . "') AND (dateEnd IS NULL  OR dateEnd>='" . date("Y-m-d") . "') AND gibbonperson.status='Full'";
+	$sql="SELECT gibbonperson.gibbonPersonID, status, gibbonStudentEnrolmentID, surname, preferredName,officialName,gibbonstudentenrolment.gibbonYearGroupID, gibbonperson.boarder,`gibbonperson`.`phone1`,`gibbonperson`.`admission_number`,`gibbonperson`.`enrollment_date`, gibbonyeargroup.name AS yearGroup, gibbonrollgroup.nameShort AS rollGroup,`gibbonstudentenrolment`.`gibbonRollGroupID`,account_number,gibbonstudentenrolment.rollOrder FROM gibbonperson, gibbonstudentenrolment, gibbonyeargroup, gibbonrollgroup WHERE (gibbonperson.gibbonPersonID=gibbonstudentenrolment.gibbonPersonID) AND (gibbonstudentenrolment.gibbonYearGroupID=gibbonyeargroup.gibbonYearGroupID) AND (gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID) AND gibbonstudentenrolment.gibbonSchoolYearID={$filterYear} AND (dateStart IS NULL OR dateStart<='" . date("Y-m-d") . "') AND (dateEnd IS NULL  OR dateEnd>='" . date("Y-m-d") . "') AND gibbonperson.status='Full'";
 	$sql.=$sqlFilter;
 	$sql.=" ORDER BY  account_number" ;
 	$result=$connection2->prepare($sql);
