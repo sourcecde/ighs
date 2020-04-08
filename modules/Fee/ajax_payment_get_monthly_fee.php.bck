@@ -1,0 +1,173 @@
+<?php
+include "../../config.php" ;
+@session_start();
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+@session_start() ;
+
+$monthfee=array();
+if($_POST['action']=='getmonthfee')
+{
+	$personid=$_REQUEST['personid'];
+	$monthno=$_REQUEST['monthno'];
+	$gibbonSchoolYearID=$_REQUEST['financialyear'];
+	$sql="SELECT fee_payable.*,fee_type_master.fee_type_desc FROM fee_payable left join fee_type_master 
+	on fee_payable.fee_type_master_id=fee_type_master.fee_type_master_id WHERE month_no=".$monthno." AND gibbonStudentEnrolmentID=".$personid." AND gibbonSchoolYearID=".$gibbonSchoolYearID;
+	//echo $sql;
+$result=$connection2->prepare($sql);
+$result->execute();
+$dboutbut=$result->fetchAll();
+foreach ($dboutbut as $value) {
+	$monthfee[$value['fee_type_desc']]=$value['net_amount'];
+}
+//echo $sql;
+header('Content-type: application/json');
+echo json_encode($monthfee);
+	
+}
+
+//this is for payment
+if($_POST['action']=='payment')
+{
+	$montharr=implode(",", $_REQUEST['montharr']);
+	$fine_amount=$_REQUEST['fine_amount'];
+	$total_amount=$_REQUEST['total_amount'];
+	$payment_date=$_REQUEST['payment_date'];
+	$payment_mode=$_REQUEST['payment_mode'];
+	$bank_name=$_REQUEST['bank_name'];
+	$cheque_no=$_REQUEST['cheque_no'];
+	$cheque_date=$_REQUEST['cheque_date'];
+	$personid=$_REQUEST['personid'];
+	$gibbonPersonID=$_REQUEST['gibbonPersonID'];
+	//$gibbonSchoolYearID=$_REQUEST['gibbonSchoolYearID'];
+	$gibbonSchoolYearID=033;
+	$transport=$_REQUEST['transport'];
+	
+	if($_REQUEST['vouchar_no']=='')
+	{
+		$vouchar_no=generateVoucherNumber($connection2,$payment_date);
+	}
+	else 
+	{
+		$vouchar_no=$_REQUEST['vouchar_no'];
+	}
+	
+	
+	//insert into payment master
+try {
+	$dataFile=array("gibbonPersonID"=>$gibbonPersonID,"gibbonStudentEnrolmentID"=>$personid, "fine_amount"=>$fine_amount,"total_amount"=>($total_amount-$fine_amount),"net_total_amount"=>$total_amount,"payment_date"=>$payment_date,"voucher_number"=>$vouchar_no,"payment_mode"=>$payment_mode,'bank_name'=>$bank_name,'cheque_no'=>$cheque_no,'cheque_date'=>$cheque_date,'payment_date'=>$payment_date, 'gibbonSchoolYearID'=>$gibbonSchoolYearID); 
+	$sqlFile="Insert into  payment_master SET gibbonPersonID=:gibbonPersonID,gibbonStudentEnrolmentID=:gibbonStudentEnrolmentID,fine_amount=:fine_amount,total_amount=:total_amount,net_total_amount=:net_total_amount,voucher_number=:voucher_number,payment_mode=:payment_mode,bank_name=:bank_name,cheque_no=:cheque_no,cheque_date=:cheque_date,payment_date=:payment_date,gibbonSchoolYearID:gibbonSchoolYearID" ;
+	//$sqlFile="Insert into  payment_master SET gibbonPersonID=:gibbonPersonID,gibbonStudentEnrolmentID=:gibbonStudentEnrolmentID,fine_amount=:fine_amount,total_amount=:total_amount,net_total_amount=:net_total_amount,voucher_number=:voucher_number,payment_mode=:payment_mode,bank_name=:bank_name,cheque_no=:cheque_no,cheque_date=:cheque_date,payment_date=:payment_date,gibbonSchoolYearID:gibbonSchoolYearID" ;
+	$resultFile=$connection2->prepare($sqlFile);
+	$resultFile->execute($dataFile);
+	}
+	catch(PDOException $e) { }
+	$payment_master_id=$connection2->lastInsertId();
+	$returnvouchr=getVoucherNo($connection2,$payment_master_id);
+	//update fee payable table
+try {
+	$sqlFile="UPDATE fee_payable SET payment_staus='paid',payment_master_id=".$payment_master_id.",payment_date='".$payment_date."',voucher_number=".$returnvouchr." where month_no in(".$montharr.") AND gibbonStudentEnrolmentID=".$personid;
+	
+	$resultFile=$connection2->prepare($sqlFile);
+	$resultFile->execute();
+	}
+	catch(PDOException $e) { }
+	
+	//for transport 
+	if($transport==1)
+	{
+		try {
+		$monthnamearr=$_REQUEST['monthnamearr'];
+		$monthnamearrstr=implode(",", $monthnamearr);
+		$sqlFile="UPDATE transport_month_entry SET payment_master_id=".$payment_master_id." WHERE month_name IN (".$monthnamearrstr.") AND gibbonStudentEnrolmentID=".$personid;
+		$resultFile=$connection2->prepare($sqlFile);
+		$resultFile->execute();
+		}
+		catch(PDOException $e) { }
+		
+		try {
+		$sqlFile="SELECT GROUP_CONCAT(transport_month_entryid) AS transport_month_entryidstr FROM transport_month_entry WHERE month_name IN (".$monthnamearrstr.") AND gibbonStudentEnrolmentID=".$personid;
+		$result=$connection2->prepare($sqlFile);
+		$result->execute();
+		$dboutbut=$result->fetch();
+		$transport_month_entryidstr=$dboutbut['transport_month_entryidstr'];
+		}
+		catch(PDOException $e) { }
+		
+		try {
+		$sqlFile="UPDATE payment_master SET transport_month_entryid='".$transport_month_entryidstr."' WHERE payment_master_id=".$payment_master_id;
+		$resultFile=$connection2->prepare($sqlFile);
+		$resultFile->execute();
+		}
+		catch(PDOException $e) { }
+	}
+	
+	echo $payment_master_id."_".$returnvouchr;
+}
+
+if($_POST['action']=='deletepayment')
+{
+	$payment_master_id=$_REQUEST['payment_master_id'];
+try {
+	$sqlFile="UPDATE fee_payable SET payment_staus='unpaid',payment_master_id=0,payment_date='0000-00-00' where payment_master_id=".$payment_master_id;
+	$resultFile=$connection2->prepare($sqlFile);
+	$resultFile->execute();
+	}
+	catch(PDOException $e) { }
+	
+try {
+	$sqlFile="DELETE from  payment_master where payment_master_id=".$payment_master_id;
+	$resultFile=$connection2->prepare($sqlFile);
+	$resultFile->execute();
+	}
+	catch(PDOException $e) { }
+}
+function generateVoucherNumber($connection2,$payment_date)
+{
+	$sql="SELECT count(*) as tableid FROM payment_master where payment_date='".$payment_date."'";
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$dboutbut=$result->fetch();
+	if($dboutbut['tableid']==0)
+	{
+		$tableid='001';
+	}
+	else 
+	{
+		$tableid=$dboutbut['tableid']+1;
+		$tableidlen=strlen($tableid);
+		switch ($tableidlen) {
+			case 1:
+				$tableid='00'.$tableid;
+			break;
+			
+			case 2:
+				$tableid='0'.$tableid;
+			break;
+			
+			case 3:
+				$tableid=$tableid;
+			break;
+		}
+	}
+	
+	$date=explode("-", $payment_date);
+	$voucharnumber=$date[2].$date[1].$tableid;
+	return $voucharnumber;
+}
+
+function getVoucherNo($connection2,$id)
+{
+	$sql="SELECT voucher_number FROM payment_master where payment_master_id=".$id;
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$dboutbut=$result->fetch();
+	return $dboutbut['voucher_number'];
+}
+?>

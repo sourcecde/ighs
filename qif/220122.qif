@@ -1,0 +1,28 @@
+!Account 
+NCash in Wallet 
+TCash 
+^ 
+!Type:Cash 
+D02-11-2015 
+T1600.00 
+PCash Collection Computer Fee For Current Year 
+LIncome:Computer Fee For CurrentYear 
+^ 
+!Type:Cash 
+D02-11-2015 
+T30400.00 
+PCash Collection Tuition Fee For Current Year 
+LIncome:Tuition Fee For CurrentYear 
+^ 
+!Type:Cash 
+D02-11-2015 
+T460.00 
+PCash Collection Fine For Current Year 
+LIncome:Fine For CurrentYear 
+^ 
+!Type:Cash 
+D02-11-2015 
+T7500.00 
+PCash Collection Transport Fee For Current Year 
+LIncome:Transport Fee For Current Year 
+^ 

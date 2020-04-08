@@ -1,0 +1,52 @@
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2017 
+T12520.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2017 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2017 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2017 
+T300.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2017 
+T2700.00 
+PSession Fee
+LINCOME:Session Fee
+^ 

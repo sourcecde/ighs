@@ -1,0 +1,179 @@
+/*
+Gibbon, Flexible & Open School System
+Copyright (C) 2010, Ross Parker
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+$(document).ready(function(){
+	/*User Admin*/
+	$('#hasTC').click(function(){
+		if($('#hasTC').val()=='Y'){
+			$('#tcNumber').prop("disabled",false);
+			$('#tcDate').prop("disabled",false);
+		}
+		else{
+			$('#tcNumber').prop("disabled",true);
+			$('#tcDate').prop("disabled",true);
+		}
+	});
+	/*User Admin*/
+	/*$(".select_student_dropdown").change(function(){
+		var studentid=$(this).val();
+		var linkurl=$("#check_student_class_url").val();
+		if(studentid!='')
+			{
+			$.ajax
+	 		({
+	 			type: "POST",
+	 			url: linkurl,
+	 			data: {action:'getclass',studentid:studentid},
+	 			success: function(msg)
+	 			{
+	 				//$('.select_student_dropdown option[value='+msg+']').attr('selected','selected');
+	 				//$(this).attr('selected','selected');
+	 				$("#gibbonYearGroupID").get(0).selectedIndex = msg;
+	 			}
+	 			});
+			}
+	})*/
+	
+	$("#account_number").blur(function(){
+		var account_number=$(this).val();
+		var personid=$('.select_student_dropdown').val();
+		
+		
+		var linkurl=$("#check_accountno_url").val();
+		//ajax_check_unique_account_number.php
+		$.ajax
+ 		({
+ 			type: "POST",
+ 			url: linkurl,
+ 			data: {accountno:account_number,personid:personid},
+ 			success: function(msg)
+ 			{
+ 				
+ 				if(msg>0)
+ 					{
+	 					$("#account_number_error").html("This number already exist!");
+	 					$("#account_number_error").show();
+	 					$("#account_number_correct").hide();
+ 					}
+ 				else
+ 					{
+	 					$("#account_number_error").hide();
+	 					$("#account_number_correct").html("Valid Number");
+	 					$("#account_number_correct").show();
+ 					}
+ 			}
+ 			});
+	})
+	$('#search_by_acc').click(function(){
+		var account_number=$("#account_number").val();
+		var checkurl=$("#get_personID_from_accno_url").val();
+		//alert(account_number);
+		$.ajax
+ 		({
+ 			type: "POST",
+ 			url: checkurl,
+ 			data: {account_number:account_number},
+ 			success: function(msg)
+ 			{
+ 				console.log(msg);
+ 				if(msg=='0')
+ 					{
+ 					alert("Account Number does not exist");
+ 					return false;
+ 					}
+ 				else
+ 					{
+ 					$('#student_personID option[value="' + msg + '"]').prop('selected', true);
+ 					$('#src_student option[value="' + msg + '"]').prop('selected', true);
+					}
+			}
+		}); 
+		
+	});
+	$('.mClose').click(function(){
+		$('#hide_body').hide();
+		$('.cModal').hide();
+	});
+	$('.editRoll').click(function(){
+		var enrollID=$(this).attr("id");
+		var name=$('#Name_'+enrollID).text();
+		var roll=$('#Roll_'+enrollID).text();
+		var sectionID=$('#SectionID_'+enrollID).text();
+		var yearGroupID=$('#ClassID_'+enrollID).val();
+		var className=$('#Class_'+enrollID).text();
+		var edate=$('#EDate_'+enrollID).text();
+		var account=$('#Account_'+enrollID).text();
+		var admission=$('#Admission_'+enrollID).text();
+		$('#e_name').text(name);
+		$('#enrollID').val(enrollID);
+		$('#edit_name').val(name);
+		$('#edit_class').val(className);
+		$('#edit_roll').val(roll);
+		$("#edit_section option").hide();
+		$("."+yearGroupID).show();
+		$("#edit_section option[value='"+sectionID+"']").attr("selected","selected");
+		console.log(sectionID);
+		$('#edit_edate').val(edate);
+		$('#edit_admission').val(admission);
+		$('#edit_account').val(account);
+		$('#hide_body').show();
+		$('#modal_roll_edit').show();
+	});
+	$('#editRollNo').click(function(){
+		var enrollID=$('#enrollID').val();
+		var name=$('#edit_name').val();
+		var className=$('#edit_class').val();
+		var roll=$('#edit_roll').val();
+		var sectionID=$('#edit_section').val();
+		var sectionName=$('#edit_section option:selected').text().substring(3);
+		var edate=$('#edit_edate').val();
+		var admission=$('#edit_admission').val();
+		var account=$('#edit_account').val();
+		var updateUrl=$('#updateUrl').val();
+		if(roll!=''){
+		$.ajax
+ 		({
+ 			type: "POST",
+ 			url: updateUrl,
+ 			data: {enrollID:enrollID, roll:roll,section:sectionID,e_date:edate,admission:admission,account_no: account},
+ 			success: function(msg)
+ 			{
+				$('#Account_'+enrollID).text(account);
+				$('#Name_'+enrollID).text(name);
+				$('#Class_'+enrollID).text(className);
+				$('#Section_'+enrollID).text(sectionName);
+				$('#Admission_'+enrollID).text(admission);
+				$('#EDate_'+enrollID).text(edate);
+				$('#Roll_'+enrollID).text(roll);
+				$('#hide_body').hide();
+				$('.cModal').hide();
+				cAlert(msg);
+				console.log(msg);
+				//location.reload();
+ 			}
+		});
+		}
+		else{
+			cAlert("ERROR: Roll No. Cannot be Empty!")
+		}
+	});
+	function cAlert(message){
+		$('#message').text(message);
+		$('#hide_body').show();
+		$('#messageAlert').show();
+	};
+})

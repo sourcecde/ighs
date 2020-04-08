@@ -1,0 +1,387 @@
+<?php
+/*
+Gibbon, Flexible & Open School System
+Copyright (C) 2010, Ross Parker
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+@session_start() ;
+
+if (isActionAccessible($guid, $connection2, "/modules/Timetable Admin/courseEnrolment_manage_class_edit.php")==FALSE) {
+	//Acess denied
+	print "<div class='error'>" ;
+		print _("You do not have access to this action.") ;
+	print "</div>" ;
+}
+else {
+	//Check if school year specified
+	$gibbonCourseClassID=$_GET["gibbonCourseClassID"] ;
+	$gibbonCourseID=$_GET["gibbonCourseID"] ;
+	$gibbonSchoolYearID=$_GET["gibbonSchoolYearID"] ;
+	if ($gibbonCourseClassID=="" OR $gibbonCourseID=="" OR $gibbonSchoolYearID=="") {
+		print "<div class='error'>" ;
+			print _("You have not specified one or more required parameters.") ;
+		print "</div>" ;
+	}
+	else {
+		try {
+			$data=array("gibbonCourseID"=>$gibbonCourseID, "gibbonCourseClassID"=>$gibbonCourseClassID); 
+			$sql="SELECT gibbonCourseClassID, gibboncourseclass.name, gibboncourseclass.nameShort, gibboncourse.gibbonCourseID, gibboncourse.name AS courseName, gibboncourse.nameShort as courseNameShort, gibboncourse.description AS courseDescription, gibboncourse.gibbonSchoolYearID, gibbonschoolyear.name as yearName, gibbonYearGroupIDList FROM gibboncourseclass, gibboncourse, gibbonschoolyear WHERE gibboncourse.gibbonCourseID=gibboncourseclass.gibbonCourseID AND gibboncourse.gibbonSchoolYearID=gibbonschoolyear.gibbonSchoolYearID AND gibboncourse.gibbonCourseID=:gibbonCourseID AND gibbonCourseClassID=:gibbonCourseClassID" ;
+			$result=$connection2->prepare($sql);
+			$result->execute($data);
+		}
+		catch(PDOException $e) { 
+			print "<div class='error'>" . $e->getMessage() . "</div>" ; 
+		}
+		
+		if ($result->rowCount()!=1) {
+			print "<div class='error'>" ;
+				print _("The specified record cannot be found.") ;
+			print "</div>" ;
+		}
+		else {
+			//Let's go!
+			$row=$result->fetch() ;
+			print "<div class='trail'>" ;
+			print "<div class='trailHead'><a href='" . $_SESSION[$guid]["absoluteURL"] . "'>" . _("Home") . "</a> > <a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . getModuleName($_GET["q"]) . "/" . getModuleEntry($_GET["q"], $connection2, $guid) . "'>" . _(getModuleName($_GET["q"])) . "</a> > <a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . getModuleName($_GET["q"]) . "/courseEnrolment_manage.php&gibbonSchoolYearID=" . $_GET["gibbonSchoolYearID"] . "'>" . _('Enrolment by Class') . "</a> > </div><div class='trailEnd'>" . sprintf(_('Edit %1$s.%2$s Enrolment'), $row["courseNameShort"], $row["name"]) . "</div>" ;
+			print "</div>" ;
+
+			if (isset($_GET["updateReturn"])) { $updateReturn=$_GET["updateReturn"] ; } else { $updateReturn="" ; }
+			$updateReturnMessage="" ;
+			$class="error" ;
+			if (!($updateReturn=="")) {
+				if ($updateReturn=="fail0") {
+					$updateReturnMessage=_("Your request failed because you do not have access to this action.") ;	
+				}
+				else if ($updateReturn=="fail1") {
+					$updateReturnMessage=_("Your request failed because your inputs were invalid.") ;	
+				}
+				else if ($updateReturn=="fail2") {
+					$updateReturnMessage=_("Your request failed due to a database error.") ;	
+				}
+				else if ($updateReturn=="fail3") {
+					$updateReturnMessage=_("Your request failed because your inputs were invalid.") ;	
+				}
+				else if ($updateReturn=="fail4") {
+					$updateReturnMessage=_("Your request failed because your inputs were invalid.") ;	
+				}
+				else if ($updateReturn=="fail5") {
+					$updateReturnMessage=_("Your request was successful, but some data was not properly saved. You may have tried to mark as left people who are not students or teachers in this class.") ;	
+				}
+				else if ($updateReturn=="success0") {
+					$updateReturnMessage=_("Your request was completed successfully.") ;	
+					$class="success" ;
+				}
+				print "<div class='$class'>" ;
+					print $updateReturnMessage;
+				print "</div>" ;
+			} 
+			
+			if (isset($_GET["deleteReturn"])) { $deleteReturn=$_GET["deleteReturn"] ; } else { $deleteReturn="" ; }
+			$deleteReturnMessage="" ;
+			$class="error" ;
+			if (!($deleteReturn=="")) {
+				if ($deleteReturn=="success0") {
+					$deleteReturnMessage=_("Your request was completed successfully.") ;		
+					$class="success" ;
+				}
+				print "<div class='$class'>" ;
+					print $deleteReturnMessage;
+				print "</div>" ;
+			} 
+	
+			print "<h2>" ;
+			print _("Add Participants") ;
+			print "</h2>" ;
+			?>
+			<form method="post" action="<?php print $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/courseEnrolment_manage_class_edit_addProcess.php?gibbonCourseClassID=$gibbonCourseClassID&gibbonCourseID=$gibbonCourseID&gibbonSchoolYearID=$gibbonSchoolYearID" ?>">
+				<table class='smallIntBorder' cellspacing='0' style="width: 100%">	
+					<tr>
+						<td style='width: 275px'> 
+							<b><?php print _('Participants') ?></b><br/>
+							<span style="font-size: 90%"><i><?php print _('Use Control, Command and/or Shift to select multiple.') ?></i></span>
+						</td>
+						<td class="right">
+							<select name="Members[]" id="Members[]" multiple style="width: 302px; height: 150px">
+								<optgroup label='--<?php print _('Enrolable Students') ?>--'>
+								<?php
+								try {
+									$dataSelect=array("gibbonSchoolYearID"=>$_SESSION[$guid]["gibbonSchoolYearID"]); 
+									$sqlSelectWhere="" ;
+									if ($row["gibbonYearGroupIDList"]!="") {
+										$years=explode(",", $row["gibbonYearGroupIDList"]);
+										for ($i=0; $i<count($years); $i++) {
+											if ($i==0) {
+												$dataSelect[$years[$i]]=$years[$i] ;
+												$sqlSelectWhere=$sqlSelectWhere . "AND (gibbonYearGroupID=:" . $years[$i] ;
+											}
+											else {
+												$dataSelect[$years[$i]]=$years[$i] ;
+												$sqlSelectWhere=$sqlSelectWhere . " OR gibbonYearGroupID=:" . $years[$i] ;
+											}
+											
+											if ($i==(count($years)-1)) {
+												$sqlSelectWhere=$sqlSelectWhere . ")" ;
+											}
+										}
+									}
+									else {
+										$sqlSelectWhere=" FALSE" ;
+									}
+									$sqlSelect="SELECT gibbonperson.gibbonPersonID, preferredName, surname, gibbonrollgroup.name AS name FROM gibbonperson, gibbonstudentenrolment, gibbonrollgroup WHERE gibbonperson.gibbonPersonID=gibbonstudentenrolment.gibbonPersonID AND gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID AND status='FULL' AND gibbonrollgroup.gibbonSchoolYearID=:gibbonSchoolYearID $sqlSelectWhere ORDER BY name, surname, preferredName" ;
+									$resultSelect=$connection2->prepare($sqlSelect);
+									$resultSelect->execute($dataSelect);
+								}
+								catch(PDOException $e) { }
+								while ($rowSelect=$resultSelect->fetch()) {
+									print "<option value='" . $rowSelect["gibbonPersonID"] . "'>" . htmlPrep($rowSelect["name"]) . " - " . formatName("", htmlPrep($rowSelect["preferredName"]), htmlPrep($rowSelect["surname"]), "Student", true) . "</option>" ;
+								}
+								?>
+								</optgroup>
+								<optgroup label='--<?php print _('All Users') ?>--'>
+								<?php
+								try {
+									$dataSelect=array(); 
+									$sqlSelect="SELECT gibbonPersonID, surname, preferredName, status FROM gibbonperson WHERE status='Full' OR status='Expected' ORDER BY surname, preferredName" ;
+									$resultSelect=$connection2->prepare($sqlSelect);
+									$resultSelect->execute($dataSelect);
+								}
+								catch(PDOException $e) { }
+								while ($rowSelect=$resultSelect->fetch()) {
+									$expected="" ;
+									if ($rowSelect["status"]=="Expected") {
+										$expected=" (Expected)" ;
+									}
+									print "<option value='" . $rowSelect["gibbonPersonID"] . "'>" . formatName("", htmlPrep($rowSelect["preferredName"]), htmlPrep($rowSelect["surname"]), "Student", true) . "$expected</option>" ;
+								}
+								?>
+								</optgroup>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<b><?php print _('Role') ?> *</b><br/>
+						</td>
+						<td class="right">
+							<select style="width: 302px" name="role">
+								<option value="Student"><?php print _('Student') ?></option>
+								<option value="Teacher"><?php print _('Teacher') ?></option>
+								<option value="Assistant"><?php print _('Assistant') ?></option>
+								<option value="Technician"><?php print _('Technician') ?></option>
+								<option value="Parent"><?php print _('Parent') ?></option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span style="font-size: 90%"><i>* <?php print _("denotes a required field") ; ?></i></span>
+						</td>
+						<td class="right">
+							<input type="hidden" name="address" value="<?php print $_SESSION[$guid]["address"] ?>">
+							<input type="submit" value="<?php print _("Submit") ; ?>">
+						</td>
+					</tr>
+				</table>
+			</form>
+
+			<?php	
+			print "<h2>" ;
+			print _("Current Participants") ;
+			print "</h2>" ;
+			
+			try {
+				$data=array("gibbonCourseClassID"=>$gibbonCourseClassID); 
+				$sql="SELECT * FROM gibbonperson, gibboncourseclassperson WHERE (gibbonperson.gibbonPersonID=gibboncourseclassperson.gibbonPersonID) AND gibbonCourseClassID=:gibbonCourseClassID AND (status='Full' OR status='Expected') AND NOT role LIKE '%left' ORDER BY role DESC, surname, preferredName" ; 
+				$result=$connection2->prepare($sql);
+				$result->execute($data);
+			}
+			catch(PDOException $e) { 
+				print "<div class='error'>" . $e->getMessage() . "</div>" ; 
+			}
+			
+			if ($result->rowCount()<1) {
+				print "<div class='error'>" ;
+				print _("There are no records to display.") ;
+				print "</div>" ;
+			}
+			else {
+				print "<form method='post' action='" . $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/courseEnrolment_manage_class_editProcessBulk.php'>" ;
+					print "<fieldset style='border: none'>" ;
+					print "<div class='linkTop' style='height: 27px'>" ;
+						?>
+						<input style='margin-top: 0px; float: right' type='submit' value='<?php print _('Go') ?>'>
+						<select name="action" id="action" style='width:120px; float: right; margin-right: 1px;'>
+							<option value="Select action"><?php print _('Select action') ?></option>
+							<option value="Mark as left"><?php print _('Mark as left') ?></option>
+							<option value="Delete"><?php print _('Delete') ?></option>
+						</select>
+						<script type="text/javascript">
+							var action=new LiveValidation('action');
+							action.add(Validate.Exclusion, { within: ['<?php print _('Select action') ?>'], failureMessage: "<?php print _('Select something!') ?>"});
+						</script>
+						<?php
+					print "</div>" ;
+					
+					print "<table cellspacing='0' style='width: 100%'>" ;
+						print "<tr class='head'>" ;
+							print "<th>" ;
+								print _("Name") ;
+							print "</th>" ;
+							print "<th>" ;
+								print _("Email") ;
+							print "</th>" ;
+							print "<th>" ;
+								print _("Role") ;
+							print "</th>" ;
+							print "<th>" ;
+								print _("Reportable") ;
+							print "</th>" ;
+							print "<th>" ;
+								print _("Actions") ;
+							print "</th>" ;
+							print "<th>" ;
+								?>
+								<script type="text/javascript">
+									$(function () {
+										$('.checkall').click(function () {
+											$(this).parents('fieldset:eq(0)').find(':checkbox').attr('checked', this.checked);
+										});
+									});
+								</script>
+								<?php
+								print "<input type='checkbox' class='checkall'>" ;
+							print "</th>" ;
+						print "</tr>" ;
+						
+						$count=0;
+						$rowNum="odd" ;
+						while ($row=$result->fetch()) {
+							if ($count%2==0) {
+								$rowNum="even" ;
+							}
+							else {
+								$rowNum="odd" ;
+							}
+							$count++ ;
+							
+							//COLOR ROW BY STATUS!
+							print "<tr class=$rowNum>" ;
+								print "<td>" ;
+									print formatName("", htmlPrep($row["preferredName"]), htmlPrep($row["surname"]), "Student", true) ;
+								print "</td>" ;
+								print "<td>" ;
+									print $row["email"] ;
+								print "</td>" ;
+								print "<td>" ;
+									print $row["role"] ;
+								print "</td>" ;
+								print "<td>" ;
+									print $row["reportable"] ;
+								print "</td>" ;
+								print "<td>" ;
+									print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/courseEnrolment_manage_class_edit_edit.php&gibbonCourseClassID=$gibbonCourseClassID&gibbonCourseID=$gibbonCourseID&gibbonSchoolYearID=$gibbonSchoolYearID&gibbonPersonID=" . $row["gibbonPersonID"] . "'><img title='" . _('Edit') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/config.png'/></a> " ;
+									print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/courseEnrolment_manage_class_edit_delete.php&gibbonCourseClassID=$gibbonCourseClassID&gibbonCourseID=$gibbonCourseID&gibbonSchoolYearID=$gibbonSchoolYearID&gibbonPersonID=" . $row["gibbonPersonID"] . "'><img title='" . _('Delete') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/garbage.png'/></a>" ;
+								print "</td>" ;
+								print "<td>" ;
+									print "<input name='gibbonPersonID-$count' value='" . $row["gibbonPersonID"] . "' type='hidden'>" ;
+									print "<input name='role-$count' value='" . $row["role"] . "' type='hidden'>" ;
+									print "<input type='checkbox' name='check-$count' id='check-$count'>" ;
+								print "</td>" ;
+							print "</tr>" ;
+						}
+					print "</table>" ;
+					
+					print "<input name='count' value='$count' type='hidden'>" ;
+					print "<input name='gibbonCourseClassID' value='$gibbonCourseClassID' type='hidden'>" ;
+					print "<input name='gibbonCourseID' value='$gibbonCourseID' type='hidden'>" ;
+					print "<input name='gibbonSchoolYearID' value='$gibbonSchoolYearID' type='hidden'>" ;	
+					print "<input name='address' value='" . $_GET["q"] . "' type='hidden'>" ;	
+					print "</fieldset>" ;
+				print "</form>" ;
+			}
+			
+			print "<h2>" ;
+			print _("Former Participants") ;
+			print "</h2>" ;
+			
+			try {
+				$data=array("gibbonCourseClassID"=>$gibbonCourseClassID); 
+				$sql="SELECT * FROM gibbonperson, gibboncourseclassperson WHERE (gibbonperson.gibbonPersonID=gibboncourseclassperson.gibbonPersonID) AND gibbonCourseClassID=:gibbonCourseClassID AND (status='Full' OR status='Expected') AND role LIKE '%left' ORDER BY role DESC, surname, preferredName" ; 
+				$result=$connection2->prepare($sql);
+				$result->execute($data);
+			}
+			catch(PDOException $e) { 
+				print "<div class='error'>" . $e->getMessage() . "</div>" ; 
+			}
+			
+			if ($result->rowCount()<1) {
+				print "<div class='error'>" ;
+				print _("There are no records to display.") ;
+				print "</div>" ;
+			}
+			else {
+				print "<form method='post' action='" . $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/courseEnrolment_manage_class_editProcessBulk.php'>" ;
+					print "<table cellspacing='0' style='width: 100%'>" ;
+						print "<tr class='head'>" ;
+							print "<th>" ;
+								print _("Name") ;
+							print "</th>" ;
+							print "<th>" ;
+								print _("Email") ;
+							print "</th>" ;
+							print "<th>" ;
+								print _("Class Role") ;
+							print "</th>" ;
+							print "<th>" ;
+								print _("Actions") ;
+							print "</th>" ;
+						print "</tr>" ;
+						
+						$count=0;
+						$rowNum="odd" ;
+						while ($row=$result->fetch()) {
+							if ($count%2==0) {
+								$rowNum="even" ;
+							}
+							else {
+								$rowNum="odd" ;
+							}
+							$count++ ;
+							
+							//COLOR ROW BY STATUS!
+							print "<tr class=$rowNum>" ;
+								print "<td>" ;
+									print formatName("", htmlPrep($row["preferredName"]), htmlPrep($row["surname"]), "Student", true) ;
+								print "</td>" ;
+								print "<td>" ;
+									print $row["email"] ;
+								print "</td>" ;
+								print "<td>" ;
+									print $row["role"] ;
+								print "</td>" ;
+								print "<td>" ;
+									print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/courseEnrolment_manage_class_edit_edit.php&gibbonCourseClassID=$gibbonCourseClassID&gibbonCourseID=$gibbonCourseID&gibbonSchoolYearID=$gibbonSchoolYearID&gibbonPersonID=" . $row["gibbonPersonID"] . "'><img title='" . _('Edit') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/config.png'/></a> " ;
+									print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/courseEnrolment_manage_class_edit_delete.php&gibbonCourseClassID=$gibbonCourseClassID&gibbonCourseID=$gibbonCourseID&gibbonSchoolYearID=$gibbonSchoolYearID&gibbonPersonID=" . $row["gibbonPersonID"] . "'><img title='" . _('Delete') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/garbage.png'/></a>" ;
+								print "</td>" ;
+							print "</tr>" ;
+						}
+					print "</table>" ;
+				print "</form>" ;
+			}
+		}
+	}
+}
+?>

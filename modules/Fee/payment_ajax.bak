@@ -1,0 +1,55 @@
+<?php
+include "../../config.php" ;
+@session_start();
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+@session_start() ;
+$schoolyeararr=array(1=>'jan',2=>'feb',3=>'mar',4=>'apr',5=>'may',6=>'jun',7=>'jul',8=>'aug',9=>'sep',10=>'oct',11=>'nov',12=>'dec');
+$paidmontharr=array();
+$personid=0;
+if($_POST){
+	if(isset($_REQUEST['action'])=='show_history_payment'){
+
+		$montharr=array();
+		$year=$_REQUEST['year'];
+		/* */	
+			$sql="SELECT `month_name` FROM fee_payable WHERE gibbonSchoolYearID=".$year." AND gibbonPersonID=".$_REQUEST['personID']." AND `net_amount`>0 AND `payment_staus`='unpaid'";
+			$result=$connection2->prepare($sql);
+			$result->execute();
+			$data=$result->fetchAll();
+			$dataArray=array();
+			foreach($data as $d){
+				$dataArray[$d['month_name']][]='unpaid';
+			}
+			$sql1="SELECT `month_name` FROM `transport_month_entry` WHERE `gibbonPersonID`={$_REQUEST['personID']} AND `gibbonSchoolYearID`=$year AND `payment_master_id`=0";
+			$result1=$connection2->prepare($sql1);
+			$result1->execute();
+			$transport=$result1->fetchAll();
+			foreach($transport as $t){
+				$dataArray[$t['month_name']][]='unpaid';
+			}
+			
+			$monthNameArray=array('yearly','apr','may','jun','jul','aug','sep','oct','nov','dec','jan','feb','mar');
+			foreach($monthNameArray as $m){
+				if(!array_key_exists($m,$dataArray))
+					array_push($montharr, $m);
+			}
+		/* */
+		$sql2="SELECT `gibbonStudentEnrolmentID` FROM `gibbonstudentenrolment` WHERE `gibbonPersonID`={$_REQUEST['personID']} AND `gibbonSchoolYearID`=$year";
+		$result2=$connection2->prepare($sql2);
+		$result2->execute();
+		$enrolId=$result2->fetch();
+		
+		$studentEnrolmentID=$enrolId['gibbonStudentEnrolmentID'];
+		$paidmontharr=array('studentEnrolmentID'=>$studentEnrolmentID,'montharr'=>$montharr);
+		header('Content-type: application/json');
+		echo json_encode($paidmontharr);
+		//echo json_encode($montharr);
+	}	
+}

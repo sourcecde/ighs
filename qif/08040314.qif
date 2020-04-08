@@ -1,0 +1,3236 @@
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T61440.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T23720.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T520.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T580.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T7660.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T7700.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T32400.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T600.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T1200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T4200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T400.00 
+PExam Fee Term 1
+LINCOME:Exam Fee Term 1
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T2180.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T40.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T80.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T500.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T20.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T2400.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T200.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T2500.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T34700.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T1400.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T4500.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T371800.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T6700.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T14800.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T48200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T400.00 
+PSelection Test (Class 12)
+LINCOME:Selection Test (Class 12)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2018 
+T189510.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T3410.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T7490.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D29-03-2018 
+T47900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T8100.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T7940.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T440.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T740.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T1300.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T10500.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T600.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T900.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T700.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T40.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T60.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T40.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T600.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T50.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T11400.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T1000.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T123400.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T6500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T10500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2018 
+T61750.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T3320.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D30-03-2018 
+T5200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T99950.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T16200.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T16580.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T1020.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T780.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T4460.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T6100.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T1000.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T21000.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T1500.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T1200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T4200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T1440.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T100.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T80.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T400.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T1750.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T200.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T250.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T100.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T23100.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T1600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T1400.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T4600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T248600.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T16900.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T14500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T48900.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2018 
+T128360.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T8670.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T7320.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D31-03-2018 
+T35050.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T260650.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T9250.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T17000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T19000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T29260.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T2900.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T2060.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T5880.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T9800.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T35100.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T4800.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T3300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T6900.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T2440.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T320.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T220.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T500.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T2650.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T200.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T250.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T250.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T39800.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T5300.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T3900.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T7600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T428400.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T56300.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T41000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T81700.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T1800.00 
+PTransfer Certificate
+LINCOME:Transfer Certificate
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-04-2018 
+T221660.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T28140.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T20070.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-04-2018 
+T43840.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T89610.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T9250.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T17840.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T2160.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T1080.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T1800.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T3200.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T22500.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T2400.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T1200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T2400.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T1540.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T160.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T80.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T160.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T1950.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T350.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T50.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T50.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T25400.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T2900.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T1300.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T2700.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T273600.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T31200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T14200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T29300.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T600.00 
+PTransfer Certificate
+LINCOME:Transfer Certificate
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-04-2018 
+T138730.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T15140.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T7010.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D03-04-2018 
+T14520.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T173930.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T28250.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T27300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T4680.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T820.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T1540.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T5500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T33600.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T5700.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T900.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T2700.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T2240.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T420.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T60.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T180.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T4650.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T850.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T50.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T200.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T39700.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T6500.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T1000.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T2900.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T425970.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T70500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T10700.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T30900.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-04-2018 
+T209760.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T38200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T5290.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D04-04-2018 
+T15820.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T54970.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T62990.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T19000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T12520.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T16390.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T1940.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T3080.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T3120.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T1000.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T5400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T1500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T1600.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T29550.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T2700.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T4500.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T4200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T1500.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T600.00 
+PExam Fee Term 1
+LINCOME:Exam Fee Term 1
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T600.00 
+PExam Fee Term 2
+LINCOME:Exam Fee Term 2
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T600.00 
+PExam Fee Final Term
+LINCOME:Exam Fee Final Term
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T2410.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T180.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T300.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T280.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T190.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T2100.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T150.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T400.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T150.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T32750.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T3100.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T5300.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T4600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T1600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T345500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T33200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T56200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T48300.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T16800.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T2000.00 
+PTransfer Certificate
+LINCOME:Transfer Certificate
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-04-2018 
+T209185.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T16550.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T27820.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T24190.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D05-04-2018 
+T8510.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T47830.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T51000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T13100.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T30140.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T2520.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T880.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T3560.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T3480.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T2300.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T41700.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T4200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T1200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T4200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T900.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T700.00 
+PExam Fee Term 1
+LINCOME:Exam Fee Term 1
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T700.00 
+PExam Fee Term 2
+LINCOME:Exam Fee Term 2
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T700.00 
+PExam Fee Final Term
+LINCOME:Exam Fee Final Term
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T2820.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T280.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T80.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T280.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T550.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T3150.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T750.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T150.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T46500.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T4900.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T1200.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T4600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T900.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T496200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T52700.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T12900.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T49000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T9600.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-04-2018 
+T250850.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T26190.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T6630.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T24310.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D06-04-2018 
+T41340.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T9250.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T17000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T200.00 
+PBank Charges
+LINCOME:Bank Charges
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T17040.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T1800.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T640.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T4520.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T1020.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T400.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T20400.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T3000.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T900.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T4200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T900.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T1360.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T200.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T60.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T280.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T80.00 
+PGenerator Fee
+LINCOME:Generator Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T600.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T300.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T50.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T300.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T100.00 
+PLaboratory Fee
+LINCOME:Laboratory Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T22600.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T3400.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T1000.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T5000.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T1100.00 
+PMagazine and Periodicals Fees
+
+LINCOME:Magazine and Periodicals Fees
+
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T245500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T36900.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T10500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T54300.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T11900.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-04-2018 
+T121880.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T18270.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T5280.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T25980.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D07-04-2018 
+T5660.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 

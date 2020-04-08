@@ -1,0 +1,4110 @@
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-12-2015 
+T1200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-12-2015 
+T15600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-12-2015 
+T220.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-12-2015 
+T5700.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-12-2015 
+T2700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-12-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-12-2015 
+T1700.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T7000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T450.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T21000.00 
+PHostel,Mess,Loundry (Upcoming Year)
+LADVANCE:Hostel,Mess,Loundry (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T3300.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-12-2015 
+T800.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-12-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-12-2015 
+T9600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-12-2015 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-12-2015 
+T5300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-12-2015 
+T2700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-12-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-12-2015 
+T600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-12-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-12-2015 
+T7800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-12-2015 
+T2000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-12-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-12-2015 
+T7400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-12-2015 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-12-2015 
+T2900.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-12-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-12-2015 
+T1900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-12-2015 
+T10.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-12-2015 
+T300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-12-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-12-2015 
+T9600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-12-2015 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-12-2015 
+T3300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-12-2015 
+T1800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-12-2015 
+T700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-12-2015 
+T11500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-12-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-12-2015 
+T4100.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-12-2015 
+T1400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-12-2015 
+T23900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-12-2015 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-12-2015 
+T6000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-12-2015 
+T3200.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-12-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-12-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-12-2015 
+T1000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-12-2015 
+T2700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-12-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-12-2015 
+T600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T1000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T9600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T190.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-12-2015 
+T4300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-12-2015 
+T2700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-12-2015 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-12-2015 
+T400.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-12-2015 
+T1800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-12-2015 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-12-2015 
+T1000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T3900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-12-2015 
+T1200.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-12-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-12-2015 
+T10.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-12-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-12-2015 
+T1000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-12-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-12-2015 
+T700.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-01-2016 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-01-2016 
+T6700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-01-2016 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-01-2016 
+T2400.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T7000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T100.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T1500.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T4600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T1100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-01-2016 
+T1400.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T1900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-01-2016 
+T1600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-01-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-01-2016 
+T2900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-01-2016 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-01-2016 
+T1500.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-01-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-01-2016 
+T2900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-01-2016 
+T400.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-01-2016 
+T2700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-01-2016 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-01-2016 
+T1300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T7000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T150.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T8700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T1100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T50.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-01-2016 
+T2900.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T11500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-01-2016 
+T4000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T1200.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T11500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T70.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-01-2016 
+T3500.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-01-2016 
+T700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-01-2016 
+T12400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-01-2016 
+T50.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-01-2016 
+T4000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-01-2016 
+T3600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-01-2016 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-01-2016 
+T1400.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T1500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T17500.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T250.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T1000.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T900.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T4000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T8500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T3200.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T100.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-01-2016 
+T1500.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-01-2016 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-01-2016 
+T3000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-01-2016 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-01-2016 
+T900.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T5900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T150.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-01-2016 
+T2800.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T1000.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T10100.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T150.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T600.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T5800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T2100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T120.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-01-2016 
+T2200.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-01-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-01-2016 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-01-2016 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-01-2016 
+T600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-01-2016 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-01-2016 
+T6800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-01-2016 
+T100.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-01-2016 
+T2200.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T1000.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T12000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T600.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T4000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T2000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-01-2016 
+T900.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-01-2016 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-01-2016 
+T3900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-01-2016 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-01-2016 
+T1900.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T1000.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T12000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T600.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T4000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T1000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T2000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-01-2016 
+T300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-01-2016 
+T600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T7000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T100.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T1500.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T1000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T1100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-01-2016 
+T300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-01-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-01-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-01-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-01-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-01-2016 
+T2700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-01-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-01-2016 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-01-2016 
+T900.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-02-2016 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-02-2016 
+T5700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-02-2016 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-02-2016 
+T1700.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-02-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-02-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-02-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-02-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-02-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-02-2016 
+T1000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NBank:CANARA BANK(5708201000007)
+TBank
+^ 
+!Type:Bank 
+D02-02-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-02-2016 
+T500.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T1500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T18000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T1000.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T100.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T900.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T3000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T19700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T3100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T220.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-02-2016 
+T6300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T3800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-02-2016 
+T1200.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T7000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T1200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T100.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T15600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T1100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T120.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-02-2016 
+T6000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T4000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-02-2016 
+T1600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-02-2016 
+T1500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-02-2016 
+T15400.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-02-2016 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-02-2016 
+T900.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-02-2016 
+T4000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-02-2016 
+T9500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-02-2016 
+T3000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-02-2016 
+T2500.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T1200.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T9100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-02-2016 
+T3100.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T1000.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T9200.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T1300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T600.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T1000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T24700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T2000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T90.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-02-2016 
+T6200.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-02-2016 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-02-2016 
+T5000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-02-2016 
+T1500.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T1000.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T13000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T900.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T100.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T600.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T2500.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T9900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T2100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-02-2016 
+T4700.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T1500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T18500.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T1300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T150.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T900.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T3500.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T23800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T3100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T120.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-02-2016 
+T4200.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T1000.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T13000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T1500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T100.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T600.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T3000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T31100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T2100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T160.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-02-2016 
+T11300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-02-2016 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-02-2016 
+T12000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-02-2016 
+T160.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-02-2016 
+T2800.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T1000.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T10400.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T900.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T600.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T10800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T2000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T160.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-02-2016 
+T3600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T7000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T2200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T100.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T28200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T1100.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T360.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-02-2016 
+T9200.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T6000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T2200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T300.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T2000.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T43600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T1000.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T560.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-02-2016 
+T15000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T1000.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T5000.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T300.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T500.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T600.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T10100.00 
+PHostel,Mess,Loundry (Upcoming Year)
+LADVANCE:Hostel,Mess,Loundry (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T14900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T3300.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T200.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-02-2016 
+T6000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-02-2016 
+T3500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-02-2016 
+T53000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-02-2016 
+T660.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-02-2016 
+T15400.00 
+PTransport
+LINCOME:Transport
+^ 

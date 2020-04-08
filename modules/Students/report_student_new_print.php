@@ -1,0 +1,216 @@
+<?php 
+include "../../config.php" ;
+@session_start();
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+
+$type=$_REQUEST['type'];
+switch ($type) {
+	case 1:
+		$data=array("startDateFrom"=>dateConvert($guid, $_REQUEST['from_date']), "startDateTo"=>dateConvert($guid, $_REQUEST['todate'])); 
+	$sql="SELECT DISTINCT account_number,admission_number,enrollment_date,gender,
+	gibbonperson.gibbonPersonID,account_number,enrollment_date, surname, preferredName,
+	 username, dateStart,dob, lastSchool,gibbonyeargroup.name as class,
+	 gibbonrollgroup.name AS section,gibbonstudentenrolment.gibbonStudentEnrolmentID,gibbonstudentenrolment.rollOrder,
+	 gibbonfamily.homeAddress,gibbonfamily.name as parents,phone1 FROM gibbonperson 
+JOIN gibbonstudentenrolment ON (gibbonstudentenrolment.gibbonPersonID=gibbonperson.gibbonPersonID)
+LEFT JOIN gibbonyeargroup ON gibbonstudentenrolment.gibbonYearGroupId=gibbonyeargroup.gibbonYearGroupId
+LEFT JOIN gibbonrollgroup ON gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID
+LEFT JOIN gibbonfamilychild ON gibbonfamilychild.gibbonPersonID=gibbonperson.gibbonPersonID 
+LEFT JOIN gibbonfamily ON gibbonfamily.gibbonFamilyID=gibbonfamilychild.gibbonFamilyID 
+WHERE enrollment_date>=:startDateFrom AND enrollment_date<=:startDateTo";
+ if($_REQUEST['select_class']!='')
+	{
+		$sql.=" AND gibbonstudentenrolment.gibbonYearGroupID=".$_REQUEST['select_class'];
+	 }
+	 if($_REQUEST['select_section'])
+	 {
+	 	$sql.=" AND gibbonstudentenrolment.gibbonRollGroupID=".$_REQUEST['select_section'];
+	 } 
+
+$sql.=" AND gibbonperson.status='Full' ORDER BY account_number ASC" ;
+		
+	break;
+	
+	case 2:
+		$data=array("startDateFrom"=>dateConvert($guid, $_REQUEST['from_date']), "startDateTo"=>dateConvert($guid, $_REQUEST['todate'])); 
+		$sql="SELECT DISTINCT account_number,admission_number,enrollment_date,gender,
+		gibbonperson.gibbonPersonID,account_number,enrollment_date, surname, 
+		preferredName, username, dateStart,dob, lastSchool,gibbonyeargroup.name as class,
+		gibbonrollgroup.name AS section,gibbonstudentenrolment.gibbonStudentEnrolmentID,gibbonstudentenrolment.rollOrder,
+		gibbonfamily.homeAddress,gibbonfamily.name as parents,phone1 FROM gibbonperson
+JOIN gibbonstudentenrolment ON (gibbonstudentenrolment.gibbonPersonID=gibbonperson.gibbonPersonID)
+LEFT JOIN gibbonyeargroup ON gibbonstudentenrolment.gibbonYearGroupId=gibbonyeargroup.gibbonYearGroupId
+LEFT JOIN gibbonrollgroup ON gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID
+LEFT JOIN gibbonfamilychild ON gibbonfamilychild.gibbonPersonID=gibbonperson.gibbonPersonID 
+LEFT JOIN gibbonfamily ON gibbonfamily.gibbonFamilyID=gibbonfamilychild.gibbonFamilyID 
+ WHERE enrollment_date>=:startDateFrom AND enrollment_date<=:startDateTo";
+		 
+ if($_REQUEST['select_class']!='')
+	{
+		$sql.=" AND gibbonstudentenrolment.gibbonYearGroupID=".$_REQUEST['select_class'];
+	 }
+	 if($_REQUEST['select_section'])
+	 {
+	 	$sql.=" AND gibbonstudentenrolment.gibbonRollGroupID=".$_REQUEST['select_section'];
+	 } 
+		
+ $sql.=" AND gibbonperson.status='Full' ORDER BY account_number ASC" ;
+		
+	break;
+	
+	case 3:
+			$data=array("gibbonSchoolYearID"=>$_SESSION[$guid]["gibbonSchoolYearID"]); 
+$sql="SELECT account_number,admission_number,enrollment_date,gender,
+gibbonperson.gibbonPersonID,account_number,enrollment_date, surname, preferredName, 
+gibbonrollgroup.nameShort AS rollGroup, username, dateStart, lastSchool,dob,
+gibbonyeargroup.name as class,gibbonrollgroup.name AS section,
+gibbonstudentenrolment.gibbonStudentEnrolmentID,gibbonstudentenrolment.rollOrder,
+gibbonfamily.homeAddress,gibbonfamily.name as parents,phone1 FROM gibbonperson 
+JOIN gibbonstudentenrolment ON (gibbonstudentenrolment.gibbonPersonID=gibbonperson.gibbonPersonID)
+LEFT JOIN gibbonyeargroup ON gibbonstudentenrolment.gibbonYearGroupId=gibbonyeargroup.gibbonYearGroupId 
+JOIN gibbonrollgroup ON (gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID)
+LEFT JOIN gibbonfamilychild ON gibbonfamilychild.gibbonPersonID=gibbonperson.gibbonPersonID 
+LEFT JOIN gibbonfamily ON gibbonfamily.gibbonFamilyID=gibbonfamilychild.gibbonFamilyID 
+WHERE gibbonstudentenrolment.gibbonSchoolYearID=:gibbonSchoolYearID";
+
+ if($_REQUEST['select_class']!='')
+	{
+		$sql.=" AND gibbonstudentenrolment.gibbonYearGroupID=".$_REQUEST['select_class'];
+	 }
+	 if($_REQUEST['select_section'])
+	 {
+	 	$sql.=" AND gibbonstudentenrolment.gibbonRollGroupID=".$_REQUEST['select_section'];
+	 } 
+$sql.=" AND gibbonperson.status='Full' ORDER BY account_number ASC" ;
+		
+		break;
+}
+
+$result=$connection2->prepare($sql);
+				$result->execute($data); 
+				
+				
+function dateConvert($guid, $date) {
+	$output=FALSE ;
+	
+	if ($date!="") {
+		if ($_SESSION[$guid]["i18n"]["dateFormat"]=="mm/dd/yyyy") {
+			$firstSlashPosition=2 ;
+			$secondSlashPosition=5 ;
+			$output=substr($date,($secondSlashPosition+1)) . "-" . substr($date,0,$firstSlashPosition) . "-" . substr($date,($firstSlashPosition+1),2) ; 
+		}
+		else {
+			$output=date('Y-m-d', strtotime(str_replace('/', '-', $date)));
+		}
+	}
+	return $output ;
+}
+function SectionFormater($section)
+{
+	return substr($section, -1);
+}
+?>
+<?php 
+$headingstr='';
+if($_REQUEST['from_date']!='' && $_REQUEST['todate']!=''){
+$headingstr='Admission Register from '.$_REQUEST['from_date'].' to '.$_REQUEST['todate'];
+	
+}
+else 
+{
+	$headingstr='Admission Register for Current Year';
+}
+?>
+
+<table width="100%">
+ 
+  <tr>
+    <td></td>
+    <td align="center"><h1 style="font-family:Arial, Helvetica, sans-serif; font-size:24px; font-weight:bold;">
+    <?php echo $headingstr;?>
+    </h1>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-bottom:1px solid #000000;">
+  <tr>
+    <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:center;">Sl.No</th>
+    <th  style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:center;">Acc&nbsp;No</th>
+    <th  style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:center;">Admn&nbsp;No</th>
+    
+    
+    <!--  <th>Student ID</th>-->
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;">Name</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:center;">Class</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:center;">Sec</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:center;">Roll&nbsp;No</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:center;">DOB</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:center;">Gender</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;">Enrollment&nbsp;Date</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;">Phone</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;">Parent</th>
+     <th style="border-top:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;">Address</th>
+  </tr>
+  <?php 
+  $count=0;
+  while ($row=$result->fetch()) {
+  	$count++;
+  	$dobarr=explode("-", $row["dob"]);
+  ?>
+  <tr>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php echo $count;?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php echo substr($row["account_number"],5);?></td>
+     <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php echo $row["admission_number"];?></td>
+  <!--    <td><?php //echo $row["gibbonStudentEnrolmentID"];?></td>-->
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px;"><?php echo $row["preferredName"];?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php echo $row["class"];?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php echo SectionFormater($row["section"]);?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php echo $row["rollOrder"];?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php echo $dobarr[2].'/'.$dobarr[1].'/'.$dobarr[0];?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php echo $row["gender"];?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;"><?php 
+  if($row["enrollment_date"])
+					{
+						$enrolldatearr=explode("-", $row["enrollment_date"]);
+						print $enrolldatearr[2].'/'.$enrolldatearr[1].'/'.$enrolldatearr[0] ;
+					}
+    ?></td>
+     <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px;"><?php echo $row["phone1"];?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px;"><?php echo $row["parents"];?></td>
+    <td style="border-top:1px solid #000000;border-left:1px solid #000000; border-right:1px solid #000000; font-family:Arial, Helvetica, sans-serif; font-size:13px;"><?php echo $row["homeAddress"];?></td>
+  </tr>
+  <?php } ?>
+</table>
+<div id="collection_register_print_button_area" style="position: relative;top:30px;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+
+  <tr>
+    <td align="center"><input type="button" name="print_collecttion" id="print_collecttion" onclick="return printFunction()" value="Print" style="background:#ff731b; color:#ffffff; font-size:14px; font-weight:bold; padding:5px 10px; border:none; outline:none; cursor:pointer;">
+	<input type="button" name="cancel_collecttion" id="cancel_collecttion" onclick="return cancelFunction()" value="Close" style="background:#ff731b; color:#ffffff; font-size:14px; font-weight:bold; padding:5px 10px; border:none; outline:none; cursor:pointer;"></td>
+    
+  </tr>
+</table>
+
+</div>
+<script type="text/javascript">
+function printFunction()
+{
+	document.getElementById("collection_register_print_button_area").style.display='none';
+	window.print();
+	}
+
+function cancelFunction()
+{
+	window.close();
+	}
+</script>
+

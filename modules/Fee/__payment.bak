@@ -1,0 +1,200 @@
+<?php 
+@session_start() ;
+$gibbonPersonID=NULL ;
+if (isset($_SESSION[$guid]["gibbonPersonID"])) {
+	$gibbonPersonID=$_SESSION[$guid]["gibbonPersonID"] ;
+}
+
+$sql="SELECT gibbonstudentenrolment.*,gibbonperson.firstName,gibbonperson.surname,gibbonYearGroup.name FROM gibbonstudentenrolment LEFT JOIN gibbonperson ON 
+gibbonstudentenrolment.gibbonPersonId=gibbonperson.gibbonPersonId LEFT JOIN gibbonYearGroup ON 
+gibbonstudentenrolment.gibbonYearGroupId=gibbonYearGroup.gibbonYearGroupId";
+$result=$connection2->prepare($sql);
+$result->execute();
+$dboutbut=$result->fetchAll();
+
+//get rule type masteree
+$student_id=0;
+$paidmontharr=array();
+$schoolyeararr=array(1=>'jan',2=>'feb',3=>'mar',4=>'apr',5=>'may',6=>'jun',7=>'jul',8=>'aug',9=>'sep',10=>'oct',11=>'nov',12=>'dec');
+//getting fee type
+$sql='Select fee_type_master_id,fee_type_name,boarder from fee_type_master';
+$result=$connection2->prepare($sql);
+$result->execute();
+$all_fee_type=$result->fetchAll();
+// end of getting fee type
+$all_fee_payable=array();
+$month_arr=array();
+$grand_total=0;
+
+
+$fee_jsonarr=array();
+	$sql='Select fee_type_master_id,fee_type_name,boarder,fee_type_desc from fee_type_master';
+$result=$connection2->prepare($sql);
+$result->execute();
+$all_fee_type=$result->fetchAll();
+
+//getting month sequence
+$month_squence_arr=array();
+$sql="SELECT * from gibbonschoolyear where status='Current'";
+$result=$connection2->prepare($sql);
+$result->execute();
+$schoolyearresult=$result->fetch();
+$firstdayarr=explode("-", $schoolyearresult['firstDay']);
+$firstday=(int)$firstdayarr[1];
+
+$lastdayarr=explode("-", $schoolyearresult['lastDay']);
+$lastday=(int)$lastdayarr[1];
+
+
+for($i=$firstday;$i<=12;$i++)
+{
+	array_push($month_squence_arr, $i);
+}
+for($i=1;$i<=$lastday;$i++)
+{
+	array_push($month_squence_arr, $i);
+}
+
+
+?>
+<style>
+#content {
+  margin: 0 0 0 -1px;
+  padding: 0 0px 0 0px;
+  min-height: 470px;
+  width: 900px;
+  max-width: 900px!important;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  border-right: 1px solid rgba(0,0,0,0.15);
+}
+#sidebar {
+  float: right;
+  width:150px;
+  padding: 12px 26px 40px 22px;
+  margin-top: -12px;
+  min-height: 200px;
+}
+</style>
+<form name="f1" id="f1" method="post">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td align="center" colspan="3">
+    
+    <select name="student_enrollid" id="student_enrollid" style="float: left;">
+		    	<option value=""> -Select- </option>
+		    	<?php foreach ($dboutbut as $value) { ?>
+<option value="<?php echo $value['gibbonStudentEnrolmentID']?>" <?php if($student_id==$value['gibbonStudentEnrolmentID']){?> selected="selected"<?php } ?>><?php echo $value['firstName']?> <?php echo $value['surname']?> - <?php echo $value['name']?></option>
+<?php } ?>
+		    </select>
+		     <div id="student_payment_history"></div>
+	</td>
+  </tr>
+  <tr>
+  	<td valign="top" width="10%">
+  		<table width="100%" cellpadding="0" cellspacing="0">
+  			<?php foreach ($month_squence_arr as $value) { ?>
+  			<tr>
+  				<td id="tdchklbl_<?php echo $schoolyeararr[$value];?>">
+  					<?php echo ucwords($schoolyeararr[$value]);?>
+  					
+  				</td>
+  				<td id="tdchk_<?php echo $schoolyeararr[$value];?>">
+  				<input type="checkbox" name="selected_month[]" id="<?php echo $schoolyeararr[$value];?>" value="<?php echo $value;?>" <?php if(in_array($value, $month_arr)){?> checked="checked"<?php } ?><?php if(in_array($value, $paidmontharr)){?> disabled="disabled"<?php } ?> class="selecte_month_class">
+  				</td>
+  			</tr>
+  			<?php } ?> 
+  		</table>
+  	</td>
+  	<td valign="top" width="35%">
+  	<table width="100%" cellpadding="0" cellspacing="0">
+  			<?php foreach ($all_fee_type as $value) {
+				if($value['boarder']=='no')
+				{
+					array_push($fee_jsonarr, $value['fee_type_desc']);
+  				?>
+  			<tr>
+  				<td width="50%"><?php echo ucwords($value['fee_type_name']);?></td>
+  				<td>
+  					<input type="text" name="fee_type_<?php echo $value['fee_type_master_id']?>" id="<?php echo $value['fee_type_desc']?>" disabled="disabled" value="0.00">
+  				</td>
+  			</tr>
+  			<?php } } ?> 
+  			<input type="hidden" name="all_fee_type_json" id="all_fee_type_json" value="<?php echo implode(",", $fee_jsonarr);?>">
+  			<tr>
+	  			<td width="50%">Fine</td>
+	  			<td><input type="text" name="fine_amount" id="fine_amount" value="0.00"></td>
+  			</tr>
+  			<tr>
+	  			<td width="50%">Total</td>
+	  			<td><input type="text" name="total_amount" id="total_amount" value="0.00"></td>
+  			</tr>
+  		</table>
+  	</td>
+  	<td valign="top" width="35%">
+  		<table width="100%" cellpadding="0" cellspacing="0">
+  		<tr>
+  			<td width="50%">Payment Date</td>
+  			<td>
+  			<input type="text" name="payment_date" id="payment_date">
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="50%">Voucher No.</td>
+  			<td>
+  			<input type="text" name="vouchar_no" id="vouchar_no" readonly="readonly">
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="50%">Mode of Payment</td>
+  			<td>
+  			<select name="payment_mode" id="payment_mode">
+  			<option value="cash">Cash</option>
+  			<option value="cheque">Cheque</option>
+  			<option value="dd">Draft</option>
+  			</select>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="50%">Bank Name</td>
+  			<td>
+  			<input type="text" name="bank_name" id="bank_name">
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="50%">Chq No</td>
+  			<td>
+  			<input type="text" name="cheque_no" id="cheque_no">
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="50%">Chq Date</td>
+  			<td>
+  			<input type="text" name="cheque_date" id="cheque_date">
+  			</td>
+  		</tr>
+  		<tr>
+  			<td colspan="2">
+  			<input type="button" name="pay" id="pay" value="Pay">&nbsp;
+  			<input type="button" name="print" id="print" value="Print" style="display: none;" >
+  			<input type="hidden" name="payment_master_id" id="payment_master_id" value="1">
+  			</td>
+  		</tr>
+  		
+  		</table>
+  	</td>
+  </tr>
+</table>
+</form>
+
+<input type="hidden" name="personid" id="personid" value="">
+<input type="hidden" name="show_history_url" id="show_history_url" value="<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/Fee/payment_ajax.php";?>">
+<input type="hidden" name="month_fee_url" id="month_fee_url" value="<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/Fee/ajax_payment_get_monthly_fee.php";?>">
+<input type="hidden" name="print_page_url" id="print_page_url" value="<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/Fee/print_payment.php";?>">
+<script type="text/javascript">
+		$(function() {
+			$( "#payment_date" ).datepicker();
+			$( "#cheque_date" ).datepicker();
+		});
+</script>

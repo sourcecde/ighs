@@ -1,0 +1,138 @@
+<?php 
+@session_start() ;
+$payemntmode='';
+$startdate='';
+$enddate='';
+$result='';
+$sql='';
+$data='';
+$year='';	
+try {
+	$sql="SELECT * from gibbonSchoolYear ORDER BY status";
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$yearresult=$result->fetchAll();
+	}
+	catch(PDOException $e) { 
+	print "<div class='error'>" . $e->getMessage() . "</div>" ; 
+	}
+
+if($_POST)
+{ 
+
+						if(isset($_POST['src_payment_mode']))
+							if($_POST['src_payment_mode']!='')
+								$payemntmode=$_POST['src_payment_mode'];
+
+						if(isset($_POST['src_from_date']))
+							if($_POST['src_from_date']!='')
+								$startdate=$_POST['src_from_date'];
+					
+						if(isset($_POST['src_to_date']))
+							if($_POST['src_to_date']!='')
+								$enddate=$_POST['src_to_date'];
+						if(isset($_POST['year_id']))
+							if($_POST['year_id']!='')
+								$year=$_REQUEST['year_id'];	
+					
+}
+
+?>
+<form name="f1" id="f1" method="post" action="<?php print $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/collection_register.php" ?>">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td><input type="text" name="src_from_date" id="src_from_date" style="width: 100px;" value="<?php echo $startdate;?>" placeholder=" From Date.." required></td>
+    
+    <td><input type="text" name="src_to_date" id="src_to_date" style="width: 100px;" value="<?php echo $enddate;?>" placeholder=" To Date.." required></td>
+    <td>
+		<select name="year_id" id="year_id" style="width:150px;">
+		<option value=''>Select Year</option>
+		<?php foreach ($yearresult as $value) { ?>
+    	<option value="<?php echo $value['gibbonSchoolYearID']?>" <?php if($year==$value['gibbonSchoolYearID']){?> selected="selected"<?php } ?>><?php echo $value['name']." (".$value['status']." year)"?></option>
+    	<?php } ?>
+	    </select>
+	    </td>
+     
+    <td>
+    <select name="src_payment_mode" id="src_payment_mode">
+	    	<option value=""> Select Mode </option>
+	    	<option value="cash" <?php if($payemntmode=='cash'){?> selected="selected"<?php } ?>>Cash</option>
+	    	<option value="cheque" <?php if($payemntmode=='cheque'){?> selected="selected"<?php } ?>>Cheque</option>
+	    	<option value="dd" <?php if($payemntmode=='dd'){?> selected="selected"<?php } ?>>Draft</option>
+			<option value="bank_transfer" <?php if($payemntmode=='bank_transfer'){?> selected="selected"<?php } ?>>Bank Transfer</option>
+			<option value="net_banking" <?php if($payemntmode=='net_banking'){?> selected="selected"<?php } ?>>Net Banking</option>
+			<option value="credit_card" <?php if($payemntmode=='credit_card'){?> selected="selected"<?php } ?>>Credit Card</option>
+			<option value="debit_card" <?php if($payemntmode=='debit_card'){?> selected="selected"<?php } ?>>Debit Card</option>
+	    </select>
+	    </td>
+	    <td><input type="submit" name="submit" id="submit" value="Search" ></td>
+		<td>
+		<select id='view_type' style='float:left'>
+			<option>Short</option>>
+			<option>Details</option>>
+		</select>
+	    <?php if($_POST){?>
+	    <input type="button" id="print" name="collection_register_print" value="Print" style="float: right; background:seagreen; color:white; border:0px solid;">
+		<?php } ?>
+	    </td>
+  </tr>
+</table>
+</form>
+<?php 
+if($_POST)
+{?>
+<h3 id='head3'>Collection Register From <?=$startdate?> To <?=$enddate?></h3>
+<div id="display_panel"></div>
+<form id='printForm' method="POST" action="<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/Fee/collection_register_print.php";?>" target="_blank">
+<input type='hidden' name='print_page' id='print_page' value=''>
+<input type='hidden' name='p_head3' id='p_head3'>
+</form>
+<script>
+	var url="<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/Fee/ajax_collection_register.php";?>";
+	var startDate=$('#src_from_date').val();
+	var endDate=$('#src_to_date').val();
+	var yearID=$('#year_id').val();
+	var paymentMode=$('#src_payment_mode').val();
+	getData(startDate,endDate,yearID,paymentMode,$('#view_type').val());
+	$('#view_type').change(function(){
+		getData(startDate,endDate,yearID,paymentMode,$('#view_type').val());
+	});
+	function getData(startDate,endDate,yearID,paymentMode,viewType){
+			$.ajax
+	 		({
+	 			type: "POST",
+	 			url: url,
+	 			data: {action:'load_data',startDate:startDate,endDate:endDate,yearID:yearID,paymentMode:paymentMode,viewType:viewType},
+	 			success: function(msg)
+	 			{ 
+	 				console.log(msg);
+	 				$('#display_panel').html(msg);
+	 			}
+	 			});
+	} 
+	$('#print').click(function(){
+		$('#print_page').val($('#display_panel').html());
+		$('#p_head3').val($('#head3').html());
+		$('#printForm').submit();
+	});
+</script>
+<?php
+/*
+
+<?php } */
+}
+?>
+<script type="text/javascript">
+		$(function() {
+			$( "#src_from_date" ).datepicker({ dateFormat: 'dd/mm/yy' });
+			$( "#src_to_date" ).datepicker({ dateFormat: 'dd/mm/yy' });
+		});
+</script>
+<style>
+.rightA{
+	text-align: right;
+}
+.footerT td{
+	font-weight: bold;
+}
+</style>

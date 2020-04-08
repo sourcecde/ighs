@@ -1,0 +1,84 @@
+<?php
+@session_start() ;
+$databaseServer="localhost" ;
+$databaseUsername="root" ;
+$databasePassword="" ;
+$databaseName="lakshya3" ;
+$guid="dmrcs346-jzgg-cwgc-3ngj-x2rw44ukcfo" ;
+
+//New PDO DB connection
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+$action=$_GET['action'];
+if($action=="accounts"){
+	$sql="SELECT gibbonstudentenrolment.gibbonStudentEnrolmentID+0 as id,gibbonperson.officialName as name,gibbonrollgroup.name AS section,SUBSTR(gibbonperson.account_number,7,4) as acc_no
+		FROM gibbonstudentenrolment 
+		LEFT JOIN gibbonperson ON gibbonstudentenrolment.gibbonPersonId=gibbonperson.gibbonPersonId 
+		LEFT JOIN gibbonYearGroup ON gibbonstudentenrolment.gibbonYearGroupId=gibbonYearGroup.gibbonYearGroupId 
+		LEFT JOIN gibbonrollgroup ON gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID 
+		WHERE `gibbonstudentenrolment`.`gibbonSchoolYearID`={$_SESSION[$guid]["gibbonSchoolYearIDCurrent"]} 
+		AND (`gibbonperson`.`dateEnd` IS NULL  OR `gibbonperson`.`dateEnd`>='" . date("Y-m-d") . "')
+		ORDER BY gibbonperson.account_number";
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$json=$result->fetchAll();
+	foreach ($json as $value) { ?>
+	<option value="<?php echo $value['id']+0?>"> <?php echo $value['acc_no'];?> - <?php echo $value['name'];?> (<?php echo $value['section'];?>) </option><?php }
+}
+else if($action=="name"){
+	$sql="SELECT gibbonstudentenrolment.gibbonStudentEnrolmentID+0 as id,gibbonperson.officialName as name,gibbonrollgroup.name AS section,SUBSTR(gibbonperson.account_number,7,4) as acc_no
+		FROM gibbonstudentenrolment 
+		LEFT JOIN gibbonperson ON gibbonstudentenrolment.gibbonPersonId=gibbonperson.gibbonPersonId 
+		LEFT JOIN gibbonYearGroup ON gibbonstudentenrolment.gibbonYearGroupId=gibbonYearGroup.gibbonYearGroupId 
+		LEFT JOIN gibbonrollgroup ON gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID 
+		WHERE `gibbonstudentenrolment`.`gibbonSchoolYearID`={$_SESSION[$guid]["gibbonSchoolYearIDCurrent"]} 
+		AND (`gibbonperson`.`dateEnd` IS NULL  OR `gibbonperson`.`dateEnd`>='" . date("Y-m-d") . "')
+		ORDER BY gibbonperson.officialName";
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$json=$result->fetchAll();
+	foreach ($json as $value) { ?>
+	<option value="<?php echo $value['id']+0?>"> <?php echo $value['name'];?> - <?php echo $value['section'];?>(<?php echo $value['acc_no'];?>)</option><?php } 
+}
+else if($action=="Upcoming"){
+	$sql="SELECT `gibbonstudentenrolment`.`gibbonStudentEnrolmentID`,`gibbonperson`.`officialName`,`gibbonperson`.`account_number`,`gibbonperson`.`enrollment_date`
+		FROM `gibbonstudentenrolment`
+		LEFT JOIN `gibbonschoolyear` ON `gibbonschoolyear`.`gibbonSchoolYearID`=`gibbonstudentenrolment`.`gibbonSchoolYearID`
+		LEFT JOIN `gibbonperson` ON `gibbonperson`.`gibbonPersonID`=`gibbonstudentenrolment`.`gibbonPersonID`
+		WHERE `gibbonschoolyear`.`status`='Upcoming'
+		AND `gibbonstudentenrolment`.`gibbonPersonID` NOT IN (SELECT `gibbonstudentenrolment`.`gibbonPersonID` FROM `gibbonstudentenrolment` 
+															LEFT JOIN `gibbonschoolyear` ON `gibbonschoolyear`.`gibbonSchoolYearID`=`gibbonstudentenrolment`.`gibbonSchoolYearID`
+															WHERE `gibbonschoolyear`.`status`='Current')
+		ORDER BY `gibbonperson`.`account_number`";
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$dboutbut=$result->fetchAll();
+	foreach ($dboutbut as $value) { ?>
+		<option value="<?php echo $value['gibbonStudentEnrolmentID']+0?>"><?php echo substr($value['account_number'], 5);?> - <?php echo $value['officialName'];?> (<?php echo $value['enrollment_date'];?>)</span></option>
+	<?php } 
+}
+else if($action=="Current"){
+	$sql="SELECT `gibbonstudentenrolment`.`gibbonStudentEnrolmentID`,`gibbonperson`.`officialName`,`gibbonperson`.`account_number`,`gibbonperson`.`enrollment_date`
+		FROM `gibbonstudentenrolment`
+		LEFT JOIN `gibbonschoolyear` ON `gibbonschoolyear`.`gibbonSchoolYearID`=`gibbonstudentenrolment`.`gibbonSchoolYearID`
+		LEFT JOIN `gibbonperson` ON `gibbonperson`.`gibbonPersonID`=`gibbonstudentenrolment`.`gibbonPersonID`
+		WHERE `gibbonschoolyear`.`status`='Current'
+		AND `gibbonstudentenrolment`.`gibbonPersonID` NOT IN (SELECT `gibbonstudentenrolment`.`gibbonPersonID` FROM `gibbonstudentenrolment` 
+															LEFT JOIN `gibbonschoolyear` ON `gibbonschoolyear`.`gibbonSchoolYearID`=`gibbonstudentenrolment`.`gibbonSchoolYearID`
+															WHERE `gibbonschoolyear`.`status`='Past')
+		ORDER BY `gibbonperson`.`account_number`";
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$dboutbut=$result->fetchAll();
+	foreach ($dboutbut as $value) { ?>
+		<option value="<?php echo $value['gibbonStudentEnrolmentID']+0?>"><?php echo substr($value['account_number'], 5);?> - <?php echo $value['officialName'];?> (<?php echo $value['enrollment_date'];?>)</span></option>
+	<?php } 
+}
+//echo json_encode($json);
+?>

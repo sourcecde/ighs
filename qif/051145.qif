@@ -1,0 +1,40 @@
+!Account 
+NCash in Wallet 
+TCash 
+^ 
+!Type:Cash 
+D04-11-2015 
+T2200.00 
+PCash Collection Admission Fee For Current Year 
+LIncome:Admission Fee For CurrentYear 
+^ 
+!Type:Cash 
+D04-11-2015 
+T300.00 
+PCash Collection Celebration Fee For Current Year 
+LIncome:Celebration Fee For CurrentYear 
+^ 
+!Type:Cash 
+D04-11-2015 
+T600.00 
+PCash Collection Examination Fee For Current Year 
+LIncome:Examination Fee For CurrentYear 
+^ 
+!Type:Cash 
+D04-11-2015 
+T3000.00 
+PCash Collection Session Fee For Current Year 
+LIncome:Session Fee For CurrentYear 
+^ 
+!Type:Cash 
+D04-11-2015 
+T1800.00 
+PCash Collection Tuition Fee For Current Year 
+LIncome:Tuition Fee For CurrentYear 
+^ 
+!Type:Cash 
+D04-11-2015 
+T400.00 
+PCash Collection Transport Fee For Current Year 
+LIncome:Transport Fee For Current Year 
+^ 

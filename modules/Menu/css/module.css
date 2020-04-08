@@ -1,0 +1,46 @@
+@CHARSET "ISO-8859-1";
+ul, menu, dir {
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+
+li {list-style-type: none;}
+
+.parent a {text-decoration:none;}
+.parent{font-weight:bold;}
+#root
+{
+	width:200px;
+}
+.top_menu_manage
+{
+  position: absolute;
+  top: 26px;
+  right: 12px;
+}
+
+.common_button {
+  border: 1px solid #222222;
+  background-color: #444444;
+  height: 28px;
+  min-width: 55px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 2px;
+  font-size: 13px;
+  }
+  
+  .newTop_menu
+  {
+  	 position: absolute;
+  	 top: 514px;
+ 	 right: 12px;
+	 border:1px solid;
+	 height:auto;
+  }
+

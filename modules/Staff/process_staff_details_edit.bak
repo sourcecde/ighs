@@ -1,0 +1,79 @@
+<?php
+@session_start() ;
+include "../../config.php" ;
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+if($_POST){
+	$URL=$_SESSION[$guid]["absoluteURL"]."/index.php?q=/modules/Staff/staff_details_edit.php&gibbonStaffID=".$_REQUEST['gibbonStaffID'];
+	$fail=FALSE;	
+			$p_name=$_REQUEST['p_name'];
+				$tDob = str_replace('/', '-', $_REQUEST['dob']);
+			$dob=date("Y-m-d",strtotime($tDob));
+			$gender=$_REQUEST['gender'];	
+			$address=$_REQUEST['address'];	
+			$email=$_REQUEST['email'];	
+			$phone=$_REQUEST['phone'];	
+				$tDOS=str_replace('/', '-',$_REQUEST['dateStart']);
+			$dateStart=date("Y-m-d",strtotime($tDOS));
+			$dateEnd=$_REQUEST['dateEnd'];
+			$type=$_REQUEST['type'];
+			$job_title=$_REQUEST['job_title'];
+			$qualification=$_REQUEST['qualification'];
+			$priority=$_REQUEST['priority'];
+			$pf_no=$_REQUEST['pf_no'];
+			$uan_no=$_REQUEST['uan_no'];
+			$esi_no=$_REQUEST['esi_no'];
+			$bank_ac=$_REQUEST['bank_ac'];
+			$payment_mode=$_REQUEST['payment_mode'];
+			$guardian=$_REQUEST['guardian'];
+			$relationship=$_REQUEST['relationship'];
+			$reasonOL=$_REQUEST['reasonOL'];
+			$attachment='';
+			if($_FILES["image"]['error']==0){
+			$size1=getimagesize($_FILES["image"]["tmp_name"]);
+			if($size1[0]==240 && $size1[1]==320){
+			$attachment="uploads/" . date("Y") . "/" . date("m") . "/" . $_REQUEST['gibbonPersonID'] . "_240" . strrchr($_FILES["image"]["name"], ".") ;
+			if (is_dir("../../uploads/" . date("Y") . "/" . date("m"))==FALSE) {
+				mkdir("../../uploads/" . date("Y") . "/" . date("m"), 0777, TRUE) ;					
+			}
+			if(file_exists("../../".$attachment))
+				unlink("../../".$attachment);
+			move_uploaded_file($_FILES["image"]["tmp_name"],"../../".$attachment); 
+			}
+			else{
+				$fail=TRUE;
+			}
+		}
+		$sql="UPDATE `gibbonperson` SET  
+				preferredName='".$p_name."',gender='".$gender."',dob='".$dob."',email='".$email."',address1='".$address."',phone1='".$phone."',dateStart='".$dateStart."'";
+			if($attachment!='')
+				$sql.=",image_240='".$attachment."'";
+				if($dateEnd!='') {
+					$tDate = str_replace('/', '-', $dateEnd);
+					$dateE=date("Y-m-d",strtotime($tDate));
+					$sql.=",dateEnd='".$dateE."'";
+				}
+				$sql.=" WHERE `gibbonPersonID`=".$_REQUEST['gibbonPersonID'];
+			$result=$connection2->prepare($sql);
+			$result->execute();
+		//echo $sql;
+		$sql="UPDATE `gibbonstaff` SET  
+				type='".$type."',jobTitle='".$job_title."',bank_ac='".$bank_ac."',payment_mode='".$payment_mode."',qualifications='".$qualification."',
+				pf_no='".$pf_no."',uan_no='".$uan_no."',esi_no='".$esi_no."',priority='".$priority."',guardian='$guardian',relationship='$relationship',`reasonOfLeaving`='$reasonOL'    
+				WHERE `gibbonPersonID`=".$_REQUEST['gibbonPersonID'];
+			echo $sql;
+			$result=$connection2->prepare($sql);
+			$result->execute();
+		if(!$fail)
+			$URL.="&status=success";	
+		else
+			$URL.='&status=imagesize';
+		header("Location: {$URL}");
+}
+?>

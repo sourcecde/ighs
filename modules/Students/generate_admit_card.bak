@@ -1,0 +1,53 @@
+<?php
+include "../../config.php" ;
+@session_start();
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+?>
+<?php
+	$year=$_POST['year'];
+	$account_no=$_POST['account_no'];
+	$person_id=$_POST['person_id'];
+	$class=$_POST['class'];
+	
+	$sql1="SELECT gibbonperson.preferredName,gibbonYearGroup.name as class,gibbonrollgroup.name as section,rollOrder FROM gibbonstudentenrolment " ;
+	$sql1.=" LEFT JOIN gibbonperson on gibbonperson.gibbonPersonID=gibbonstudentenrolment.gibbonPersonID ";
+	$sql1.=" LEFT JOIN gibbonYearGroup on gibbonYearGroup.gibbonYearGroupID=gibbonstudentenrolment.gibbonYearGroupID ";
+	$sql1.=" LEFT JOIN gibbonrollgroup on gibbonrollgroup.gibbonRollGroupID=gibbonstudentenrolment.gibbonRollGroupID ";
+	$sql1.=" where gibbonstudentenrolment.gibbonSchoolYearID=".$year;
+	if($account_no!='')
+		$sql1.=" AND gibbonperson.account_number=".$account_no;
+	if($person_id!='')
+		$sql1.=" AND gibbonperson.gibbonPersonID=".$person_id;
+	if($class!='')
+		$sql1.=" AND gibbonstudentenrolment.gibbonYearGroupID=".$class;
+	$result1=$connection2->prepare($sql1);
+	$result1->execute();	
+	$data_arr=$result1->fetchall();
+	
+	$sql2="SELECT  `name` FROM `gibbonschoolyear` WHERE `gibbonSchoolYearID`=".$year;
+	$result2=$connection2->prepare($sql2);
+	$result2->execute();
+	$year_name=$result2->fetch();
+
+									$i=0;
+									echo "<table width='100%'>";
+									foreach($data_arr as $row){
+										$data=$year_name['name']."_".$row['preferredName']."_".$row['class']."_".$row['rollOrder']."_".$row['section'];
+										if($i%2==0)
+											echo "<tr><td>";
+										
+										echo "<img src='create_admit.php?data=".$data."' style='padding: 10px 5px; width:47%;'>";
+										if($i%2!=0)
+											echo "</td></tr>";
+										$i++;
+									}									
+									echo "</table>";
+
+?>

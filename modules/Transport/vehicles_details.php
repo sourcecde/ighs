@@ -1,0 +1,63 @@
+<?php
+@session_start() ;
+$gibbonPersonID=NULL ;
+if (isset($_SESSION[$guid]["gibbonPersonID"])) {
+	$gibbonPersonID=$_SESSION[$guid]["gibbonPersonID"] ;
+}
+
+$sql="SELECT * FROM vehicles ORDER BY vehicle_id";
+			$result=$connection2->prepare($sql);
+			$result->execute();
+			$dboutbut=$result->fetchAll();
+	
+?>
+<h3>Manage vehicles:</h3>
+<table width="80%" cellpadding="0" cellspacing="0" id='myTable'>
+<thead>
+  <tr>
+    <th>No.</th>
+    <th>Type</th>
+    <th>Details</th>
+     <th> <input type="button" id="add_vehicle"  style='border:1px; padding:5px 30px; background:#ff731b; color:white;' value="+ Add"></th>
+  </tr>
+ </thead>
+ <tbody>
+  <?php $i=0; foreach ($dboutbut as $value) { ?>
+  <tr>
+    <td><?php echo ++$i;?></td>
+    <td><?php echo $value['type'];?><input type='hidden' id="type_<?php echo $value['vehicle_id'];?>" value="<?php echo $value['type'];?>"></td>
+    <td><?php echo $value['details'];?><input type='hidden' id="dtls_<?php echo $value['vehicle_id'];?>" value="<?php echo $value['details'];?>"></td>
+    <td><a href="#" class="v_edit" id="<?php echo $value['vehicle_id'];?>">Edit</a> | 
+		<a href="<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/vehicles_process.php?event=delete&vehicle_id=".$value['vehicle_id']; ?>" onclick="return confirm('Are you sure you want to delete it?');">Delete</a></td>
+  </tr>
+  <?php } ?>
+</tbody>  
+</table>
+<input type="hidden" id="edit_url" value='<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/vehicles_process.php";?>'>
+ <div id='hide_body'style='background-color :rgba(0,0,0, 0.7); width:100%; height:100%; position:fixed; left:0px; top:0px; z-index:100; display:none;'>
+ </div>
+<div  id='modal_v' class='modal_v' style="position:fixed; left:500px; top:250px; z-index:200; border:1px; padding:5px 10px; background-color :rgba(0,0,0, 0.6); color:white; width:300px; display:none;">
+<div style="margin:20px;">
+Type: <select id='v_type' style='width:100px;'><option>Bus</option><option>Van</option></select><br><br>
+Details: <input type='text' id='v_dtls' style='width:180px;'><br><br>
+<button id='v_add' style='border:1px; padding:10px; margin-left:50px;  background:#ff731b; color:white;'>Add</button>
+<button class='v_close' style='border:1px; padding:10px; background:#ff731b; color:white;'>Close</button>
+</div>
+</div>
+
+<div  id='modal_v_edit' class='modal_v' style="position:fixed; left:500px; top:250px; z-index:200; border:1px; padding:5px 10px; background-color :rgba(0,0,0, 0.6); color:white; width:300px; display:none;">
+<div style="margin:20px;">
+Type: <select id='v_type_e' style='width:100px;'><option>Bus</option><option>Van</option></select><br><br>
+Details: <input type='text' id='v_dtls_e' style='width:180px;'><br><br>
+<button id='v_update' style='border:1px; padding:10px; margin-left:50px;  background:#ff731b; color:white;'>Update</button>
+<button class='v_close' style='border:1px; padding:10px; background:#ff731b; color:white;'>Close</button>
+<input type='hidden' id='v_id_e'>
+</div>
+</div>
+
+ <script src="<?php echo $_SESSION[$guid]["absoluteURL"] ;?>modules/Transport/js/jquery.dataTables.min.js"></script>
+ <script>
+	 $(document).ready(function(){
+		$('#myTable').DataTable();
+	});
+ </script>

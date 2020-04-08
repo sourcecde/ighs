@@ -1,0 +1,143 @@
+<?php
+function PopulateStudentPayableFee($gibbonPersonID,$gibbonSchoolYearID,$gibbonYearGroupID,$gibbonRollGroupID,$gibbonStudentEnrolmentID,$connection2,$student_type)
+{
+//$gibbonSchoolYearID->financial year
+//$gibbonYearGroupID -> class
+//$gibbonRollGroupID ->section
+
+	//get student borarder
+	try{
+		$data=array("gibbonPersonID"=>$gibbonPersonID); 
+		$sql="SELECT * FROM gibbonperson WHERE gibbonPersonID=:gibbonPersonID" ;
+		$result=$connection2->prepare($sql);
+		$result->execute($data);
+		$dboutbut=$result->fetch();
+	}
+	catch(PDOException $e) { 
+	//Fail 2
+	$URL.="&addReturn=fail9" ;
+	header("Location: {$URL}");
+	}
+	$border=$dboutbut['boarder'];
+	//end of student boarder
+	//get the class of the student from year group
+try {
+	$data=array("gibbonYearGroupID"=>$gibbonYearGroupID); 
+	$sql="SELECT * FROM gibbonyeargroup WHERE gibbonYearGroupID=:gibbonYearGroupID" ;
+	$result=$connection2->prepare($sql);
+	$result->execute($data);
+	$dboutbut=$result->fetch();
+	}
+	catch(PDOException $e) { 
+	//Fail 2
+	$URL.="&addReturn=fail10" ;
+	header("Location: {$URL}");
+	}
+	
+	$class=$dboutbut['name'];
+	// get the fee border class id from fee_border_class
+	
+try {
+	$data=array("class"=>$class); 
+	$sql2="SELECT * FROM fee_boarder_class WHERE class='$class' AND border='".$border."'";
+	$result=$connection2->prepare($sql2);
+	//$result->execute($data);
+	$result->execute();
+	$dboutbut=$result->fetch();
+	}
+	catch(PDOException $e) { 
+	//Fail 2
+	$URL.="&addReturn=fail11" ;
+	header("Location: {$URL}");
+	}
+
+	$fee_boarder_class_id=$dboutbut['fee_boarder_class_id'];
+	// get the rule from rule master for this border class id
+try {
+	$data=array("fee_boarder_class_id"=>$fee_boarder_class_id,"gibbonSchoolYearID"=>$gibbonSchoolYearID); 
+	$sql1="SELECT fee_rule_master.*,fee_type_master.fee_type_desc as fee_short_type,fee_type_master.yearly,fee_type_master.jan,fee_type_master.feb,fee_type_master.mar,fee_type_master.apr,fee_type_master.may,
+			fee_type_master.jun,fee_type_master.jul,fee_type_master.aug,fee_type_master.sep,fee_type_master.oct,
+			fee_type_master.nov,fee_type_master.dec
+ FROM fee_rule_master
+ LEFT JOIN fee_type_master 
+ ON fee_rule_master.fee_type_master_id=fee_type_master.fee_type_master_id 
+ WHERE fee_boarder_class_id=:fee_boarder_class_id AND fee_rule_master.gibbonSchoolYearID=:gibbonSchoolYearID";
+ if($student_type=='old')
+	 $sql1.=" AND `fee_rule_master`.`onetime`=0";
+	$result=$connection2->prepare($sql1);
+	$result->execute($data);
+	$dboutbut=$result->fetchAll();
+	}
+	catch(PDOException $e) { 
+	//Fail 2
+	$URL.="&addReturn=fail11" ;
+	header("Location: {$URL}");
+	}
+	$amount=0;
+	$date=date('Y-m-d');
+	$schoolyeararr=array(0=>'yearly',1=>'jan',2=>'feb',3=>'mar',4=>'apr',5=>'may',6=>'jun',7=>'jul',8=>'aug',9=>'sep',10=>'oct',11=>'nov',12=>'dec');
+	$sql="INSERT INTO `fee_payable`(`fee_payable_id`, `gibbonSchoolYearID`, `gibbonPersonID`, `gibbonStudentEnrolmentID`, `rule_id`, `fee_type_master_id`, `month_no`, `month_name`, `amount`, `concession`, `net_amount`, `payment_staus`, `created_date`,`fee_type_short_name`) VALUES ";
+	$i=0;
+	foreach ($dboutbut as $value) {
+		foreach ($schoolyeararr as $key=>$monthvalue) {
+			if($value[$monthvalue]==1)
+			{
+				$amount=$value['amount'];
+				if($i++!=0)
+					$sql.=", ";
+				$sql.="(NULL,$gibbonSchoolYearID,$gibbonPersonID,$gibbonStudentEnrolmentID,{$value['fee_rule_master_id']},{$value['fee_type_master_id']},$key,'$monthvalue',$amount,'0.00',$amount,'unpaid','$date','{$value['fee_short_type']}' )";
+			}
+		}
+	}
+			try {
+				
+				$result=$connection2->prepare($sql);
+				$result->execute();
+			}
+			catch(PDOException $e) {
+				echo "$sql1<br>";
+				echo "$sql2<br>";
+				echo "<br>$sql, $gibbonPersonID, $gibbonStudentEnrolmentID<br>";
+				print_r($dboutbut);
+				echo "<br>";
+			//Fail2
+			//$URL.="&addReturn=fail12" ;
+			//header("Location: {$URL}{$sql}");
+			}
+
+}
+
+function updateGibbonPeronAccountEnrolldate($gibbonPersonID,$enrollmentdate,$accountnumber,$admissionnumber,$connection2)
+{
+try {
+				$data=array("gibbonPersonID"=>$gibbonPersonID, "account_number"=>$accountnumber,"admission_number"=>$admissionnumber, "enrollment_date"=>$enrollmentdate); 
+				$sql="UPDATE gibbonperson  SET account_number=:account_number,admission_number=:admission_number, enrollment_date=:enrollment_date where gibbonPersonID=:gibbonPersonID";
+				$result=$connection2->prepare($sql);
+				$result->execute($data);
+			}
+			catch(PDOException $e) { 
+			//Fail2
+			$URL.="&addReturn=fail13" ;
+			header("Location: {$URL}");
+			break ;
+			}
+}
+
+function GetYearGroupArray($connection2)
+{
+	$arr=array();
+try {
+	$sql="SELECT * FROM gibbonyeargroup" ;
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$dboutbut=$result->fetchAll();
+	}
+	catch(PDOException $e) {}
+
+	foreach ($dboutbut as $value) {
+		$arr[$value['gibbonYearGroupID']]=$value['name'];
+	}
+	
+	return $arr;
+}
+?>

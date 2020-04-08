@@ -1,0 +1,175 @@
+<?php 
+@session_start() ;
+$gibbonPersonID=NULL ;
+if (isset($_SESSION[$guid]["gibbonPersonID"])) {
+	$gibbonPersonID=$_SESSION[$guid]["gibbonPersonID"] ;
+}
+$year='';
+$sql="SELECT * from gibbonSchoolYear ORDER BY status";
+$result=$connection2->prepare($sql);
+$result->execute();
+$yearresult=$result->fetchAll();
+
+
+
+
+if($_POST)
+{
+
+		$sql="SELECT month_name,SUM(amount) as n_amount, SUM(concession) as n_concession, SUM(net_amount) as n_net_amount ,fee_type_master.fee_type_name,fee_type_master.boarder_type_name 
+		FROM `fee_payable` 
+		LEFT JOIN fee_type_master ON fee_type_master.fee_type_master_id=fee_payable.fee_type_master_id 
+		where fee_payable.concession>0 ";
+		
+		if(isset($_POST['year_id']))
+		{
+				if($_POST['year_id']!='')
+					{
+					$year=$_REQUEST['year_id'];	
+					$sql.=" AND fee_payable.gibbonSchoolYearID=".$year;
+					}
+		}
+		if($_REQUEST['months'])
+		{	
+			$month=join("','",$_REQUEST['months']);
+			$sql.=" AND fee_payable.month_name in('".$month."')";
+			echo '<input type="hidden" id="month_filter" value="'.$month.'">';
+		}
+
+		$sql.=" group by `month_name`,fee_payable.`fee_type_master_id` order by `month_no`";
+		$result=$connection2->prepare($sql);
+		$result->execute();
+		$month_list=$result->fetchAll();
+		
+	$fullNameArray=array('yearly'=>'Yearly','jan'=>'January','feb'=>'February','mar'=>'March  ','apr'=>'April  ','may'=>'May    ','jun'=>'June   ','jul'=>'July   ','aug'=>'August','sep'=>'September','oct'=>'October','nov'=>'November','dec'=>'December');	
+}
+
+?> 
+<form name="f1" id="f1" method="post" action="<?php print $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/headwise_concession_report.php" ?>">
+<div>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+	 <td colspan='2'>
+		 <b>Select Months:&nbsp;&nbsp;
+		  Yearly <input type="checkbox" name="months[]" value="yearly" <?php if($_POST){ if(in_array("yearly",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Apr <input type="checkbox" name="months[]" value="apr" <?php if($_POST){ if(in_array("apr",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  May <input type="checkbox" name="months[]" value="may" <?php if($_POST){ if(in_array("may",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Jun <input type="checkbox" name="months[]" value="jun" <?php if($_POST){ if(in_array("jun",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Jul <input type="checkbox" name="months[]" value="jul" <?php if($_POST){ if(in_array("jul",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Aug <input type="checkbox" name="months[]" value="aug" <?php if($_POST){ if(in_array("aug",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Sep <input type="checkbox" name="months[]" value="sep" <?php if($_POST){ if(in_array("sep",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Oct <input type="checkbox" name="months[]" value="oct" <?php if($_POST){ if(in_array("oct",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Nov <input type="checkbox" name="months[]" value="nov" <?php if($_POST){ if(in_array("nov",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Dec <input type="checkbox" name="months[]" value="dec" <?php if($_POST){ if(in_array("dec",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Jan <input type="checkbox" name="months[]" value="jan" <?php if($_POST){ if(in_array("jan",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Feb <input type="checkbox" name="months[]" value="feb" <?php if($_POST){ if(in_array("feb",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |
+		  Mar <input type="checkbox" name="months[]" value="mar" <?php if($_POST){ if(in_array("mar",$_REQUEST['months'])) echo "checked";} else echo "checked"; ?> /> |		  </b>
+	</td>
+</tr>
+  <tr>
+  <td>
+    <select name="year_id" id="year_id" style="float:left;">
+	<option value=''>Select Year</option>
+    <?php foreach ($yearresult as $value) { ?>
+    	<option value="<?php echo $value['gibbonSchoolYearID']?>" <?php if($year==$value['gibbonSchoolYearID']){?> selected="selected"<?php } ?>><?php echo $value['name']." (".$value['status']." year)"?></option>
+    	<?php } ?>
+    </select>
+    </td>
+
+<td>
+<input type="submit" name="search" id="search" value="Search" style="margin-left:25%"> &nbsp;&nbsp;&nbsp;
+<?php if($_POST){?>
+<input type="button" name="concession_print_page" id="concession_print_page" value="Print" style="background:seagreen; color:#ffffff; font-size:14px; font-weight:bold; padding:5px 10px; border:none;">
+<?php } ?>
+</td></tr>
+</table>
+
+</div>
+</form>
+<?php if(isset($month_list)) { ?>
+
+<table width="100%" cellpadding="0" cellspacing="0" id="rule_table">
+  <tr>
+    <th>Month</th>
+    <th>Fees Head</th>
+    <th>Boarder Type</th>
+    <th>Amount</th>
+    <th>Concession</th>
+    <th>Net Amount</th>
+  </tr>
+  <?php
+	$total_concession=0;
+	$m_name='';
+  foreach($month_list as $a) { ?>
+  <tr>
+	<td><?php if($m_name!=$a['month_name'])echo $fullNameArray[$a['month_name']];?></td>
+	<td><?php echo $a['fee_type_name'];?></td>
+	<td><?php echo $a['boarder_type_name'];?></td>
+	<td style="text-align: right"><?php echo $a['n_amount'];?></td>
+	<td style="text-align: right"><?php echo $a['n_concession'];?></td>
+	<td style="text-align: right"><?php echo $a['n_net_amount'];?></td>
+  </tr>
+  <?php
+	$total_concession+=$a['n_concession'];
+	$m_name=$a['month_name'];
+  } ?>
+  <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td><!--  Total :--> <?php //echo $total_amount;?></td>
+  <td style="text-align: right"><b>Total : <?php echo $total_concession;?></b></td> 
+  <td><!--  Total :--><?php //echo $total_net_amount;?></td>
+  </tr>
+</table>
+<?php } ?>  
+<!-- Total Table -->
+<?php
+if($_POST) {
+	$month=join("','",$_REQUEST['months']);	
+	$year_id=$_REQUEST['year_id'];
+$sql1="SELECT SUM(concession) as n_concession, fee_type_master.fee_type_name,fee_type_master.boarder_type_name 
+		FROM `fee_payable` 
+		LEFT JOIN fee_type_master ON fee_type_master.fee_type_master_id=fee_payable.fee_type_master_id 
+		where fee_payable.concession>0 ";
+		if($year_id!='')	
+		$sql1.=" AND fee_payable.gibbonSchoolYearID=".$year_id;
+		
+		$sql1.=" AND fee_payable.month_name in('".$month."')";
+
+		$sql1.=" group by fee_payable.`fee_type_master_id` order by fee_payable.`fee_type_master_id`";
+		$result1=$connection2->prepare($sql1);
+		$result1->execute();
+		$concession_list=$result1->fetchAll();
+	
+if(isset($concession_list)) {
+ ?>
+ <br><br>
+<table width="60%" cellpadding="6" cellspacing="0" style="border-left:1px solid #000000; border-top:1px solid #000000; font-family:Arial, Helvetica, sans-serif;" id="rule_table">
+<tr>
+	<th>Fee Head</th><th>Boarder Type</th><th>Amount</th>
+</tr>
+	<?php 
+	$c_total=0;
+	foreach($concession_list as $a) {?>
+	<tr>
+	<td   style="border-bottom:1px solid #000000; 	border-right:1px solid #000000; font-size:14px; color:#000000; text-align:right"><?php echo $a['fee_type_name'];?></td>
+	<td   style="border-bottom:1px solid #000000; 	border-right:1px solid #000000; font-size:14px; color:#000000; text-align:right"><?php echo $a['boarder_type_name'];?></td>
+	<td   style="border-bottom:1px solid #000000; 	border-right:1px solid #000000; font-size:14px; color:#000000; text-align:right"><?php echo $a['n_concession'];?></td>
+	</tr>
+	<?php
+	$c_total+=$a['n_concession'];
+	} ?>
+	<tr>
+	
+	<td   style="border-bottom:1px solid #000000; 	border-right:1px solid #000000; font-size:14px; color:#000000; text-align:right" colspan='3'><b>Total: <?php echo $c_total;?>.00</b></td>
+	</tr>
+  </table>
+<?php 
+}
+}?>
+<!-- Total Table -->
+
+<input type="hidden" name="hidden_fee_payable_id" id="hidden_fee_payable_id">
+<input type="hidden" name="cocession_report_url" id="cocession_report_url" value="<?php print $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/headwise_concession_report_print.php" ?>">

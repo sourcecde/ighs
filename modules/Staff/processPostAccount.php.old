@@ -1,0 +1,15 @@
+	try{
+	$sql1="SELECT  `preferredName`,`lakshyasalaryadvance`.`date`,`lakshyasalaryadvance`.`amount`,`lakshyasalaryadvance`.`type` 
+		FROM `lakshyasalaryadvance` 
+		LEFT JOIN `gibbonstaff` ON `lakshyasalaryadvance`.`staffID`=`gibbonstaff`.`gibbonStaffID` 
+		LEFT JOIN `gibbonperson` ON `gibbonStaff`.`gibbonPersonID`=`gibbonperson`.`gibbonPersonID` 
+		WHERE `salaryMonth`=0 AND `lakshyasalaryadvance`.`date` BETWEEN '$startDate' AND '$endDate'";
+	$result1=$connection2->prepare($sql1);
+	$result1->execute();
+	$advanceDB=$result1->fetchAll();
+	}
+	catch(PDOException $e) { echo $e; }
+	$advanceData=array();
+	foreach($advanceDB as $a){
+		$advanceData[$entryType][$cashID][]=$a;
+	}

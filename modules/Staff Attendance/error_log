@@ -1,0 +1,9 @@
+[21-Dec-2018 15:17:56 Asia/Singapore] PHP Notice:  Undefined offset: 12 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Staff Attendance/print_attendance_log.php on line 47
+[21-Dec-2018 15:18:28 Asia/Singapore] PHP Notice:  Undefined offset: 12 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Staff Attendance/print_attendance_log.php on line 47
+[21-Dec-2018 15:20:38 Asia/Singapore] PHP Notice:  Undefined offset: 12 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Staff Attendance/print_attendance_log.php on line 47
+[21-Dec-2018 15:20:54 Asia/Singapore] PHP Notice:  Undefined offset: 12 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Staff Attendance/print_attendance_log.php on line 47
+[15-May-2019 16:13:07 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Staff Attendance/staff_attendance_process.php:39
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Staff Attendance/staff_attendance_process.php(39): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Staff Attendance/staff_attendance_process.php on line 39

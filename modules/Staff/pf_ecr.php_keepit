@@ -1,0 +1,117 @@
+<?php 
+@session_start() ;
+
+//Set timezone from session variable
+date_default_timezone_set($_SESSION[$guid]["timezone"]);
+
+if (isActionAccessible($guid, $connection2, "/modules/Staff/staff_view_details.php")==FALSE) {
+	//Acess denied
+	print "<div class='error'>" ;
+		print _("You do not have access to this action.") ;
+	print "</div>" ;
+}
+else{
+		try{
+		$sql="SELECT `gibbonSchoolYearID`, `name` FROM `gibbonschoolyear` ORDER BY name";
+		$result2=$connection2->prepare($sql);
+		$result2->execute();
+		$year=$result2->fetchAll();
+		}
+		catch(PDOException $e){
+			echo $e;
+		}
+?>
+	<h3>Create PF ECR: </h3>
+	<form method='POST' action="">
+	<table width="60%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<?php $sm=isset($_POST['month_f'])?$_POST['month_f']:'';?>
+			<select name='month_f' required>
+				<option value=''> Select Month </option>
+				<option value='04' <?=$sm==04?'selected':'';?>>April</option>
+				<option value='05' <?=$sm==05?'selected':'';?>>May</option>
+				<option value='06' <?=$sm==06?'selected':'';?>>June</option>
+				<option value='07' <?=$sm==07?'selected':'';?>>July</option>
+				<option value='08' <?=$sm==8?'selected':'';?>>August</option>
+				<option value='09' <?=$sm==9?'selected':'';?>>September</option>
+				<option value='10' <?=$sm==10?'selected':'';?>>October</option>
+				<option value='11' <?=$sm==11?'selected':'';?>>November</option>
+				<option value='12' <?=$sm==12?'selected':'';?>>December</option>
+				<option value='01' <?=$sm==01?'selected':'';?>>January</option>
+				<option value='02' <?=$sm==02?'selected':'';?>>February</option>
+				<option value='03' <?=$sm==03?'selected':'';?>>March</option>
+			</select>
+		</td>
+		<td>
+			<select name='year_f' required>
+				<option value=''> Select Year </option>
+				<?php $sy=isset($_POST['year_f'])?$_POST['year_f']:'';
+				foreach($year as $y){
+					$s=$y['gibbonSchoolYearID']==$sy?'selected':'';
+					print "<option value='".$y['gibbonSchoolYearID']."' $s>".$y['name']."</option>";
+				}?>
+			</select>
+		</td>
+		<td>
+			<input type='submit' value='Select' id="pf_month_year">
+		</td>
+	</tr>
+	</table>
+	</form>
+<?php
+if($_POST){
+	//print_r($_POST);
+	extract($_POST);
+	try{
+	$sql="SELECT `payment_id` FROM `lakshyasalarypayment` WHERE `master_id` IN (SELECT `master_id` FROM `lakshyasalarymaster` WHERE `month`=$month_f AND `year_id`=$year_f)";
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$count=$result->rowCount();
+	}
+	catch(PDOException $e){
+		echo $e;
+	}
+	if($count==0){
+		print "<div class='error'>" ;
+		print _("Paymeny has not done for selected month") ;
+		print "</div>" ;
+	}
+	else{
+?>
+	<input type='hidden' id='month' value='<?=$month_f?>'>
+	<input type='hidden' id='yearID' value='<?=$year_f?>'>
+	<table width='60%'>
+		<tr>
+			<td><span id='pf_ecr_view'>View Report&nbsp;&nbsp;<img title='View Report' src='./themes/<?=$_SESSION[$guid]["gibbonThemeName"]?>/img/plus.png'/></span></td>
+			<td><span id='pf_ecr_csv'>Generate CSV&nbsp;&nbsp;<img title='Generate CSV' src='./themes/<?=$_SESSION[$guid]["gibbonThemeName"]?>/img/upload.png'/></span></td>
+			<td><span id='pf_ecr_ecr'>Generate ECR&nbsp;&nbsp;<img title='Generate ECR' src='./themes/<?=$_SESSION[$guid]["gibbonThemeName"]?>/img/upload.png'/></span></td>
+		</tr>
+	</table>
+
+<?php 
+echo $_SESSION[$guid]["absoluteURL"]?>modules/<?php print $_SESSION[$guid]["module"] ;
+?>
+
+	<form id='form_csv' class='form_popup' method='POST' action='<?php print $_SESSION[$guid]["absoluteURL"]?>modules/<?php print $_SESSION[$guid]["/module"] ?>/generateCSV.php' target='_blank'>
+		<input type='hidden' name='dataCSV' id='dataCSV' value=''>
+	</form>
+	<form id='form_ecr' class='form_popup' method='POST' action='<?php print $_SESSION[$guid]["absoluteURL"]?>modules/<?php print $_SESSION[$guid]["/module"] ?>/generateECR.php' target='_blank'>
+		<input type='hidden' name='dataECR' id='dataECR' value=''>
+	</form>
+<?php
+	}
+}	
+}
+?>
+<div class='hide_body'style="display:none; position:fixed; left:0px; top:0px; height:0px; width:100%; height:100%; z-axis:199; background:rgba(0,0,0,.9);">
+</div>
+<div id='display_panel' style='display:none; position:fixed; left:0px; top:100px; overflow: scroll; height:80%; width:100%; z-axis:200;'>
+
+</div>
+<div class='close_panel' style="display:none; position:fixed; left:48%; top:50px; z-axis:2500; padding:10px; background:#ff731b;color:#fff; border-radius:0px 20px;"><b>X</b></div>
+<style>
+table tr th {
+	padding:0;
+}
+</style>

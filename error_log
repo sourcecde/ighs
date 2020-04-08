@@ -1,0 +1,7 @@
+[14-Mar-2020 14:48:55 Asia/Kolkata] PHP Warning:  join(): Invalid arguments passed in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/Fee/defaulter_report.php on line 73
+[14-Mar-2020 16:20:10 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/User Admin/changeRollNumber.php on line 211
+[14-Mar-2020 16:22:04 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/User Admin/changeRollNumber.php on line 211
+[18-Mar-2020 13:08:23 Asia/Kolkata] PHP Warning:  join(): Invalid arguments passed in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/Fee/defaulter_report.php on line 73
+[19-Mar-2020 12:51:30 Asia/Kolkata] PHP Warning:  join(): Invalid arguments passed in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/Fee/defaulter_report.php on line 73
+[19-Mar-2020 12:51:36 Asia/Kolkata] PHP Warning:  join(): Invalid arguments passed in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/Fee/defaulter_report.php on line 73
+[19-Mar-2020 12:56:50 Asia/Kolkata] PHP Warning:  join(): Invalid arguments passed in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/Fee/defaulter_report.php on line 73

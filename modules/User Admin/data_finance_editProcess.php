@@ -1,0 +1,188 @@
+<?php
+/*
+Gibbon, Flexible & Open School System
+Copyright (C) 2010, Ross Parker
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+include "../../functions.php" ;
+include "../../config.php" ;
+
+//New PDO DB connection
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+
+@session_start() ;
+
+//Set timezone from session variable
+date_default_timezone_set($_SESSION[$guid]["timezone"]);
+
+$gibbonFinanceInvoiceeUpdateID=$_GET["gibbonFinanceInvoiceeUpdateID"] ;
+$gibbonFinanceInvoiceeID=$_POST["gibbonFinanceInvoiceeID"] ;
+$URL=$_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . getModuleName($_POST["address"]) . "/data_finance_edit.php&gibbonFinanceInvoiceeUpdateID=$gibbonFinanceInvoiceeUpdateID" ;
+
+if (isActionAccessible($guid, $connection2, "/modules/User Admin/data_finance_edit.php")==FALSE) {
+	//Fail 0
+	$URL.="&updateReturn=fail0" ;
+	header("Location: {$URL}");
+}
+else {
+	//Proceed!
+	//Check if school year specified
+	if ($gibbonFinanceInvoiceeUpdateID=="" OR $gibbonFinanceInvoiceeID=="") {
+		//Fail1
+		$URL.="&updateReturn=fail1" ;
+		header("Location: {$URL}");
+	}
+	else {
+		try {
+			$data=array("gibbonFinanceInvoiceeUpdateID"=>$gibbonFinanceInvoiceeUpdateID); 
+			$sql="SELECT * FROM gibbonfinanceinvoiceeupdate WHERE gibbonFinanceInvoiceeUpdateID=:gibbonFinanceInvoiceeUpdateID" ;
+			$result=$connection2->prepare($sql);
+			$result->execute($data);
+		}
+		catch(PDOException $e) { 
+			//Fail2
+			$URL.="&updateReturn=fail2" ;
+			header("Location: {$URL}");
+			break ;
+		}
+		
+		if ($result->rowCount()!=1) {
+			//Fail 2
+			$URL.="&updateReturn=fail2" ;
+			header("Location: {$URL}");
+		}
+		else {
+			//Set values
+			$data=array(); 
+			$set="" ;
+			if (isset($_POST["newinvoiceToOn"])) {
+				if ($_POST["newinvoiceToOn"]=="on") {
+					$data["invoiceTo"]=$_POST["newinvoiceTo"] ;
+					$set.="gibbonfinanceinvoicee.invoiceTo=:invoiceTo, " ;
+				}
+			}
+			if (isset($_POST["newcompanyNameOn"])) {
+				if ($_POST["newcompanyNameOn"]=="on") {
+					$data["companyName"]=$_POST["newcompanyName"] ;
+					$set.="gibbonfinanceinvoicee.companyName=:companyName, " ;
+				}
+			}
+			if (isset($_POST["newcompanyContactOn"])) {
+				if ($_POST["newcompanyContactOn"]=="on") {
+					$data["companyContact"]=$_POST["newcompanyContact"] ;
+					$set.="gibbonfinanceinvoicee.companyContact=:companyContact, " ;
+				}
+			}
+			if (isset($_POST["newcompanyAddressOn"])) {
+				if ($_POST["newcompanyAddressOn"]=="on") {
+					$data["companyAddress"]=$_POST["newcompanyAddress"] ;
+					$set.="gibbonfinanceinvoicee.companyAddress=:companyAddress, " ;
+				}
+			}
+			if (isset($_POST["newcompanyEmailOn"])) {
+				if ($_POST["newcompanyEmailOn"]=="on") {
+					$data["companyEmail"]=$_POST["newcompanyEmail"] ;
+					$set.="gibbonfinanceinvoicee.companyEmail=:companyEmail, " ;
+				}
+			}
+			if (isset($_POST["newcompanyCCFamilyOn"])) {
+				if ($_POST["newcompanyCCFamilyOn"]=="on") {
+					$data["companyCCFamily"]=$_POST["newcompanyCCFamily"] ;
+					$set.="gibbonfinanceinvoicee.companyCCFamily=:companyCCFamily, " ;
+				}
+			}
+			if (isset($_POST["newcompanyPhoneOn"])) {
+				if ($_POST["newcompanyPhoneOn"]=="on") {
+					$data["companyPhone"]=$_POST["newcompanyPhone"] ;
+					$set.="gibbonfinanceinvoicee.companyPhone=:companyPhone, " ;
+				}
+			}
+			if (isset($_POST["newcompanyAllOn"])) {
+				if ($_POST["newcompanyAllOn"]=="on") {
+					$data["companyAll"]=$_POST["newcompanyAll"] ;
+					$set.="gibbonfinanceinvoicee.companyAll=:companyAll, " ;
+				}
+			}
+			if (isset($_POST["newgibbonFinanceFeeCategoryIDListOn"])) {
+				if ($_POST["newgibbonFinanceFeeCategoryIDListOn"]=="on") {
+					$data["gibbonFinanceFeeCategoryIDList"]=$_POST["newgibbonFinanceFeeCategoryIDList"] ;
+					$set.="gibbonfinanceinvoicee.gibbonFinanceFeeCategoryIDList=:gibbonFinanceFeeCategoryIDList, " ;
+				}
+			}
+			
+			if (strlen($set)>1) {
+				//Write to database
+				try {
+					$data["gibbonFinanceInvoiceeID"]=$gibbonFinanceInvoiceeID ; 
+					$sql="UPDATE gibbonfinanceinvoicee SET " . substr($set,0,(strlen($set)-2)) . " WHERE gibbonFinanceInvoiceeID=:gibbonFinanceInvoiceeID" ;
+					$result=$connection2->prepare($sql);
+					$result->execute($data);
+				}
+				catch(PDOException $e) { 
+					//Fail 2
+					$URL.="&updateReturn=fail2" ;
+					header("Location: {$URL}");
+					break ;
+				}
+				
+				//Write to database
+				try {
+					$data=array("gibbonFinanceInvoiceeUpdateID"=>$gibbonFinanceInvoiceeUpdateID); 
+					$sql="UPDATE gibbonfinanceinvoiceeupdate SET status='Complete' WHERE gibbonFinanceInvoiceeUpdateID=:gibbonFinanceInvoiceeUpdateID" ;
+					$result=$connection2->prepare($sql);
+					$result->execute($data);
+				}
+				catch(PDOException $e) { 
+					//Fail 2
+					$URL.="&updateReturn=success1" ;
+					header("Location: {$URL}");
+					break ;
+				}
+				
+				//Success 0
+				$URL.="&updateReturn=success0" ;
+				header("Location: {$URL}");
+			}
+			else {
+				//Write to database
+				try {
+					$data=array("gibbonFinanceInvoiceeUpdateID"=>$gibbonFinanceInvoiceeUpdateID); 
+					$sql="UPDATE gibbonfinanceinvoiceeupdate SET status='Complete' WHERE gibbonFinanceInvoiceeUpdateID=:gibbonFinanceInvoiceeUpdateID" ;
+					$result=$connection2->prepare($sql);
+					$result->execute($data);
+				}
+				catch(PDOException $e) { 
+					//Fail 2
+					$URL.="&updateReturn=success1" ;
+					header("Location: {$URL}");
+					break ;
+				}
+				
+				//Success 0
+				$URL.="&updateReturn=success0" ;
+				header("Location: {$URL}");
+			}
+		}
+	}
+}
+?>

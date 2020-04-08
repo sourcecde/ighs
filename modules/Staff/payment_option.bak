@@ -1,0 +1,177 @@
+<?php 
+@session_start() ;
+
+//Set timezone from session variable
+date_default_timezone_set($_SESSION[$guid]["timezone"]);
+
+if (isActionAccessible($guid, $connection2, "/modules/Staff/staff_view_details.php")==FALSE) {
+	//Acess denied
+	print "<div class='error'>" ;
+		print _("You do not have access to this action.") ;
+	print "</div>" ;
+}
+else {
+	$mode='';
+	$month_f='';
+	$year_f='';
+	if(isset($_REQUEST['type'])){
+		$mode=$_REQUEST['type'];
+		$month_f=$_REQUEST['month'];
+		$year_f=$_REQUEST['year'];
+    }
+		$sql2="SELECT * FROM `gibbonschoolyear` ORDER BY `gibbonSchoolYearID` DESC";
+		$result2=$connection2->prepare($sql2);
+		$result2->execute();
+		$year=$result2->fetchAll();
+			$month_ar=array(3,2,1,12,11,10,9,8,7,6,5,4);
+			$month_name=array('January','February','March','April','May','June','July','August','September','October','November','December');
+	
+?>
+<h3>Print Payment Option: </h3>
+	<form  id="form_payment_option" action='<?php print $_SESSION[$guid]["absoluteURL"]?>/index.php'>
+	<input type="hidden" name="q" value="/modules/<?php print $_SESSION[$guid]["module"] ?>/payment_option.php">
+	<table width="80%" cellpadding="0" cellspacing="0" align='center'>
+		<tr>
+			<td><select name='type' required><option value=''> Select Type </option><option <?php echo $mode=='Cash'?'selected':''; ?>>Cash</option><option <?php echo $mode=='Cheque'?'selected':''; ?>>Cheque</option></select></td>
+			<td><select name='month' required>
+								<option value=''> Select Month </option>
+								<option value='4' <?php echo $month_f==4?'selected':''; ?>>April</option>
+								<option value='5' <?php echo $month_f==5?'selected':''; ?>>May</option>
+								<option value='6' <?php echo $month_f==6?'selected':''; ?>>June</option>
+								<option value='7' <?php echo $month_f==7?'selected':''; ?>>July</option>
+								<option value='8' <?php echo $month_f==8?'selected':''; ?>>August</option>
+								<option value='9' <?php echo $month_f==9?'selected':''; ?>>September</option>
+								<option value='10' <?php echo $month_f==10?'selected':''; ?>>October</option>
+								<option value='11' <?php echo $month_f==11?'selected':''; ?>>November</option>
+								<option value='12' <?php echo $month_f==12?'selected':''; ?>>December</option>
+								<option value='1' <?php echo $month_f==1?'selected':''; ?>>January</option>
+								<option value='2' <?php echo $month_f==2?'selected':''; ?>>February</option>
+								<option value='3' <?php echo $month_f==3?'selected':''; ?>>March</option>
+				</select></td>
+			<td><select name='year' required><option value=''> Select Year </option>
+					<?php foreach($year as $y){
+						$s=$y['gibbonSchoolYearID']==$year_f?'selected':'';
+						print "<option value='".$y['gibbonSchoolYearID']."' $s>".$y['name']."</option>";
+					}?>
+				</select></td>
+			<td><input  type='submit' value='Print' name='print-btn'></td>
+		</tr>
+	</table>
+	</form>
+<?php
+	if(isset($_REQUEST['print-btn'])){
+		$sql="SELECT gibbonstaff.gibbonStaffID,gibbonstaff.type,gibbonstaff.bank_ac,gibbonperson.preferredName FROM gibbonstaff
+				LEFT JOIN gibbonperson on gibbonperson.gibbonPersonID=gibbonstaff.gibbonPersonID 
+				 WHERE payment_mode='{$_REQUEST['type']}'";
+		$sql.=" ORDER BY gibbonstaff.priority";
+		$result=$connection2->prepare($sql);
+		$result->execute();
+		$staff=$result->fetchAll();
+		
+		$sql="SELECT * FROM `lakshyasalaryrule` ORDER BY `impact`";
+		$result=$connection2->prepare($sql);
+		$result->execute();
+		$rule=$result->fetchAll();
+		
+		$positive_rule=array();
+		$negative_rule=array();
+		foreach($rule as $r)
+		{
+			if($r['impact']=='+')
+				$positive_rule[]=$r;
+			else
+				$negative_rule[]=$r;
+		}
+		
+		$sql5="SELECT *,lakshyaSalaryMaster.* FROM lakshyasalarypayment
+				LEFT JOIN lakshyaSalaryMaster ON  lakshyaSalaryMaster.master_id=lakshyasalarypayment.master_id
+			WHERE 1";
+		$sql5.=" AND lakshyaSalaryMaster.month=".$month_f;
+		$sql5.=" AND lakshyaSalaryMaster.year_id=".$year_f;
+		$result5=$connection2->prepare($sql5);
+		$result5->execute();
+		$structure=$result5->fetchAll();
+		$structure_d=array();
+		foreach($structure as $s){
+			$structure_d[$s['staff_id']+0][$s['rule_id']+0]=$s['paid_amount'];
+		}
+		$sql6="SELECT * FROM `lakshyasalarymaster` WHERE `rule_id` IN (97,96)";
+		$sql6.=" AND month=".$month_f;
+		$sql6.=" AND year_id=".$year_f;
+		$result6=$connection2->prepare($sql6);
+		$result6->execute();
+		$structure=$result6->fetchAll();
+		foreach($structure as $s){
+			$pf_arr[$s['rule_id']+0]=$s['amount'];
+		} 
+		
+		echo "<div id='print_page' style='display:none'>";
+		?>
+			<table width="100%" cellpadding="2" cellspacing="0" border="0">
+				  <tr>
+					<th align="center" style="padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:25px; color:#000000;">Calcutta Public School, Ormanjhi</th>
+				  </tr>
+				  <tr>
+					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;">Ormanjhi, Ranchi</td>
+				  </tr>
+				  <tr>
+					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Jharkhand, Pin Code - 835219</td>
+				  </tr>
+				   <tr>
+				  </tr>
+				  <tr>
+				  </table>
+				  <br>
+		<?php
+		echo "<table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;'>";
+		echo "<tr style='border: 1px solid black; border-collapse: collapse;'>";
+			echo "<th>Staff</th>";
+			if($mode=='Cheque')
+				echo "<th>Bank a/c</th>";
+			echo "<th>Amount</th>";
+		echo "</tr>";
+		foreach($staff as $s){
+			if (!array_key_exists($s['gibbonStaffID']+0,$structure_d))
+				continue;
+			$p=0;
+			$n=0;
+				foreach($positive_rule as $r){
+					if (array_key_exists($r['rule_id']+0,$structure_d[$s['gibbonStaffID']+0])){
+						 $p+=$structure_d[$s['gibbonStaffID']+0][$r['rule_id']+0];	
+					}
+				}
+				foreach($negative_rule as $r){
+					if (array_key_exists($r['rule_id']+0,$structure_d[$s['gibbonStaffID']+0])){
+						 $n+=$structure_d[$s['gibbonStaffID']+0][$r['rule_id']+0];	
+					}
+				}
+		$pf=round($structure_d[$s['gibbonStaffID']+0][98]*$pf_arr['97']/100);
+				$n+=$pf;
+				$advance=$structure_d[$s['gibbonStaffID']+0][99];
+				$n+=$advance;
+				$esi=($structure_d[$s['gibbonStaffID']+0][98])<=21000?ceil(($structure_d[$s['gibbonStaffID']+0][98]+0)*($pf_arr['96']+0)/100):0;
+				$n+=$esi;
+				$total=$p-$n;
+						
+			echo "<tr style='border: 1px solid black; border-collapse: collapse;'>";
+				echo "<td style='border: 1px solid black; border-collapse: collapse;'>{$s['preferredName']}<br><small>{$s['type']}</small></td>";
+				if($mode=='Cheque')
+					echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>{$s['bank_ac']}</td>";
+				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>{$total}</td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+		echo "</div>";
+	?>
+	<script>
+	$(document).ready(function(){
+		var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
+		var html=$('#print_page').html();
+		$(w.document.body).html(html);
+		w.print();
+	})
+	</script>
+<?php	
+	}
+}
+?>

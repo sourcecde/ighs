@@ -1,0 +1,52 @@
+!Account 
+NCash 
+TCash 
+^ 
+!Type:Cash 
+D03-04-2015 
+T500.00 
+PCash Collection Admission Fee For Current Year 
+LINCOME:Admission Fee For CurrentYear 
+^ 
+!Type:Cash 
+D03-04-2015 
+T700.00 
+PCash Collection Computer Fee For Current Year 
+LINCOME:Computer Fee For CurrentYear 
+^ 
+!Type:Cash 
+D03-04-2015 
+T500.00 
+PCash Collection Computer Induction Fee For Current Year 
+LINCOME:Computer Induction Fee For CurrentYear 
+^ 
+!Type:Cash 
+D03-04-2015 
+T300.00 
+PCash Collection Celebration Fee For Current Year 
+LINCOME:Celebration Fee For CurrentYear 
+^ 
+!Type:Cash 
+D03-04-2015 
+T600.00 
+PCash Collection Examination Fee For Current Year 
+LINCOME:Examination Fee For CurrentYear 
+^ 
+!Type:Cash 
+D03-04-2015 
+T3000.00 
+PCash Collection Session Fee For Current Year 
+LINCOME:Session Fee For CurrentYear 
+^ 
+!Type:Cash 
+D03-04-2015 
+T7000.00 
+PCash Collection Tuition Fee For Current Year 
+LINCOME:Tuition Fee For CurrentYear 
+^ 
+!Type:Cash 
+D03-04-2015 
+T2700.00 
+PCash Collection Transport Fee For Current Year 
+LINCOME:Transport Fee For Current Year 
+^ 

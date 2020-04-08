@@ -1,0 +1,70 @@
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-03-2016 
+T1500.00 
+PActivity Charge (Upcoming Year)
+LADVANCE:Activity Charge (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-03-2016 
+T13200.00 
+PAdmission Fee (Upcoming Year)
+LADVANCE:Admission Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-03-2016 
+T200.00 
+PComputer Fee (Upcoming Year)
+LADVANCE:Computer Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-03-2016 
+T1000.00 
+PComputer Induction Fee (Upcoming Year)
+LADVANCE:Computer Induction Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-03-2016 
+T900.00 
+PCelebration Fee (Upcoming Year)
+LADVANCE:Celebration Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-03-2016 
+T500.00 
+PSession Fee (Upcoming Year)
+LADVANCE:Session Fee (Upcoming Year)
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-03-2016 
+T3200.00 
+PTuition Fee (Upcoming Year)
+LADVANCE:Tuition Fee (Upcoming Year)
+^ 

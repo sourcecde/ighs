@@ -1,0 +1,38 @@
+CHANGELOG
+=========
+v1.0.08
+-------
+Added Gibbon v8 compatibility
+
+v1.0.07
+-------
+Fixed sync issue on https hosts
+
+v1.0.06
+-------
+Fixed export content-shortening issue.
+
+v1.0.05
+-------
+Removed password related fields from queries
+
+v1.0.04
+-------
+Fixed PHP short tag issues
+
+v1.0.03
+-------
+Fixed export file name issue
+
+v1.0.02
+-------
+Fixed help issue
+
+v1.0.01
+-------
+Fixed memory leak in query export
+
+v1.0.00
+-------
+Settings for key to access gibbonedu.org queries
+Ability to access and run gibbonedu.org queries

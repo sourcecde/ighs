@@ -1,0 +1,1710 @@
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T3000.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T41000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T750.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T2500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T1800.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T21000.00 
+PHostel,Mess,Loundry
+LINCOME:Hostel,Mess,Loundry
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T7450.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T3600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T8700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T1200.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-03-2016 
+T600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T1500.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T9400.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T900.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T7300.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T2900.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-03-2016 
+T400.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T500.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T7000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T2000.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T7000.00 
+PHostel,Mess,Loundry
+LINCOME:Hostel,Mess,Loundry
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T41600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T1100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T490.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-03-2016 
+T18700.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T2000.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T26000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T1000.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T1200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T7200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T4200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T400.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-03-2016 
+T800.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T2500.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T21900.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T2000.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T1500.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T8700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T5400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T3600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-03-2016 
+T400.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T14500.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T42000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T1000.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T8700.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T55000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T4600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T19300.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T2100.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-03-2016 
+T7600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T18500.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T24400.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T1000.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T6000.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T11100.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T10500.00 
+PDay Boarding Charges
+LINCOME:Day Boarding Charges
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T66000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T11900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T1000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-03-2016 
+T4700.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T18000.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T37000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T1350.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T3500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T10800.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T60200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T6000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T22100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T120.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T1800.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-03-2016 
+T7800.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T2000.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T7000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T1200.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T7000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T2100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-03-2016 
+T3700.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T10000.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T55850.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T1200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T4500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T6000.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T7000.00 
+PDay Boarding Charges
+LINCOME:Day Boarding Charges
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T24500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T5900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T15100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T110.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T2000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-03-2016 
+T6800.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T5500.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T10000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T350.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T1000.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T3300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T20000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T3000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T4300.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T1000.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-03-2016 
+T1600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-03-2016 
+T500.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-03-2016 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-03-2016 
+T2000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-03-2016 
+T800.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T8000.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T42950.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T1450.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T3000.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T4800.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T21000.00 
+PHostel,Mess,Loundry
+LINCOME:Hostel,Mess,Loundry
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T20850.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T14200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T600.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-03-2016 
+T2500.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T3500.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T25500.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T1000.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T2100.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T9000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T5000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T5300.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T100.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T1500.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-03-2016 
+T2150.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2016 
+T1000.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2016 
+T12000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2016 
+T600.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2016 
+T2200.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2016 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-03-2016 
+T1300.00 
+PTransport
+LINCOME:Transport
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T1000.00 
+PActivity Charge
+LINCOME:Activity Charge
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T10200.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T250.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T600.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T3500.00 
+PDay Boarding Charges
+LINCOME:Day Boarding Charges
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T2000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T3200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-03-2016 
+T1800.00 
+PTransport
+LINCOME:Transport
+^ 

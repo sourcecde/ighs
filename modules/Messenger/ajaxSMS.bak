@@ -1,0 +1,43 @@
+<?php
+include "../../config.php" ;
+@session_start();
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+if($_POST){
+extract($_POST);
+if($action=='getSection'){
+	$sql="SELECT gibbonRollGroupID, name from gibbonrollgroup WHERE gibbonSchoolYearID=".$year_id;
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	//$return_message="<option value='all'>All</option>";
+	$return_message="";
+	while($section=$result->fetch())
+	{
+		$return_message.="<option value='".$section['gibbonRollGroupID']."'>".$section['name']."</option>";
+	}
+	header('Content-Type: application/json');
+	echo json_encode($return_message);
+}
+else if($action=='getRecipient'){
+	$sql="SELECT `lakshyasmsrecipients`.`phone`,`gibbonperson`.`preferredName` FROM `lakshyasmsrecipients` 
+	 LEFT JOIN `gibbonperson` ON `gibbonperson`.`gibbonPersonID`=`lakshyasmsrecipients`.`personID` 
+	 WHERE `SMSLogID`=$id";
+	 $result=$connection2->prepare($sql);
+	$result->execute();
+	$data=$result->fetchAll();
+	$return_message="<table width='100%'><tr><th>Recipient</th><th>Phone</th></tr>";
+	foreach($data as $d){
+		$return_message.="<tr><td>{$d['preferredName']}</td><td class='rightA'>{$d['phone']}</td></tr>";
+	}
+	$return_message.="</table>";
+	echo $return_message;
+	 
+}
+}
+ ?>

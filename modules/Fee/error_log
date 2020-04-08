@@ -1,0 +1,205 @@
+[19-Apr-2019 01:31:30 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'payment_date' in field list is ambiguous' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/headwise_collection_report_print.php:71
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/headwise_collection_report_print.php(71): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/headwise_collection_report_print.php on line 71
+[19-Apr-2019 01:31:34 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'payment_date' in field list is ambiguous' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/headwise_collection_report_print.php:71
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/headwise_collection_report_print.php(71): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/headwise_collection_report_print.php on line 71
+[27-Apr-2019 16:49:03 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php:22
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php on line 22
+[11-May-2019 16:12:25 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[11-May-2019 16:12:25 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[11-May-2019 13:42:25 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[11-May-2019 13:42:25 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[31-May-2019 13:36:10 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[31-May-2019 13:36:10 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[31-May-2019 11:06:10 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[31-May-2019 11:06:10 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[18-Jun-2019 14:06:02 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php:22
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php on line 22
+[18-Jun-2019 15:06:52 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[18-Jun-2019 15:06:52 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[18-Jun-2019 12:36:52 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[18-Jun-2019 12:36:52 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[20-Jun-2019 19:27:25 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[20-Jun-2019 19:27:25 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[25-Jun-2019 15:09:10 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[25-Jun-2019 15:09:10 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[27-Jun-2019 18:09:00 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php:22
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php on line 22
+[01-Jul-2019 14:57:38 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[01-Jul-2019 14:57:38 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[03-Jul-2019 14:46:49 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[03-Jul-2019 14:46:49 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[03-Jul-2019 12:16:49 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[03-Jul-2019 12:16:49 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[16-Jul-2019 16:02:02 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[16-Jul-2019 16:02:02 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[17-Jul-2019 14:16:46 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `gibbonrollgroup`.`gibbonYearGroupID`,`gibbonrollgroup`.`name`' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php:17
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php(17): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php on line 17
+[17-Jul-2019 14:16:47 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `gibbonrollgroup`.`gibbonYearGroupID`,`gibbonrollgroup`.`name`' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php:17
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php(17): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php on line 17
+[17-Jul-2019 18:48:02 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[17-Jul-2019 18:48:02 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[17-Jul-2019 16:18:02 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[17-Jul-2019 16:18:02 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[17-Jul-2019 18:49:25 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[17-Jul-2019 18:49:25 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[17-Jul-2019 16:19:25 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[17-Jul-2019 16:19:25 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[19-Jul-2019 12:12:31 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[19-Jul-2019 12:12:31 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[19-Jul-2019 09:42:31 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[19-Jul-2019 09:42:31 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[19-Jul-2019 12:19:26 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `gibbonrollgroup`.`gibbonYearGroupID`,`gibbonrollgroup`.`name`' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php:17
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php(17): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php on line 17
+[19-Jul-2019 12:19:26 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `gibbonrollgroup`.`gibbonYearGroupID`,`gibbonrollgroup`.`name`' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php:17
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php(17): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php on line 17
+[21-Jul-2019 22:39:03 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `gibbonrollgroup`.`gibbonYearGroupID`,`gibbonrollgroup`.`name`' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php:17
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php(17): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php on line 17
+[21-Jul-2019 22:39:03 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `gibbonrollgroup`.`gibbonYearGroupID`,`gibbonrollgroup`.`name`' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php:17
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php(17): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php on line 17
+[24-Jul-2019 14:34:32 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[24-Jul-2019 14:34:32 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[24-Jul-2019 12:04:32 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[24-Jul-2019 12:04:32 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[26-Jul-2019 15:20:54 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php:22
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php on line 22
+[26-Jul-2019 15:20:56 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php:22
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php on line 22
+[31-Jul-2019 22:00:09 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[31-Jul-2019 22:00:09 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[03-Aug-2019 14:12:33 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[03-Aug-2019 14:12:33 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[03-Aug-2019 11:42:33 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[03-Aug-2019 11:42:33 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[05-Aug-2019 14:07:26 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[05-Aug-2019 14:07:26 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[05-Aug-2019 11:37:26 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[05-Aug-2019 11:37:26 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[05-Aug-2019 14:26:31 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[05-Aug-2019 14:26:31 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[05-Aug-2019 11:56:31 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[05-Aug-2019 11:56:31 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[05-Aug-2019 15:56:44 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[05-Aug-2019 15:56:44 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[05-Aug-2019 13:26:44 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[05-Aug-2019 13:26:44 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[07-Aug-2019 14:53:40 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[07-Aug-2019 14:53:40 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[07-Aug-2019 12:23:40 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[07-Aug-2019 12:23:40 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[08-Aug-2019 13:54:50 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[08-Aug-2019 13:54:50 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[08-Aug-2019 11:24:50 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[08-Aug-2019 11:24:50 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[08-Aug-2019 15:08:02 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[08-Aug-2019 15:08:02 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[08-Aug-2019 12:38:02 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[08-Aug-2019 12:38:02 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[09-Aug-2019 14:07:47 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[09-Aug-2019 14:07:47 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[09-Aug-2019 11:37:47 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[09-Aug-2019 11:37:47 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[09-Aug-2019 14:33:19 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[09-Aug-2019 14:33:19 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[09-Aug-2019 12:03:19 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[09-Aug-2019 12:03:19 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[09-Aug-2019 15:06:34 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[09-Aug-2019 15:06:34 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[09-Aug-2019 12:36:34 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[09-Aug-2019 12:36:34 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[10-Aug-2019 13:45:13 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[10-Aug-2019 13:45:13 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[10-Aug-2019 11:15:13 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[10-Aug-2019 11:15:13 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[10-Aug-2019 13:45:20 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[10-Aug-2019 13:45:20 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[10-Aug-2019 11:15:20 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[10-Aug-2019 11:15:20 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[10-Aug-2019 13:52:09 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[10-Aug-2019 13:52:09 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[10-Aug-2019 11:22:09 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[10-Aug-2019 11:22:09 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[12-Aug-2019 17:20:57 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[12-Aug-2019 17:20:57 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[12-Aug-2019 17:24:05 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[12-Aug-2019 17:24:05 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[12-Aug-2019 17:27:15 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[12-Aug-2019 17:27:15 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[13-Aug-2019 18:16:21 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[13-Aug-2019 18:16:21 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[13-Aug-2019 15:46:21 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[13-Aug-2019 15:46:21 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[13-Aug-2019 21:03:31 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[13-Aug-2019 21:03:31 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[16-Aug-2019 11:40:33 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php:22
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_get_personid_by_accno.php on line 22
+[16-Aug-2019 14:25:10 Asia/Singapore] PHP Notice:  Undefined variable: section in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[16-Aug-2019 14:25:10 Asia/Singapore] PHP Warning:  Invalid argument supplied for foreach() in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/ajax_change_rollgroup.php on line 27
+[22-Aug-2019 13:51:33 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[22-Aug-2019 13:51:33 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[22-Aug-2019 11:21:33 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[22-Aug-2019 11:21:33 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[24-Aug-2019 14:22:25 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[24-Aug-2019 14:22:25 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[24-Aug-2019 11:52:25 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[24-Aug-2019 11:52:25 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[25-Aug-2019 16:56:24 Asia/Singapore] PHP Parse error:  syntax error, unexpected '}' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/concession_report_print.php on line 252
+[25-Aug-2019 16:57:12 Asia/Singapore] PHP Parse error:  syntax error, unexpected '}' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/concession_report_print.php on line 252
+[26-Aug-2019 02:36:49 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `gibbonrollgroup`.`gibbonYearGroupID`,`gibbonrollgroup`.`name`' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php:17
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php(17): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php on line 17
+[26-Aug-2019 02:36:49 Asia/Singapore] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `gibbonrollgroup`.`gibbonYearGroupID`,`gibbonrollgroup`.`name`' at line 1' in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php:17
+Stack trace:
+#0 /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php(17): PDOStatement->execute()
+#1 {main}
+  thrown in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/custom_ajax.php on line 17
+[26-Aug-2019 13:14:02 Asia/Singapore] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 116
+[26-Aug-2019 13:14:02 Asia/Singapore] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 119
+[26-Aug-2019 10:44:02 Asia/Kolkata] PHP Notice:  Undefined offset: 1 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 211
+[26-Aug-2019 10:44:02 Asia/Kolkata] PHP Notice:  Undefined offset: 2 in /home/hir/public_html/ezy/ighs.in/lakshya/ighs_lakshya_sr/modules/Fee/print_payment.php on line 214
+[07-Mar-2020 17:32:00 Asia/Singapore] PHP Fatal error:  Call to a member function prepare() on null in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/Fee/GenerateTallyCSV.php on line 190
+[07-Mar-2020 17:32:01 Asia/Singapore] PHP Fatal error:  Call to a member function prepare() on null in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/Fee/GenerateTallyCSV.php on line 190
+[07-Mar-2020 17:32:03 Asia/Singapore] PHP Fatal error:  Call to a member function prepare() on null in /home/hir/public_html/ezy/ighs.in/ighs_lakshya_sr/modules/Fee/GenerateTallyCSV.php on line 190

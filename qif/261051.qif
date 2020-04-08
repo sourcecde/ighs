@@ -1,0 +1,64 @@
+!Account 
+NCash in Wallet 
+TCash 
+^ 
+!Type:Cash 
+D01-10-2015 
+T100.00 
+PCash Collection Computer Fee For Current Year 
+LIncome:Computer Fee For Current Year 
+^ 
+!Type:Cash 
+D01-10-2015 
+T1000.00 
+PCash Collection  For Current Year 
+LIncome: For Current Year 
+^ 
+!Type:Cash 
+D01-01-1970 
+T 
+PCash Collection Fine For  Year 
+LIncome: For  Year 
+^ 
+!Type:Cash 
+D14-10-2015 
+T100.00 
+PCash Collection Computer Fee For Current Year 
+LIncome:Computer Fee For Current Year 
+^ 
+!Type:Cash 
+D14-10-2015 
+T100.00 
+PCash Collection Computer Fee For Upcoming Year 
+LIncome:Computer Fee For Upcoming Year 
+^ 
+!Type:Cash 
+D14-10-2015 
+T10100.00 
+PCash Collection  For Current Year 
+LIncome: For Current Year 
+^ 
+!Type:Cash 
+D01-01-1970 
+T 
+PCash Collection Fine For  Year 
+LIncome: For  Year 
+^ 
+!Type:Cash 
+D15-10-2015 
+T100.00 
+PCash Collection Computer Fee For Current Year 
+LIncome:Computer Fee For Current Year 
+^ 
+!Type:Cash 
+D15-10-2015 
+T1000.00 
+PCash Collection  For Upcoming Year 
+LIncome: For Upcoming Year 
+^ 
+!Type:Cash 
+D01-01-1970 
+T 
+PCash Collection Fine For  Year 
+LIncome: For  Year 
+^ 

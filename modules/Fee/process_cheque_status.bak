@@ -1,0 +1,188 @@
+<?php
+@session_start() ;
+include "../../config.php" ;
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+function generateVoucherNumber($connection2,$payment_date)
+{
+	$sql="SELECT count(*) as tableid FROM payment_master where payment_date='".$payment_date."' AND `voucher_number`!=0";
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$dboutbut=$result->fetch();
+	if($dboutbut['tableid']==0)
+	{
+		$tableid='001';
+	}
+	else 
+	{
+		$tableid=$dboutbut['tableid']+1;
+		$tableidlen=strlen($tableid);
+		switch ($tableidlen) {
+			case 1:
+				$tableid='00'.$tableid;
+			break;
+			
+			case 2:
+				$tableid='0'.$tableid;
+			break;
+			
+			case 3:
+				$tableid=$tableid;
+			break;
+		}
+	}
+	
+	$date=explode("-", $payment_date);
+	$voucharnumber=$date[2].$date[1].$tableid;
+	return $voucharnumber;
+}
+if(isset($_REQUEST)){
+	extract($_REQUEST);
+	if($action=='accept'){
+		try{
+		$sql1="UPDATE `cheque_master` SET `cheque_status_id` = '1' WHERE `cheque_master_id` = $id";
+		$result1=$connection2->prepare($sql1);
+		$result1->execute();
+		}
+		catch(PDOException $e) { 
+		echo $e;
+		}
+		try{
+			$sql1="SELECT `payment_master_id` FROM `cheque_master` WHERE `cheque_master_id` = $id";
+			$result1=$connection2->prepare($sql1);
+			$result1->execute();
+			$pID=$result1->fetch();
+		}
+		catch(PDOException $e) { 
+		echo $e;
+		}
+		try{
+			$sql1="SELECT * FROM `payment_master` WHERE `payment_master_id` IN (".$pID['payment_master_id'].")";
+			$result1=$connection2->prepare($sql1);
+			$result1->execute();
+			$payment_arr=$result1->fetchAll();
+		}
+		catch(PDOException $e) { 
+		echo $e;
+		}
+		foreach($payment_arr as $p){
+			if($p['voucher_number']==0){
+				$voucher_no=generateVoucherNumber($connection2,$p['payment_date']);
+				try{
+					$sql1="UPDATE `payment_master` SET `voucher_number` = $voucher_no WHERE `payment_master_id` =".$p['payment_master_id'];
+					$result1=$connection2->prepare($sql1);
+					$result1->execute();
+				}
+				catch(PDOException $e) { 
+					echo $e;
+				}
+			}
+		}
+		echo "Cheque Accepted";
+		
+	}
+	if($action=='reject'){
+		try{
+			$sql1="UPDATE `cheque_master` SET `cheque_status_id` = '-1',`reason`='$reason' WHERE `cheque_master_id` = $id";
+			$result1=$connection2->prepare($sql1);
+			$result1->execute();
+		}
+		catch(PDOException $e) { 
+			echo $e;
+		}
+		echo "Cheque Rejected";
+		try{
+			$sql="Select * from `cheque_master` where `cheque_master_id`=$id";
+			$result1=$connection2->prepare($sql);
+			$result1->execute();
+			$abc=$result1->fetchAll();
+		}
+		catch(PDOException $e) { 
+			echo $e;
+		}
+		$cStr="";
+		foreach($abc as $a){
+			$cStr=$a['payment_master_id'];
+		}
+		try{
+			$sql="Select * FROM `fee_payable` WHERE payment_master_id IN ($cStr) AND `rule_id`>0";
+			$resultFile=$connection2->prepare($sql);
+			$resultFile->execute();
+			$mData=$resultFile->fetch();
+		}
+		catch(PDOException $e) { echo $e;}
+		try {
+			$sqlFile="UPDATE `fee_payable` SET payment_staus='unpaid',payment_master_id=0,payment_date='0000-00-00' where payment_master_id IN ($cStr)";
+			$resultFile=$connection2->prepare($sqlFile);
+			$resultFile->execute();
+		}
+		catch(PDOException $e) { echo $e;}
+		try{
+			$sql="Select * FROM `fee_payable` WHERE `gibbonStudentEnrolmentID`={$mData['gibbonStudentEnrolmentID']} AND `month_no`={$mData['month_no']} AND `fee_type_master_id`=43";
+			$resultFile=$connection2->prepare($sql);
+			$resultFile->execute();
+			$bcRec=$resultFile->fetch();
+		}
+		catch(PDOException $e) { echo $e;}
+		if(empty($bcRec)){
+		if($bankCharge>0){
+		try {
+		$sqlFile="INSERT INTO `fee_payable` (`fee_payable_id`, `gibbonSchoolYearID`, `gibbonPersonID`, `gibbonStudentEnrolmentID`, `rule_id`, `fee_type_master_id`, `month_no`, `month_name`, `amount`, `concession`, `net_amount`, `payment_staus`, `fee_type_short_name`) VALUES (NULL, '{$mData['gibbonSchoolYearID']}', '{$mData['gibbonPersonID']}', '{$mData['gibbonStudentEnrolmentID']}', '0', '43', '{$mData['month_no']}', '{$mData['month_name']}' , '{$bankCharge}', '0.00', '{$bankCharge}', 'unpaid','BC')";
+		$resultFile=$connection2->prepare($sqlFile);
+		$resultFile->execute();
+		}
+		catch(PDOException $e) { echo $e;}
+		}
+		}
+		else{
+		try {
+		$sqlFile="UPDATE `fee_payable` SET `amount`=`amount`+{$bankCharge},`net_amount`=`net_amount`+{$bankCharge} WHERE `gibbonStudentEnrolmentID`='{$mData['gibbonStudentEnrolmentID']}' AND `month_no`='{$mData['month_no']}' AND `fee_type_master_id`=43";
+		$resultFile=$connection2->prepare($sqlFile);
+		$resultFile->execute();
+		}
+		catch(PDOException $e) { echo $e;}
+		}
+		try {
+			$sqlFile="UPDATE `transport_month_entry` SET payment_master_id=0 WHERE payment_master_id IN ($cStr)";
+			$resultFile=$connection2->prepare($sqlFile);
+			$resultFile->execute();
+		}
+		catch(PDOException $e) { echo $e;}
+		try {
+			$sqlFile="DELETE from  `fee_payable` where payment_master_id IN ($cStr) AND `rule_id`=0";
+			$resultFile=$connection2->prepare($sqlFile);
+			$resultFile->execute();
+		}
+		catch(PDOException $e) { echo $e;}
+		try {
+			$sqlFile="DELETE from  `payment_master` where payment_master_id IN ($cStr)";
+			$resultFile=$connection2->prepare($sqlFile);
+			$resultFile->execute();
+		}
+		catch(PDOException $e) { echo $e;}
+		try {
+			$sqlFile="UPDATE `cheque_master` SET payment_master_id=0 WHERE cheque_master_id=$id";
+			$resultFile=$connection2->prepare($sqlFile);
+			$resultFile->execute();
+		}
+		catch(PDOException $e) { echo $e;}
+	}
+	if($action=='pending'){
+		try{
+		$sql1="UPDATE `cheque_master` SET `cheque_status_id` = '0' WHERE `cheque_master_id` = $id";
+		$result1=$connection2->prepare($sql1);
+		$result1->execute();
+		}
+		catch(PDOException $e) { 
+		echo $e;
+		}
+		echo "Cheque marked as pending";
+	}
+}
+ ?>

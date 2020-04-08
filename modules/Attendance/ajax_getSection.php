@@ -1,0 +1,26 @@
+<?php
+include "../../config.php" ;
+	try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+	}
+	catch(PDOException $e) {
+
+	}
+	
+if($_POST)
+{
+	$year_id=$_REQUEST['yID'];
+	$sql="SELECT gibbonRollGroupID, name from gibbonrollgroup WHERE gibbonSchoolYearID=".$year_id;
+	$result=$connection2->prepare($sql);
+	$result->execute();
+	$return_message='';
+	while($section=$result->fetch())
+	{
+		$return_message.="<option value='".$section['gibbonRollGroupID']."'>".$section['name']."</option>";
+	}
+	header('Content-Type: application/json');
+	echo json_encode($return_message);
+}
+?>

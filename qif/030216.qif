@@ -1,0 +1,3770 @@
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-07-2015 
+T1000.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-07-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-07-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-07-2015 
+T15100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-07-2015 
+T300.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-07-2015 
+T6800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-07-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-07-2015 
+T9300.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-07-2015 
+T130.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-07-2015 
+T2500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-07-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-07-2015 
+T3900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-07-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-07-2015 
+T600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-07-2015 
+T1300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-07-2015 
+T13000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-07-2015 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-07-2015 
+T3200.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-07-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-07-2015 
+T13200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-07-2015 
+T120.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-07-2015 
+T2800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-07-2015 
+T2200.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-07-2015 
+T800.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-07-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-07-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-07-2015 
+T3000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-07-2015 
+T26000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-07-2015 
+T260.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-07-2015 
+T5800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-07-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-07-2015 
+T5600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-07-2015 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-07-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-07-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-07-2015 
+T300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-07-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-07-2015 
+T10200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-07-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-07-2015 
+T2000.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-07-2015 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-07-2015 
+T6700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-07-2015 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-07-2015 
+T2100.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-07-2015 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-07-2015 
+T12200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-07-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-07-2015 
+T3800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-07-2015 
+T1300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-07-2015 
+T19300.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-07-2015 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-07-2015 
+T6900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-07-2015 
+T1100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-07-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-07-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-07-2015 
+T28100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-07-2015 
+T130.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-07-2015 
+T5700.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-07-2015 
+T2500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-07-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-07-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-07-2015 
+T41100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-07-2015 
+T590.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-07-2015 
+T14400.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-07-2015 
+T2200.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-07-2015 
+T2500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-07-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-07-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-07-2015 
+T3000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-07-2015 
+T38500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-07-2015 
+T610.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-07-2015 
+T10350.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-07-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-07-2015 
+T18200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-07-2015 
+T340.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-07-2015 
+T5500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-07-2015 
+T2200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-07-2015 
+T25600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-07-2015 
+T360.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-07-2015 
+T3900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-07-2015 
+T2700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-07-2015 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-07-2015 
+T1800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-07-2015 
+T700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-07-2015 
+T600.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-07-2015 
+T1200.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-07-2015 
+T2500.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-07-2015 
+T13200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-07-2015 
+T130.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-07-2015 
+T1250.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-07-2015 
+T2200.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-07-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-07-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-07-2015 
+T3000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-07-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-07-2015 
+T300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-07-2015 
+T1200.00 
+PTransport Fee For 
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-07-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-07-2015 
+T300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-08-2015 
+T900.00 
+PTransport Fee For 
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-08-2015 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-08-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-08-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-08-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-08-2015 
+T900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-08-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-08-2015 
+T300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-08-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-08-2015 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-08-2015 
+T800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-08-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-08-2015 
+T3000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-08-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-08-2015 
+T800.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-08-2015 
+T11600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-08-2015 
+T3900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-08-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-08-2015 
+T20400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-08-2015 
+T5100.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-08-2015 
+T200.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-08-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-08-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-08-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-08-2015 
+T3000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-08-2015 
+T10100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-08-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-08-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-08-2015 
+T9600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D13-08-2015 
+T3700.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2015 
+T1300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2015 
+T22900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2015 
+T50.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-08-2015 
+T8500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-08-2015 
+T5400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-08-2015 
+T2600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-08-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-08-2015 
+T8400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-08-2015 
+T100.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-08-2015 
+T2800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-08-2015 
+T2700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-08-2015 
+T70.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-08-2015 
+T1300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-08-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-08-2015 
+T3000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-08-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-08-2015 
+T1200.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-08-2015 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-08-2015 
+T4900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-08-2015 
+T90.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-08-2015 
+T1300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-08-2015 
+T800.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-08-2015 
+T8900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-08-2015 
+T140.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-08-2015 
+T2700.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-08-2015 
+T1500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-08-2015 
+T29400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-08-2015 
+T590.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-08-2015 
+T11300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-08-2015 
+T5100.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-08-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-08-2015 
+T500.00 
+PComputer Induction Fee
+LINCOME:Computer Induction Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-08-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-08-2015 
+T600.00 
+PExamination Fee
+LINCOME:Examination Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-08-2015 
+T6000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-08-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-08-2015 
+T500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-08-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-08-2015 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-08-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D25-08-2015 
+T300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-08-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-08-2015 
+T4600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-08-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-08-2015 
+T1600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-08-2015 
+T300.00 
+PTransport Fee For 
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-09-2015 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-09-2015 
+T1800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-09-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-09-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-09-2015 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-09-2015 
+T3800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-09-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-09-2015 
+T1300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-09-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-09-2015 
+T1900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-09-2015 
+T400.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-09-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-09-2015 
+T2900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-09-2015 
+T1000.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-09-2015 
+T5400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-09-2015 
+T2300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-09-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-09-2015 
+T1900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-09-2015 
+T600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-09-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-09-2015 
+T3000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-09-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-09-2015 
+T800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-09-2015 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-09-2015 
+T6800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-09-2015 
+T2100.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-09-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-09-2015 
+T10500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-09-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D11-09-2015 
+T900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-09-2015 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-09-2015 
+T4000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-09-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-09-2015 
+T1300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-09-2015 
+T27400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-09-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-09-2015 
+T10900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-09-2015 
+T1200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-09-2015 
+T23700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-09-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-09-2015 
+T6900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-09-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-09-2015 
+T2900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-09-2015 
+T50.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-09-2015 
+T600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-09-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-09-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D18-09-2015 
+T500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-09-2015 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-09-2015 
+T4000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-09-2015 
+T70.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D22-09-2015 
+T1300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-09-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-09-2015 
+T6600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-09-2015 
+T50.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-09-2015 
+T2100.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-09-2015 
+T1800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-09-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-09-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-09-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-09-2015 
+T600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-09-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-09-2015 
+T10.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-10-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D01-10-2015 
+T900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-10-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-10-2015 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-10-2015 
+T1200.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-10-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-10-2015 
+T6600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-10-2015 
+T100.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-10-2015 
+T3100.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-10-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-10-2015 
+T6500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-10-2015 
+T70.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-10-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-10-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-10-2015 
+T4600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-10-2015 
+T30.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-10-2015 
+T1800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-10-2015 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-10-2015 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-10-2015 
+T800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-10-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-10-2015 
+T6400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-10-2015 
+T2800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-10-2015 
+T400.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-10-2015 
+T4000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-10-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-10-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-10-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-10-2015 
+T5600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-10-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D12-10-2015 
+T2000.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-10-2015 
+T1900.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-10-2015 
+T27100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-10-2015 
+T130.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-10-2015 
+T10100.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-10-2015 
+T1700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-10-2015 
+T28700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-10-2015 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D15-10-2015 
+T8500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-10-2015 
+T700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-10-2015 
+T14200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-10-2015 
+T230.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-10-2015 
+T4700.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-10-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-10-2015 
+T4800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-10-2015 
+T100.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D17-10-2015 
+T1700.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-10-2015 
+T1700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-10-2015 
+T22400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-10-2015 
+T280.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-10-2015 
+T6800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-10-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-10-2015 
+T7500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-10-2015 
+T130.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-10-2015 
+T3400.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-10-2015 
+T1000.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-10-2015 
+T13600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-10-2015 
+T200.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D28-10-2015 
+T4600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-10-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-10-2015 
+T5600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-10-2015 
+T90.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D29-10-2015 
+T1100.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-10-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-10-2015 
+T8200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-10-2015 
+T150.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-10-2015 
+T2000.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-10-2015 
+T1600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-10-2015 
+T30400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-10-2015 
+T460.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D31-10-2015 
+T5200.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-11-2015 
+T1600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-11-2015 
+T30400.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-11-2015 
+T460.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D02-11-2015 
+T7500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-11-2015 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-11-2015 
+T4900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-11-2015 
+T110.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D03-11-2015 
+T4200.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-11-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-11-2015 
+T3700.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-11-2015 
+T50.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D04-11-2015 
+T1800.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-11-2015 
+T3600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D05-11-2015 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-11-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-11-2015 
+T3900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D06-11-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-11-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-11-2015 
+T3900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D07-11-2015 
+T1600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-11-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-11-2015 
+T5600.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D09-11-2015 
+T1400.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-11-2015 
+T800.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-11-2015 
+T15200.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-11-2015 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D10-11-2015 
+T5900.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-11-2015 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-11-2015 
+T9500.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-11-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D14-11-2015 
+T5100.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-11-2015 
+T500.00 
+PActivity Charge (Upcoming Year) 
+LINCOME:Activity Charge (Upcoming Year) 
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-11-2015 
+T6000.00 
+PAdmission Fee
+LINCOME:Admission Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-11-2015 
+T300.00 
+PCelebration Fee
+LINCOME:Celebration Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-11-2015 
+T2000.00 
+PSession Fee
+LINCOME:Session Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-11-2015 
+T2800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D16-11-2015 
+T700.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-11-2015 
+T700.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-11-2015 
+T7900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-11-2015 
+T150.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D19-11-2015 
+T8400.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-11-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-11-2015 
+T3900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-11-2015 
+T60.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D20-11-2015 
+T600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-11-2015 
+T300.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-11-2015 
+T3900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-11-2015 
+T80.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D21-11-2015 
+T1400.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-11-2015 
+T200.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-11-2015 
+T2000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-11-2015 
+T40.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D23-11-2015 
+T600.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-11-2015 
+T900.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-11-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D24-11-2015 
+T300.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-11-2015 
+T100.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-11-2015 
+T1000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-11-2015 
+T20.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D26-11-2015 
+T400.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-11-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-11-2015 
+T6000.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-11-2015 
+T90.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D27-11-2015 
+T1500.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-11-2015 
+T500.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-11-2015 
+T22100.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-11-2015 
+T350.00 
+PFine
+LINCOME:Fine
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D30-11-2015 
+T6000.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 

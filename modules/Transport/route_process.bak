@@ -1,0 +1,53 @@
+<?php
+include "../../config.php" ;
+try {
+  	$connection2=new PDO("mysql:host=$databaseServer;dbname=$databaseName;charset=utf8", $databaseUsername, $databasePassword);
+	$connection2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$connection2->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+}
+catch(PDOException $e) {
+  echo $e->getMessage();
+}
+@session_start() ;
+if($_GET){
+if($_GET['event']=='delete')
+{
+	$id=$_REQUEST['route_id'];
+try {
+		$dataFile=array("id"=>$id); 
+		$sqlFile="DELETE from  transport_route where route_id=:id" ;
+		$resultFile=$connection2->prepare($sqlFile);
+		$resultFile->execute($dataFile);
+		header("Location: ".$_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/Transport/route_details.php");
+		}
+		catch(PDOException $e) { }
+}
+}
+if($_POST) {
+	if($_REQUEST['action']=='edit')
+	{
+		$id=$_REQUEST['id'];
+
+		$route=$_REQUEST['route'];
+
+		try{
+		$sql="UPDATE transport_route SET route='".$route."' WHERE route_id=".$id;
+		$result=$connection2->prepare($sql);
+		$result->execute();
+		}
+		catch(PDOException $e) {}
+	}
+		if($_REQUEST['action']=='add')
+	{
+
+		$route=$_REQUEST['route'];
+		$distance=$_REQUEST['distance'];
+
+		try{
+		$sql="INSERT INTO `transport_route` (`route_id`,`route`) VALUES (NULL,'".$route."')";
+		$result=$connection2->prepare($sql);
+		$result->execute();
+		}
+		catch(PDOException $e) {}
+	}
+}

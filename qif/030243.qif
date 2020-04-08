@@ -1,0 +1,30 @@
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-12-2015 
+T600.00 
+PComputer Fee
+LINCOME:Computer Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-12-2015 
+T7800.00 
+PTuition Fee
+LINCOME:Tuition Fee
+^ 
+!Account 
+NCash
+TCash
+^ 
+!Type:Cash 
+D08-12-2015 
+T2000.00 
+PTransport Fee
+LINCOME:Transport Fee
+^ 
