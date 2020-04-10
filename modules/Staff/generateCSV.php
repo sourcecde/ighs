@@ -4,7 +4,7 @@ if($_POST){
 
 extract($_POST);
 $data=json_decode($dataCSV,true);
-$header=array('Member ID','Member Name','EPF Wages','EPS Wages','EPF Contribution (EE Share) due	','EPF Contribution (EE Share) being remitted','EPS Contribution due','EPS Contribution being remitted','Diff EPF and EPS Contribution (ER Share) due','Diff EPF and EPS Contribution (ER Share) being remitted','NCP Days','Refund of Advances','Arrear EPF Wages','Arrear EPF EE Share','Arrear EPF ER Share','Arrear EPS Share','Father\'s/Husband\'s Name','Relationship with the Member','Date of Birth','Gender','Date of Joining EPF','Date of Joining EPS','Date of Exit from EPF','Date of Exit from EPS','Reason for leaving');
+$header=array('Member ID','Members Name','EPF Wages','EPS Wages','EPF Contribution (EE Share) due	','EPF Contribution (EE Share) being remitted','EPS Contribution due','EPS Contribution being remitted','Diff EPF and EPS Contribution (ER Share) due','Diff EPF and EPS Contribution (ER Share) being remitted','NCP Days','Refund of Advances','Arrear EPF Wages','Arrear EPF EE Share','Arrear EPF ER Share','Arrear EPS Share','Father\'s/Husband\'s Name','Relationship with the Member','Date of Birth','Gender','Date of Joining EPF','Date of Joining EPS','Date of Exit from EPF','Date of Exit from EPS','Reason for leaving');
 
 
 if (is_dir('../../ECR')==FALSE) {

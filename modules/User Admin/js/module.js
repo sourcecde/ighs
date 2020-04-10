@@ -253,12 +253,19 @@ $(document).ready(function(){
 		//alert(sectionName);
 		var admission=$('#edit_admission').val();
 		var updateUrl=$('#updateUrl').val();
+		var aadhar = $('#edit_aadhar').val();
+		var phone = $('#edit_phone').val();
+		var father = $('#edit_father').val();
+		var mother = $('#edit_mother').val();
+		var address = $('#edit_address').val();
 		if(roll!=''){
 		$.ajax
  		({
  			type: "POST",
  			url: updateUrl,
- 			data: {enrollID:enrollID, roll:roll,section:sectionID,account_no:account,admission:admission},
+ 			data: {enrollID:enrollID, roll:roll,section:sectionID,
+ 					account_no:account,admission:admission,aadhar:aadhar,
+ 					phone:phone,father:father,mother:mother,address:address},
  			success: function(msg)
  			{
 				var msg1=msg.split('_');

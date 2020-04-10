@@ -136,6 +136,9 @@ else {
 				  </tr>
 	<tr>
 		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Salary For  the Month: <?php echo $month_name[($month_f-1)];?> of Year: <?php echo $y['name'];?></td>
+	</tr>
+	<tr>
+		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Group: <?php if($staff_type == 1){echo "Senior Section";}else{echo "Junior Section";}?></td>
 	</tr>	
 				  
 				   <tr>

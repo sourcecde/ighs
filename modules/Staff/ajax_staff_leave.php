@@ -40,7 +40,7 @@ if($_POST){
 			
 			$sql="SELECT gibbonstaff.*,staff_type.staff_type from gibbonstaff   
 			left Join staff_type on staff_type.id=gibbonstaff.staff_type WHERE
-			gibbonstaff.status='Full'  ORDER BY gibbonstaff.priority" ;
+			gibbonstaff.status='Left' and gibbonstaff.dateEnd != 'NULL'  ORDER BY gibbonstaff.priority" ;
 			$result=$connection2->prepare($sql);
 			$result->execute($data);
 		}
@@ -73,11 +73,11 @@ if($_POST){
 					//	print "<span style='font-size: 85%; font-style: italic'>" . _('Initials') . "</span>" ;
 					print "</th>" ;
 					print "<th>" ;
-						print _("Staff Type") ;
+						print _("DOL") ;
 					print "</th>" ;
 					
 					print "<th>" ;
-						print _("Designation") ;
+						print _("Reason") ;
 					print "</th>" ;
 					
 				/*	print "<th>" ;
@@ -135,11 +135,20 @@ if($_POST){
 							//print "<span style='font-size: 85%; font-style: italic'>" . $row["initials"] . "</span>" ;
 						print "</td>" ;
 						print "<td>" ;
-							print $row["staff_type"] ;
+							print $row["dateEnd"] ;
 						print "</td>" ;
 						
 						print "<td>" ;
-							print $row["jobTitle"] ;
+							if($row["reasonOfLeaving"] == "C")
+							print "Cessation" ;
+							if($row["reasonOfLeaving"] == "S")
+							print "Superannuation" ;
+							if($row["reasonOfLeaving"] == "R")
+							print "Retirement" ;
+							if($row["reasonOfLeaving"] == "D")
+							print "Death in Service" ;
+							if($row["reasonOfLeaving"] == "P")
+							print "Permanent Disablement" ;
 						print "</td>" ;
 					/*	print "<td>" ;
 							print $row["jobTitle"] ;

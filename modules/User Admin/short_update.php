@@ -197,10 +197,10 @@ catch(PDOException $e) {
 			}				
 }
 ?>
-<input type='hidden' id='updateUrl' value='<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/changeRollNumberProcess.php";?>'>
+<input type='hidden' id='updateUrl' value='<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/short_update_process.php";?>'>
 <div id='hide_body'style='background-color :rgba(0,0,0, 0.7); width:100%; height:100%; position:fixed; left:0px; top:0px; z-index:100; display:none;'>
  </div>
-<div  id='modal_roll_edit' class='cModal' style="position:fixed; left:500px; top:250px; z-index:200; border:1px; padding:5px 10px; background-color :rgba(0,0,0, 0.6); color:white; width:400px; display:none;">
+<div  id='modal_roll_edit' class='cModal' style="position:fixed; left:500px; top:115px; z-index:200; border:1px; padding:5px 10px; background-color :rgba(0,0,0, 0.6); color:white; width:400px; display:none;">
 <div style="margin:20px;">
 <input type='hidden' id='enrollID' value=''>
 <span id="e_name" style="float: left"></span><br><br><br>
@@ -215,6 +215,11 @@ catch(PDOException $e) {
 							</select><br><br><br>
 <span style='float: left'>Account No:</span> <input type='text' id='edit_account' style='width:180px;'><br><br><br>
 <span style='float: left'>Admission No:</span> <input type='text' id='edit_admission' style='width:180px;'><br><br><br>
+<span style='float: left'>Aadhar No:</span> <input type='text' id='edit_aadhar' style='width:180px;'><br><br><br>
+<span style='float: left'>Phone No:</span> <input type='text' id='edit_phone' style='width:180px;'><br><br><br>
+<span style='float: left'>Father's name:</span> <input type='text' id='edit_father' style='width:180px;'><br><br><br>
+<span style='float: left'>Mother's name:</span> <input type='text' id='edit_mother' style='width:180px;'><br><br><br>
+<span style='float: left'>Address:</span> <input type='text' id='edit_address' style='width:180px;'><br><br><br>
 <center>
 <button id='editRollNo' style='border:1px; padding:10px; background:#ff731b; color:white;'>Add</button>
 <button class='mClose' style='border:1px; padding:10px; background:#ff731b; color:white;'>Close</button>
