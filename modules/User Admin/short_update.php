@@ -200,7 +200,7 @@ catch(PDOException $e) {
 <input type='hidden' id='updateUrl' value='<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/short_update_process.php";?>'>
 <div id='hide_body'style='background-color :rgba(0,0,0, 0.7); width:100%; height:100%; position:fixed; left:0px; top:0px; z-index:100; display:none;'>
  </div>
-<div  id='modal_roll_edit' class='cModal' style="position:fixed; left:500px; top:115px; z-index:200; border:1px; padding:5px 10px; background-color :rgba(0,0,0, 0.6); color:white; width:400px; display:none;">
+<div  id='modal_roll_edit' class='cModal' style="position:fixed; left:500px; top:45px; z-index:200; border:1px; padding:5px 10px; background-color :rgba(0,0,0, 0.6); color:white; width:400px; display:none;">
 <div style="margin:20px;">
 <input type='hidden' id='enrollID' value=''>
 <span id="e_name" style="float: left"></span><br><br><br>

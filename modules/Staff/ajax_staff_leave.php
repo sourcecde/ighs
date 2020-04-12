@@ -40,7 +40,7 @@ if($_POST){
 			
 			$sql="SELECT gibbonstaff.*,staff_type.staff_type from gibbonstaff   
 			left Join staff_type on staff_type.id=gibbonstaff.staff_type WHERE
-			gibbonstaff.status='Left' and gibbonstaff.dateEnd != 'NULL'  ORDER BY gibbonstaff.priority" ;
+			gibbonstaff.status='Left' AND gibbonstaff.dateEnd!='NULL'  ORDER BY gibbonstaff.priority" ;
 			$result=$connection2->prepare($sql);
 			$result->execute($data);
 		}
@@ -73,11 +73,11 @@ if($_POST){
 					//	print "<span style='font-size: 85%; font-style: italic'>" . _('Initials') . "</span>" ;
 					print "</th>" ;
 					print "<th>" ;
-						print _("DOL") ;
+						print _("Datew of Leaving") ;
 					print "</th>" ;
 					
 					print "<th>" ;
-						print _("Reason") ;
+						print _("Reason of Leaving") ;
 					print "</th>" ;
 					
 				/*	print "<th>" ;
@@ -85,8 +85,8 @@ if($_POST){
 					print "</th>" ;
 				*/	
 					print "<th>" ;
-						print _("Actions | ") ;
-						print "<a style='font-weight: bold;' href='".$_SESSION[$guid]["absoluteURL"]."/index.php?q=/modules/".$_SESSION[$guid]["module"]."/staff_info.php'><span >Add</span></a> " ; 
+						print _("Actions") ;
+						print "<a style='font-weight: bold;' href='".$_SESSION[$guid]["absoluteURL"]."/index.php?q=/modules/".$_SESSION[$guid]["module"]."/staff_info.php'></a> " ; 
 					    print "</th>" ;
 				print "</tr>" ;
 				print "</thead>" ;
@@ -139,15 +139,15 @@ if($_POST){
 						print "</td>" ;
 						
 						print "<td>" ;
-							if($row["reasonOfLeaving"] == "C")
+							if($row["reasonOfLeaving"] == 'C')
 							print "Cessation" ;
-							if($row["reasonOfLeaving"] == "S")
+							if($row["reasonOfLeaving"] == 'S')
 							print "Superannuation" ;
-							if($row["reasonOfLeaving"] == "R")
+							if($row["reasonOfLeaving"] == 'R')
 							print "Retirement" ;
-							if($row["reasonOfLeaving"] == "D")
+							if($row["reasonOfLeaving"] == 'D')
 							print "Death in Service" ;
-							if($row["reasonOfLeaving"] == "P")
+							if($row["reasonOfLeaving"] == 'P')
 							print "Permanent Disablement" ;
 						print "</td>" ;
 					/*	print "<td>" ;
@@ -156,8 +156,8 @@ if($_POST){
 					*/	
 						print "<td>" ;
 							//print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/staff_view_details.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img title='" . _('View Details') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/plus.png'/></a> " ;
-					        print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/staff_details_edit.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img title='" . _('Edit Details') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/config.png'/></a> " ;
-					        print "  |<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/staff_view.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img id='delete_staff' style='height: 7%' title='" . _('Delete') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/delete-button.jpg'/></a>" ;
+					        print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/left_employee_edit.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img title='" . _('Edit Details') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/config.png'/></a> " ;
+					        // print "  |<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/staff_view.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img id='delete_staff' style='height: 7%' title='" . _('Delete') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/delete-button.jpg'/></a>" ;
 					        
 						print "</td>" ;
 					print "</tr>" ;

@@ -23,13 +23,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 	$sql="UPDATE `gibbonperson` SET `status`='Left' WHERE `gibbonPersonID` IN (SELECT `gibbonPersonID` FROM `gibbonstaff` WHERE 1) AND `gibbonperson`.`dateEnd`<'".date('Y-m-d')."'";
 	$result=$connection2->prepare($sql);
 	$result->execute();
-if (isActionAccessible($guid, $connection2, "/modules/Staff/staff_view.php")==FALSE) {
-	//Acess denied
-	print "<div class='error'>" ;
-		print _("You do not have access to this action.") ;
-	print "</div>" ;
-}
-else {
+// if (isActionAccessible($guid, $connection2, "/modules/Staff/manage_left_employee.php")==FALSE) {
+// 	//Acess denied
+// 	print "<div class='error'>" ;
+// 		print _("You do not have access to this action.") ;
+// 	print "</div>" ;
+// }
+///else {
 	//Get action with highest precendence
 	// $highestAction=getHighestGroupedAction($guid, $_GET["q"], $connection2) ;
 	// if ($highestAction==FALSE) {
@@ -55,7 +55,7 @@ else {
 		print "<h2>" ;
 		print _("Manage Left Employee: ") ;
 		print "</h2>" ;
-		echo "<br><b style='float:left; color:black'>Including Left: </b><input type='checkbox' name='left' id='left' style='float:left'><br><br>";
+		echo "<br><b style='float:left; color:black'><a href=".'index.php?q=/modules/Staff/staff_left_add.php'.">Add Left Employee </a></b><br><br>";
 		//Set pagination variable
 		$page=1 ; if (isset($_GET["page"])) { $page=$_GET["page"] ; }
 		if ((!is_numeric($page)) OR $page<1) {
@@ -65,7 +65,7 @@ else {
 	//}
 	
 	
-}
+//}
 ?>
 <input type="hidden" id="linkURL" value="<?php echo $_SESSION[$guid]["absoluteURL"] ;?>/modules/Staff/ajax_staff_leave.php">
  <script src="<?php echo $_SESSION[$guid]["absoluteURL"] ;?>/modules/Staff/js/jquery.dataTables.min.js"></script>
