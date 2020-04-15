@@ -65,14 +65,13 @@ else {
 	</table>
 	<table width="80%" cellpadding="0" cellspacing="0" align='center'>
 		<tr>
-			<td><input type="checkbox" id="vehicle1" name="vehicle1" 
-				onclick="CheckAll('box1', this)" >
+			<td><input type="checkbox" id="staffName" name="staffName" onclick="CheckPowerAll()">
 				<th>Staff Name</th>
 			</td>
 		</tr>
 		<?php foreach($staff as $s){?>
 		<tr>
-			<td><input type="checkbox" id="staff_id" name="staff_id" value="<?php echo $s['gibbonStaffID'];?>" class="box1">
+			<td><input type="checkbox" id="staff_id" name="staff_id" value="<?php echo $s['gibbonStaffID'];?>">
 				<th><?php echo $s['preferredName'];?></th>
 			</td>
 		</tr>
@@ -202,7 +201,7 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 		echo "</table>";
 		echo "</div>";
 	?>
-	<script>
+<script type="text/javascript">
 	$(document).ready(function(){
 		var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
 		var html=$('#print_page').html();
@@ -227,22 +226,23 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 	//console.log(sumVal);
 	document.getElementById('total_value').innerHTML = sumVal;
 
-	function CheckAll(className, elem) {
-		alert('mimi');
-        var elements = document.getElementsByClassName(className);
-        var l = elements.length;
+	function CheckPowerAll() {
+		alert('frdf');
+    // var elements = document.getElementsByName("staff_id");
+    // var l = elements.length;
 
-        if (elem.checked) {
-            for (var i = 0; i < l; i++) {
-                elements[i].checked = true;
-            }
-        } else {
-            for (var i = 0; i < l; i++) {
-                elements[i].checked = false;
-            }
-        }
-    }
-	</script>
+    // if (document.getElementById("staffName").checked) {
+    //     for (var i = 0; i < l; i++) {
+    //         elements[i].checked = true;
+    //     }
+    // } else {
+    //     for (var i = 0; i < l; i++) {
+    //         elements[i].checked = false;
+    //     }
+    // }
+}
+
+</script>
 <?php	
 	}
 }

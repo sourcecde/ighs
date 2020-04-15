@@ -23,7 +23,7 @@ catch(PDOException $e) {
   echo $e->getMessage();
 }
 try {
-  	$sql="UPDATE `gibbonperson` SET `admission_number`='$admission', `nationalIDCardNumber` = '$aadhar', `phone1` = '$phone', `fatherName` = '$father', `mothername` = 'mother', `address1`='$address' WHERE `gibbonPersonID`=(SELECT `gibbonPersonID` FROM `gibbonstudentenrolment` WHERE `gibbonStudentEnrolmentID`=$enrollID)" ;
+  	$sql="UPDATE `gibbonperson` SET `admission_number`='$admission', `nationalIDCardNumber` = '$aadhar', `phone1` = '$phone', `fatherName` = '$father', `mothername` = '$mother', `address1`='$address' WHERE `gibbonPersonID`=(SELECT `gibbonPersonID` FROM `gibbonstudentenrolment` WHERE `gibbonStudentEnrolmentID`=$enrollID)" ;
 	$result=$connection2->prepare($sql);
 	$result->execute();
 }
@@ -50,7 +50,7 @@ if($result1->rowCount()==0){
 	}
 	if($result2->rowCount()==0){
 		try {
-			echo $sql="UPDATE `gibbonperson` SET `account_number`='$account_no' WHERE `gibbonPersonID`=(SELECT `gibbonPersonID` FROM `gibbonstudentenrolment` WHERE `gibbonStudentEnrolmentID`=$enrollID)" ;
+			$sql="UPDATE `gibbonperson` SET `account_number`='$account_no' WHERE `gibbonPersonID`=(SELECT `gibbonPersonID` FROM `gibbonstudentenrolment` WHERE `gibbonStudentEnrolmentID`=$enrollID)" ;
 			$result=$connection2->prepare($sql);
 			$result->execute();
 		}

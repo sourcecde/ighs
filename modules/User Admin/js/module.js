@@ -215,9 +215,16 @@ $(document).ready(function(){
 		var className=$('#Class_'+enrollID).text();
 		var edate=$('#EDate_'+enrollID).text();
 		var account=$('#Account_'+enrollID).text();
-		var admission=$('#Admission_'+enrollID).text();
+		var admission=document.getElementById('Admission_'+enrollID).value;
+		var phone=$('#Phone_'+enrollID).text();
+		var aadhar=document.getElementById('Aadhar_'+enrollID).value;
+		var father=document.getElementById('Father_'+enrollID).value;
+		var mother=document.getElementById('Mother_'+enrollID).value;
+		var address=document.getElementById('Address_'+enrollID).value;
 		var url=$("#rollGroupURL").val();
 		var yearID=$("#filterYear").val();
+		// var test = document.getElementById('prodId').value;
+		// console.log(test);
 		$('#e_name').text(name);
 		$('#enrollID').val(enrollID);
 		$('#edit_name').val(name);
@@ -227,9 +234,15 @@ $(document).ready(function(){
 		$("."+yearGroupID).show();
 		//$("#edit_section option[value='"+sectionID+"']").attr("selected","selected");
 		console.log(sectionID);
+		console.log(admission);
 		$('#edit_edate').val(edate);
 		$('#edit_admission').val(admission);
 		$('#edit_account').val(account);
+		$('#edit_phone').val(phone);
+		$('#edit_aadhar').val(aadhar);
+		$('#edit_father').val(father);
+		$('#edit_mother').val(mother);
+		$('#edit_address').val(address);
 		$('#hide_body').show();
 		$('#modal_roll_edit').show();
 		$.ajax({

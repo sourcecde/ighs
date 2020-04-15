@@ -90,7 +90,7 @@ else {
 <?php	
 try {
 	$data=array("gibbonSchoolYearID"=>$filterYear);
-	$sql="SELECT gibbonperson.gibbonPersonID, status, gibbonStudentEnrolmentID, surname, preferredName,officialName,gibbonstudentenrolment.gibbonYearGroupID, gibbonperson.boarder,`gibbonperson`.`phone1`,`gibbonperson`.`admission_number`,`gibbonperson`.`enrollment_date`, gibbonyeargroup.name AS yearGroup, gibbonrollgroup.nameShort AS rollGroup,`gibbonstudentenrolment`.`gibbonRollGroupID`,account_number,gibbonstudentenrolment.rollOrder FROM gibbonperson, gibbonstudentenrolment, gibbonyeargroup, gibbonrollgroup WHERE (gibbonperson.gibbonPersonID=gibbonstudentenrolment.gibbonPersonID) AND (gibbonstudentenrolment.gibbonYearGroupID=gibbonyeargroup.gibbonYearGroupID) AND (gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID) AND gibbonstudentenrolment.gibbonSchoolYearID={$filterYear} AND (dateStart IS NULL OR dateStart<='" . date("Y-m-d") . "') AND (dateEnd IS NULL  OR dateEnd>='" . date("Y-m-d") . "') AND gibbonperson.status='Full'";
+	$sql="SELECT gibbonperson.gibbonPersonID, status, gibbonStudentEnrolmentID, surname, preferredName,officialName,nationalIDCardNumber,fatherName,mothername,address1,gibbonstudentenrolment.gibbonYearGroupID, gibbonperson.boarder,`gibbonperson`.`phone1`,`gibbonperson`.`admission_number`,`gibbonperson`.`enrollment_date`, gibbonyeargroup.name AS yearGroup, gibbonrollgroup.nameShort AS rollGroup,`gibbonstudentenrolment`.`gibbonRollGroupID`,account_number,gibbonstudentenrolment.rollOrder FROM gibbonperson, gibbonstudentenrolment, gibbonyeargroup, gibbonrollgroup WHERE (gibbonperson.gibbonPersonID=gibbonstudentenrolment.gibbonPersonID) AND (gibbonstudentenrolment.gibbonYearGroupID=gibbonyeargroup.gibbonYearGroupID) AND (gibbonstudentenrolment.gibbonRollGroupID=gibbonrollgroup.gibbonRollGroupID) AND gibbonstudentenrolment.gibbonSchoolYearID={$filterYear} AND (dateStart IS NULL OR dateStart<='" . date("Y-m-d") . "') AND (dateEnd IS NULL  OR dateEnd>='" . date("Y-m-d") . "') AND gibbonperson.status='Full'";
 	$sql.=$sqlFilter;
 	$sql.=" ORDER BY  account_number" ;
 	$result=$connection2->prepare($sql);
@@ -187,20 +187,28 @@ catch(PDOException $e) {
 								print "<span id='Phone_{$row['gibbonStudentEnrolmentID']}'>".$row["phone1"]."</span>" ;
 							print "</td>" ;
 							print "<td>" ;
+							echo "<input id='Admission_{$row['gibbonStudentEnrolmentID']}' name='Admission_{$row['gibbonStudentEnrolmentID']}' type='hidden' value='".$row["admission_number"]."'>";
+							echo "<input id='Aadhar_{$row['gibbonStudentEnrolmentID']}' name='Aadhar_{$row['gibbonStudentEnrolmentID']}' type='hidden' value='".$row["nationalIDCardNumber"]."'>";
+							echo "<input id='Father_{$row['gibbonStudentEnrolmentID']}' name='Father_{$row['gibbonStudentEnrolmentID']}' type='hidden' value='".$row["fatherName"]."'>";
+							echo "<input id='Mother_{$row['gibbonStudentEnrolmentID']}' name='Mother_{$row['gibbonStudentEnrolmentID']}' type='hidden' value='".$row["mothername"]."'>";
+							echo "<input id='Address_{$row['gibbonStudentEnrolmentID']}' name='Address_{$row['gibbonStudentEnrolmentID']}' type='hidden' value='".$row["address1"]."'>";
 								print "<span class='editRoll' id='{$row['gibbonStudentEnrolmentID']}'><img title='" . _('Edit Roll No') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/config.png'/></span>";
 							print "</td>" ;
 						print "</tr>" ;
+						
 					}
 					print "</tbody>";
 				print "</table>" ;
 				
 			}				
 }
+
+// echo "<button id='btnload'>aaa</button>";
 ?>
 <input type='hidden' id='updateUrl' value='<?php echo $_SESSION[$guid]["absoluteURL"] . "/modules/" . $_SESSION[$guid]["module"] . "/short_update_process.php";?>'>
 <div id='hide_body'style='background-color :rgba(0,0,0, 0.7); width:100%; height:100%; position:fixed; left:0px; top:0px; z-index:100; display:none;'>
  </div>
-<div  id='modal_roll_edit' class='cModal' style="position:fixed; left:500px; top:45px; z-index:200; border:1px; padding:5px 10px; background-color :rgba(0,0,0, 0.6); color:white; width:400px; display:none;">
+<div  id='modal_roll_edit' class='cModal' style="position:fixed; left:275px; top:40px; z-index:200; border:1px; padding:5px 10px; background-color :rgba(0,0,0, 0.6); color:white; width:400px; display:none;">
 <div style="margin:20px;">
 <input type='hidden' id='enrollID' value=''>
 <span id="e_name" style="float: left"></span><br><br><br>
@@ -267,5 +275,12 @@ catch(PDOException $e) {
 			});
 		});
 	});
+// 	 $(document).ready(function () {
+//     $("#btnload").click(function () {
+//     	alert('sss');
+//         alert(document.getElementById('prodId').value);
+//     });
+// });
  </script>
+
  
