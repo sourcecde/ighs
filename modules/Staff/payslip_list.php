@@ -197,7 +197,6 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>Total</td>";
 				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'><span id='total_value'></span></td>";
 			echo "</tr>";
-
 		echo "</table>";
 		echo "</div>";
 	?>
@@ -228,18 +227,18 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 
 	function CheckPowerAll() {
 		alert('frdf');
-    // var elements = document.getElementsByName("staff_id");
-    // var l = elements.length;
+    var elements = document.getElementsByName("staff_id");
+    var l = elements.length;
 
-    // if (document.getElementById("staffName").checked) {
-    //     for (var i = 0; i < l; i++) {
-    //         elements[i].checked = true;
-    //     }
-    // } else {
-    //     for (var i = 0; i < l; i++) {
-    //         elements[i].checked = false;
-    //     }
-    // }
+    if (document.getElementById("staffName").checked) {
+        for (var i = 0; i < l; i++) {
+            elements[i].checked = true;
+        }
+    } else {
+        for (var i = 0; i < l; i++) {
+            elements[i].checked = false;
+        }
+    }
 }
 
 </script>
