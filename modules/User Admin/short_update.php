@@ -192,7 +192,7 @@ catch(PDOException $e) {
 							echo "<input id='Father_{$row['gibbonStudentEnrolmentID']}' name='Father_{$row['gibbonStudentEnrolmentID']}' type='hidden' value='".$row["fatherName"]."'>";
 							echo "<input id='Mother_{$row['gibbonStudentEnrolmentID']}' name='Mother_{$row['gibbonStudentEnrolmentID']}' type='hidden' value='".$row["mothername"]."'>";
 							echo "<input id='Address_{$row['gibbonStudentEnrolmentID']}' name='Address_{$row['gibbonStudentEnrolmentID']}' type='hidden' value='".$row["address1"]."'>";
-								print "<span class='editRoll' id='{$row['gibbonStudentEnrolmentID']}'><img title='" . _('Edit Roll No') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/config.png'/></span>";
+								print "<span class='editRollshortUpdate' id='{$row['gibbonStudentEnrolmentID']}'><img title='" . _('Edit Roll No') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/config.png'/></span>";
 							print "</td>" ;
 						print "</tr>" ;
 						

@@ -19,6 +19,8 @@ else {
 		//$mode=$_REQUEST['type'];
 		$month_f=$_REQUEST['month'];
 		$year_f=$_REQUEST['year'];
+
+
 		//$staff_type = $_REQUEST['staff_type'];
     }
 		$sql="SELECT * FROM `gibbonschoolyear` ORDER BY `gibbonSchoolYearID` ";
@@ -65,13 +67,13 @@ else {
 	</table>
 	<table width="80%" cellpadding="0" cellspacing="0" align='center'>
 		<tr>
-			<td><input type="checkbox" id="staffName" name="staffName" onclick="CheckPowerAll()">
+			<td><input type="checkbox" id="staffName" name="staffName" onclick="checkAll()">
 				<th>Staff Name</th>
 			</td>
 		</tr>
 		<?php foreach($staff as $s){?>
 		<tr>
-			<td><input type="checkbox" id="staff_id" name="staff_id" value="<?php echo $s['gibbonStaffID'];?>">
+			<td><input type="checkbox" id="staff_id" name="staffID[]" value="<?php echo $s['gibbonStaffID'];?>">
 				<th><?php echo $s['preferredName'];?></th>
 			</td>
 		</tr>
@@ -83,26 +85,24 @@ else {
 
 	if(isset($_REQUEST['print-btn'])){
 
-		$sql="SELECT 
-                 lakshyasalarypayment.payment_id,
-                 lakshyasalarypayment.master_id,
-                 lakshyasalarypayment.paid_amount,
-                 lakshyasalarymaster.staff_id,
-                 lakshyasalarymaster.rule_id,
-                 lakshyasalaryrule.caption,
-                 gibbonstaff.preferredName,
-                 gibbonstaff.jobtitle
+		if(isset($_REQUEST['staffID'])){
+		$gibbonStaffID = implode(',', $_REQUEST['staffID']);
+	}
+
+$sql="SELECT *
 FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				where lakshyasalarymaster.master_id=lakshyasalarypayment.master_id
                 and lakshyasalarymaster.rule_id=lakshyasalaryrule.rule_id
                 and lakshyasalarymaster.staff_id=gibbonstaff.gibbonStaffID
-                and lakshyasalarymaster.month= '".$month_f."'
-                and lakshyasalarymaster.year_id='".$year_f."'
-                 order by lakshyasalarymaster.staff_id,lakshyasalaryrule.impact,lakshyasalaryrule.rule_id ";
+                and lakshyasalarymaster.month= 11
+                and lakshyasalarymaster.year_id=26
+                and gibbonstaff.gibbonStaffID IN($gibbonStaffID)
+                 order by lakshyasalarymaster.staff_id,lakshyasalaryrule.impact,lakshyasalaryrule.rule_id";
 
 		$result=$connection2->prepare($sql);
 		$result->execute();
-		$staff=$result->fetchAll();
+		$staff_payslip_details=$result->fetchAll();
+		$payslip = array();
 
 		
 		$sql5="SELECT *,lakshyasalarymaster.* FROM lakshyasalarypayment
@@ -115,20 +115,41 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 		$structure=$result5->fetchAll();
 		$structure_d=array();
 		
-		foreach($structure as $s){
-			$structure_d[$s['staff_id']+0][$s['rule_id']+0]=$s['paid_amount'];
-		}
+		// foreach($structure as $s){
+		// 	$structure_d[$s['staff_id']+0][$s['rule_id']+0]=$s['paid_amount'];
+		// }
 		$sql6="SELECT * FROM `lakshyasalarymaster` WHERE `rule_id` IN (97,96)";
 		$sql6.=" AND month=".$month_f;
 		$sql6.=" AND year_id=".$year_f;
 		$result6=$connection2->prepare($sql6);
 		$result6->execute();
 		$structure=$result6->fetchAll();
+		$pf_arr = array();
 		foreach($structure as $s){
-			$pf_arr[$s['rule_id']+0]=$s['amount'];
-		} 
-		
+			$pf_arr[$s['rule_id']]=$s['amount'];
+		}
+		//echo $pf_arr['97'];
+		//echo $pf_arr['96'];
+		//print_r($pf_arr);
+		//echo count($staff_payslip_details);
+		foreach ($staff_payslip_details as $staffPayslip) {
+			$payslip[$staffPayslip['gibbonStaffID']]['name'] =  $staffPayslip['preferredName'];
+			$payslip[$staffPayslip['gibbonStaffID']][$staffPayslip['caption']] =  $staffPayslip['paid_amount'];
+		}
+		//print_r($payslip);
 		echo "<div id='print_page' style='display:none'>";
+		?>
+		<?php foreach($payslip as $generate_payslip){
+				$total_salary = ($generate_payslip['PAYBAND'] + $generate_payslip['CONSAL']+$generate_payslip['GRPAY']+$generate_payslip['DA']+$generate_payslip['HRA']+$generate_payslip['MED']+$generate_payslip['SPLPAY']);
+
+				if($total_salary < 21000) 
+					{ $esi = ceil(($total_salary * $pf_arr['96'])/100); }
+				else{ $esi = 0;}
+
+				$pf = round(($generate_payslip['PF GROS']*$pf_arr['97'])/100);
+
+				$total_deduction = ($pf+$generate_payslip['P TAX']+$generate_payslip['I TAX']+$generate_payslip['ADVANCE']+$esi);
+				$total_in_hand = ($total_salary - $total_deduction);
 		?>
 			<table width="100%" cellpadding="2" cellspacing="0" border="0">
 				  <tr>
@@ -143,64 +164,104 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 	<tr>
 		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Salary For  the Month: <?php echo $month_name[($month_f-1)];?> of Year: <?php echo $y['name'];?></td>
 	</tr>
+
 	<tr>
-		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Group: <?php if($staff_type == 1){echo "Senior Section";}else{echo "Junior Section";}?></td>
+		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Name: <?php echo $generate_payslip['name'];?></td>
 	</tr>	
 				  
 				   <tr>
 				  </tr>
 				  <tr>
+				  </table><br>
+				  <table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;'>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<th>Particulars</th>
+				  		<th>Amount</th>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<th>Salary Structure (A)</th>
+				  		<th></th>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>PAYBAND</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['PAYBAND'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>CONSAL</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['CONSAL'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>GRPAY</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['GRPAY'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>DA</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['DA'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>HRA</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['HRA'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>MEDICAL</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['MED'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>SPECIAL PAY</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['SPLPAY'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>Total</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $total_salary;?></td>
+				  	</tr>
 				  </table>
-				  <br>
-		<?php
-		echo "<table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;' id='table'>";
-		echo "<thead>";
-		echo "<tr style='border: 1px solid black; border-collapse: collapse;'>";
-			echo "<th>Staff</th>";
-			if($mode=='Cheque')
-				echo "<th>Bank a/c</th>";
-			echo "<th>Amount</th>";
-		echo "</tr>";
-		echo "</thead>";
-		foreach($staff as $s){
-			if (!array_key_exists($s['gibbonStaffID']+0,$structure_d))
-				continue;
-			$p=0;
-			$n=0;
-				foreach($positive_rule as $r){
-					if (array_key_exists($r['rule_id']+0,$structure_d[$s['gibbonStaffID']+0])){
-						 $p+=$structure_d[$s['gibbonStaffID']+0][$r['rule_id']+0];	
-					}
-				}
-				foreach($negative_rule as $r){
-					if (array_key_exists($r['rule_id']+0,$structure_d[$s['gibbonStaffID']+0])){
-						 $n+=$structure_d[$s['gibbonStaffID']+0][$r['rule_id']+0];	
-					}
-				}
-		$pf=round($structure_d[$s['gibbonStaffID']+0][98]*$pf_arr['97']/100);
-				$n+=$pf;
-				$advance=$structure_d[$s['gibbonStaffID']+0][99];
-				$n+=$advance;
-				$esi=($structure_d[$s['gibbonStaffID']+0][98])<=21000?ceil(($structure_d[$s['gibbonStaffID']+0][98]+0)*($pf_arr['96']+0)/100):0;
-				$n+=$esi;
-				$total=$p-$n;
-						
-			echo "<tr style='border: 1px solid black; border-collapse: collapse;'>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse;'>{$s['preferredName']}<br><small>{$s['type']}</small></td>";
-				if($mode=='Cheque')
-					echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>{$s['bank_ac']}</td>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>{$total}</td>";
-			echo "</tr>";
-		}
-		echo "<tr style='border: 1px solid black; border-collapse: collapse;'>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse;'></td>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>Total</td>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'><span id='total_value'></span></td>";
-			echo "</tr>";
-		echo "</table>";
-		echo "</div>";
-	?>
+				  <table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;'>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<th></th>
+				  		<th></th>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<th>Salary Structure (B)</th>
+				  		<th></th>
+				  	</tr>
+
+				  	
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>P TAX</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['P TAX'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>I TAX</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['I TAX'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>ESI</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>
+				  			<?php echo $esi;?>
+				  		</td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>PF GROS</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $pf;?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>ADVANCE</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['ADVANCE'];?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>Total</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $total_deduction?></td>
+				  	</tr>
+				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'>Total Salary (A - B)</td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $total_in_hand?></td>
+				  	</tr>
+				  </table>
+				  <br><br><br>
+	<?php }?>
+</div>
 <script type="text/javascript">
+
 	$(document).ready(function(){
 		var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
 		var html=$('#print_page').html();
@@ -208,38 +269,22 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 		w.print();
 	})
 
-	// Total Calculation of the table
-	var table = document.getElementById("table");
 
-	var sumVal = 0;
+// 	function CheckPowerAll() {
+// 		alert('frdf');
+//     var elements = document.getElementById("staff_id");
+//     var l = elements.length;
 
-	for(var i =1; i<table.rows.length; i++)
-	{
-		var cellValue = table.rows[i].cells[2].innerHTML;
-
-		// check that the value is a number before adding it to the total
-		if (!isNaN(cellValue)) {
-		    sumVal = sumVal + parseFloat(cellValue);
-		}
-	}
-	//console.log(sumVal);
-	document.getElementById('total_value').innerHTML = sumVal;
-
-	function CheckPowerAll() {
-		alert('frdf');
-    var elements = document.getElementsByName("staff_id");
-    var l = elements.length;
-
-    if (document.getElementById("staffName").checked) {
-        for (var i = 0; i < l; i++) {
-            elements[i].checked = true;
-        }
-    } else {
-        for (var i = 0; i < l; i++) {
-            elements[i].checked = false;
-        }
-    }
-}
+//     if (document.getElementById("staffName").checked) {
+//         for (var i = 0; i < l; i++) {
+//             elements[i].checked = true;
+//         }
+//     } else {
+//         for (var i = 0; i < l; i++) {
+//             elements[i].checked = false;
+//         }
+//     }
+// }
 
 </script>
 <?php	
