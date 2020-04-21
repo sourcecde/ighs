@@ -94,8 +94,8 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				where lakshyasalarymaster.master_id=lakshyasalarypayment.master_id
                 and lakshyasalarymaster.rule_id=lakshyasalaryrule.rule_id
                 and lakshyasalarymaster.staff_id=gibbonstaff.gibbonStaffID
-                and lakshyasalarymaster.month= 11
-                and lakshyasalarymaster.year_id=26
+                and lakshyasalarymaster.month= $month_f
+                and lakshyasalarymaster.year_id=$year_f
                 and gibbonstaff.gibbonStaffID IN($gibbonStaffID)
                  order by lakshyasalarymaster.staff_id,lakshyasalaryrule.impact,lakshyasalaryrule.rule_id";
 
