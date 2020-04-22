@@ -229,7 +229,7 @@ catch(PDOException $e) {
 <span style='float: left'>Mother's name:</span> <input type='text' id='edit_mother' style='width:180px;'><br><br><br>
 <span style='float: left'>Address:</span> <input type='text' id='edit_address' style='width:180px;'><br><br><br>
 <center>
-<button id='editRollNo' style='border:1px; padding:10px; background:#ff731b; color:white;'>Add</button>
+<button id='editRollNoshortUpdate' style='border:1px; padding:10px; background:#ff731b; color:white;'>Add</button>
 <button class='mClose' style='border:1px; padding:10px; background:#ff731b; color:white;'>Close</button>
 </center>
 </div>

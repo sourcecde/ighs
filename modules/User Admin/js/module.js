@@ -260,7 +260,7 @@ $(document).ready(function(){
 		var url=$("#rollGroupURL").val();
 		var yearID=$("#filterYear").val();
 		// var test = document.getElementById('prodId').value;
-		// console.log(test);
+		 console.log(aadhar);
 		$('#e_name').text(name);
 		$('#enrollID').val(enrollID);
 		$('#edit_name').val(name);
@@ -270,7 +270,7 @@ $(document).ready(function(){
 		$("."+yearGroupID).show();
 		//$("#edit_section option[value='"+sectionID+"']").attr("selected","selected");
 		console.log(sectionID);
-		console.log(admission);
+		//console.log(admission);
 		$('#edit_edate').val(edate);
 		$('#edit_admission').val(admission);
 		$('#edit_account').val(account);
@@ -301,8 +301,10 @@ $(document).ready(function(){
 		var sectionName=$('#edit_section option:selected').text();
 		//alert(sectionName);
 		var admission=$('#edit_admission').val();
+
 		var updateUrl=$('#updateUrl').val();
 		var aadhar = $('#edit_aadhar').val();
+		//alert(aadhar);
 		var phone = $('#edit_phone').val();
 		var father = $('#edit_father').val();
 		var mother = $('#edit_mother').val();
@@ -321,12 +323,69 @@ $(document).ready(function(){
 				if(msg1[0]==1){
 					$('#Account_'+enrollID).text(account);
 				}
+				//alert(admission);
+				$('#Name_'+enrollID).text(name);
+				$('#Class_'+enrollID).text(className);
+				$('#Section_'+enrollID).text(sectionName);
+				$('#Roll_'+enrollID).text(roll);
+				$('#Phone_'+enrollID).text(phone);
+				$('#Admission_'+enrollID).text(admission);
+				$('#Aadhar_'+enrollID).val(aadhar);
+				$('#Father_'+enrollID).val(father);
+				$('#Mother_'+enrollID).val(mother);
+				$('#Address_'+enrollID).val(address);
+				$('#hide_body').hide();
+				$('.cModal').hide();
+				cAlert(msg1[1]);
+				console.log(msg);
+				//location.reload();
+ 			}
+		});
+		}
+		else{
+			cAlert("ERROR: Roll No. Cannot be Empty!")
+		}
+	});
+	$('#editRollNoshortUpdate').click(function(){
+		var enrollID=$('#enrollID').val();
+		var name=$('#edit_name').val();
+		var account=$('#edit_account').val();
+		var className=$('#edit_class').val();
+		var roll=$('#edit_roll').val();
+		var sectionID=$('#edit_section').val();
+		var sectionName=$('#edit_section option:selected').text();
+		//alert(sectionName);
+		var admission=$('#edit_admission').val();
+
+		var updateUrl=$('#updateUrl').val();
+		var aadhar = $('#edit_aadhar').val();
+		//alert(aadhar);
+		var phone = $('#edit_phone').val();
+		var father = $('#edit_father').val();
+		var mother = $('#edit_mother').val();
+		var address = $('#edit_address').val();
+		if(roll!=''){
+		$.ajax
+ 		({
+ 			type: "POST",
+ 			url: updateUrl,
+ 			data: {enrollID:enrollID, roll:roll,section:sectionID,
+ 					account_no:account,admission:admission,aadhar:aadhar,
+ 					phone:phone,father:father,mother:mother,address:address},
+ 			success: function(msg)
+ 			{
+				var msg1=msg.split('_');
+				if(msg1[0]==1){
+					$('#Account_'+enrollID).text(account);
+				}
+				//alert(admission);
 				$('#Name_'+enrollID).text(name);
 				$('#Class_'+enrollID).text(className);
 				$('#Section_'+enrollID).text(sectionName);
 				$('#Roll_'+enrollID).text(roll);
 				$('#Phone_'+enrollID).text(phone);
 				$('#Admission_'+enrollID).val(admission);
+				$('#Aadhar_'+enrollID).val(aadhar);
 				$('#Father_'+enrollID).val(father);
 				$('#Mother_'+enrollID).val(mother);
 				$('#Address_'+enrollID).val(address);

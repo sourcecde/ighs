@@ -29,12 +29,22 @@ else {
 		$year=$result2->fetchAll();
 			$month_ar=array(3,2,1,12,11,10,9,8,7,6,5,4);
 			$month_name=array('January','February','March','April','May','June','July','August','September','October','November','December');
+if(isset($_REQUEST['print']))
+{
+		$sql1="SELECT * FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
+                where lakshyasalarymaster.master_id=lakshyasalarypayment.master_id
+                and lakshyasalarymaster.rule_id=lakshyasalaryrule.rule_id
+                and lakshyasalarymaster.staff_id=gibbonstaff.gibbonStaffID
+                and lakshyasalarymaster.month= $month_f
+                and lakshyasalarymaster.year_id=$year_f
+                 order by lakshyasalarymaster.staff_id,lakshyasalaryrule.impact,lakshyasalaryrule.rule_id" ;
 
-		$sql1="SELECT * from gibbonstaff" ;
 			$result1=$connection2->prepare($sql1);
 			$result1->execute();
 			$staff = $result1->fetchAll();
+            $newStaff = array();
 			//print_r($staff);
+}
 ?>
 <h3>Payslip List: </h3>
 	<form  id="form_payment_option" action='<?php print $_SESSION[$guid]["absoluteURL"]?>/index.php'>
@@ -62,31 +72,48 @@ else {
 						print "<option value='".$y['gibbonSchoolYearID']."' $s>".$y['name']."</option>";
 					}?>
 				</select></td>
-			<td><input  type='submit' value='Print' name='print-btn'></td>
+
+                <td><input  type='submit' value='Submit' name='print'></td>
+			<td><input  type='button' value='Print' name='printing' class='print-btn'></td>
 		</tr>
 	</table>
+    <?php if(isset($_REQUEST['print'])){
+        $count = count($staff);
+        if($count>0){
+        ?>
 	<table width="80%" cellpadding="0" cellspacing="0" align='center'>
 		<tr>
 			<td><input type="checkbox" id="staffName" name="staffName" class="selectall">
 				<th>Staff Name</th>
 			</td>
 		</tr>
-		<?php foreach($staff as $s){?>
+		<?php foreach($staff as $s){
+            $newStaff[$s['gibbonStaffID']]['name'] =  $s['preferredName'];
+            $newStaff[$s['gibbonStaffID']]['id'] =  $s['gibbonStaffID'];
+        }
+
+        foreach($newStaff as $newStaffs){
+            // print_r($s);
+            ?>
 		<tr>
-			<td><input type="checkbox" id="staff_id" name="staffID[]" value="<?php echo $s['gibbonStaffID'];?>">
-				<th><?php echo $s['preferredName'];?></th>
+			<td><input type="checkbox" id="staff_id" name="staffID[]" value="<?php echo $newStaffs['id'];?>">
+				<th><?php echo $newStaffs['name'];?></th>
 			</td>
 		</tr>
 		<?php }?>
+        <?php //print_r($newStaff);?>
 	</table>
+<?php }else{ echo "No Records Found";}?>
+<?php }?>
 	</form>
 <?php
 
 
-	if(isset($_REQUEST['print-btn'])){
+	if(isset($_REQUEST['print'])){
 
 		if(isset($_REQUEST['staffID'])){
 		$gibbonStaffID = implode(',', $_REQUEST['staffID']);
+        //print_r($gibbonStaffID);
 	}
 
 $sql="SELECT *
@@ -263,12 +290,19 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 </div>
 <script type="text/javascript">
 
-	$(document).ready(function(){
-		var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
-		var html=$('#print_page').html();
-		$(w.document.body).html(html);
-		w.print();
-	})
+	// $(document).ready(function(){
+	// 	var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
+	// 	var html=$('#print_page').html();
+	// 	$(w.document.body).html(html);
+	// 	w.print();
+	// })
+    $('.print-btn').click(function() {
+        alert('aaaaa');
+        var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
+        var html=$('#print_page').html();
+        $(w.document.body).html(html);
+        w.print();
+});
 </script>
 <?php	
 	}
