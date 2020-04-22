@@ -37,7 +37,7 @@ if($action=='fetchECRData'){
 	$result=$connection2->prepare($sql);
 	$result->execute();
 	$data=$result->fetchAll();
-
+echo "<pre>";print_r($data);
 	$sql1="SELECT `staff_id`,`paid_amount` 
 			FROM `lakshyasalarymaster` 
 			LEFT JOIN `lakshyasalarypayment` ON `lakshyasalarypayment`.`master_id`=`lakshyasalarymaster`.`master_id`

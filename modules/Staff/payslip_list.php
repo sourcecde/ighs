@@ -67,7 +67,7 @@ else {
 	</table>
 	<table width="80%" cellpadding="0" cellspacing="0" align='center'>
 		<tr>
-			<td><input type="checkbox" id="staffName" name="staffName" onclick="checkAll()">
+			<td><input type="checkbox" id="staffName" name="staffName" class="selectall">
 				<th>Staff Name</th>
 			</td>
 		</tr>
@@ -142,7 +142,8 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 		<?php foreach($payslip as $generate_payslip){
 				$total_salary = ($generate_payslip['PAYBAND'] + $generate_payslip['CONSAL']+$generate_payslip['GRPAY']+$generate_payslip['DA']+$generate_payslip['HRA']+$generate_payslip['MED']+$generate_payslip['SPLPAY']);
 
-				if($total_salary < 21000) 
+				if($total_salary <= 21000 && $generate_payslip['PF GROS']>0)
+                    
 					{ $esi = ceil(($total_salary * $pf_arr['96'])/100); }
 				else{ $esi = 0;}
 
@@ -268,26 +269,18 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 		$(w.document.body).html(html);
 		w.print();
 	})
-
-
-// 	function CheckPowerAll() {
-// 		alert('frdf');
-//     var elements = document.getElementById("staff_id");
-//     var l = elements.length;
-
-//     if (document.getElementById("staffName").checked) {
-//         for (var i = 0; i < l; i++) {
-//             elements[i].checked = true;
-//         }
-//     } else {
-//         for (var i = 0; i < l; i++) {
-//             elements[i].checked = false;
-//         }
-//     }
-// }
-
 </script>
 <?php	
 	}
 }
 ?>
+
+<script type="text/javascript">
+     $('.selectall').click(function() {
+    if ($(this).is(':checked')) {
+        $('div input').attr('checked', true);
+    } else {
+        $('div input').attr('checked', false);
+    }
+});
+</script>

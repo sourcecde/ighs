@@ -63,16 +63,19 @@ else {
 			<td><select name='staff_type' required><option value=''> Select Group </option>
 				<option value='1' <?php echo $staff_type==1?'selected':''; ?>>Sr. Section</option>
 				<option value='2' <?php echo $staff_type==2?'selected':''; ?>>Jr. Section</option>
+				<option value='3' <?php echo $staff_type==3?'selected':''; ?>>All</option>
 				</select></td>
-			<td><input  type='submit' value='Print' name='print-btn'></td>
+			<td><input  type='submit' value='Submit' name='print'></td>
+			<td><input  type='button' value='Print' name='print-btn' class="print-btn"></td>
 		</tr>
 	</table>
 	</form>
 <?php
 
-	if(isset($_REQUEST['print-btn'])){
+	if(isset($_REQUEST['print'])){
 
-
+if($staff_type != 3)
+{
 $sql="SELECT *
 FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				where lakshyasalarymaster.master_id=lakshyasalarypayment.master_id
@@ -82,7 +85,16 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
                 and lakshyasalarymaster.year_id=$year_f
                 AND gibbonstaff.sec_code = $staff_type
                 order by lakshyasalarymaster.staff_id,lakshyasalaryrule.impact,lakshyasalaryrule.rule_id";
-
+}else{
+	$sql="SELECT *
+FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
+				where lakshyasalarymaster.master_id=lakshyasalarypayment.master_id
+                and lakshyasalarymaster.rule_id=lakshyasalaryrule.rule_id
+                and lakshyasalarymaster.staff_id=gibbonstaff.gibbonStaffID
+                and lakshyasalarymaster.month= $month_f
+                and lakshyasalarymaster.year_id=$year_f
+                order by lakshyasalarymaster.staff_id,lakshyasalaryrule.impact,lakshyasalaryrule.rule_id";
+}
 		$result=$connection2->prepare($sql);
 		$result->execute();
 		$staff_payslip_details=$result->fetchAll();
@@ -148,7 +160,7 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 			$totalitax += $generate_payslip['I TAX'];
 			$totaladvance += $generate_payslip['ADVANCE'];
 
-				if($total_salary < 21000) 
+				if($total_salary <= 21000 && $generate_payslip['PF GROS']>0) 
 					{ $esi = ceil(($total_salary * $pf_arr['96'])/100); }
 				else{ $esi = 0;}
 			$totalesi += $esi;
@@ -164,6 +176,25 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 			$totalinhand += $total_in_hand;
 		?>
 	<?php }	?>
+	<div id="print_page">
+		<table width="100%" cellpadding="2" cellspacing="0" border="0">
+				  <tr>
+					<th align="center" style="padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:25px; color:#000000;">Indra Gopal High School</th>
+				  </tr>
+				  <tr>
+					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;">Jheel Bagan, P.O. Ghuni, Hatiara, Kolkata - 700 157</td>
+				  </tr>
+				  <tr>
+					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> </td>
+				  </tr>
+	<tr>
+		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Summary For  the Month: <?php echo $month_name[($month_f-1)];?> of Year: <?php echo ($y['name']-1);?></td>
+	</tr>				  
+				   <tr>
+				   	<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Group: <?php if($staff_type == 1){echo "Sr. Section";}if($staff_type == 2){echo "Jr. Section";}if($staff_type == 3){echo "All";}?></td>
+				  </tr>
+				  <tr>
+				  </table>
 	<table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;'>
 				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
 				  		<th>Particulars</th>
@@ -252,3 +283,20 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 	}
 }
 ?>
+</div>
+<script type="text/javascript">
+
+	//  $('.print-btn').click(function() {
+	//  	alert('fgfgf');
+	// 	var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
+	// 	var html=$('#print_page').html();
+	// 	$(w.document.body).html(html);
+	// 	w.print();
+	// })
+	 $('.print-btn').click(function() {
+	 	var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
+		var html=$('#print_page').html();
+		$(w.document.body).html(html);
+		w.print();
+});
+</script>
