@@ -73,8 +73,8 @@ if(isset($_REQUEST['print']))
 					}?>
 				</select></td>
 
-                <td><input  type='submit' value='Submit' name='print'></td>
-			<td><input  type='button' value='Print' name='printing' class='print-btn'></td>
+                <td><input  type='submit' value='search' name='print'></td>
+			<td><input  type='submit' value='Submit' name='printing' ></td>
 		</tr>
 	</table>
     <?php if(isset($_REQUEST['print'])){
@@ -109,11 +109,11 @@ if(isset($_REQUEST['print']))
 <?php
 
 
-	if(isset($_REQUEST['print'])){
+	if(isset($_REQUEST['printing'])){
 
 		if(isset($_REQUEST['staffID'])){
 		$gibbonStaffID = implode(',', $_REQUEST['staffID']);
-        //print_r($gibbonStaffID);
+       // print_r($gibbonStaffID);
 	}
 
 $sql="SELECT *
@@ -164,8 +164,10 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 			$payslip[$staffPayslip['gibbonStaffID']][$staffPayslip['caption']] =  $staffPayslip['paid_amount'];
 		}
 		//print_r($payslip);
-		echo "<div id='print_page' style='display:none'>";
+		echo "<input  type='button' value='Print' class='printdata' >";
+		echo "<div id='print_page'>";
 		?>
+		
 		<?php foreach($payslip as $generate_payslip){
 				$total_salary = ($generate_payslip['PAYBAND'] + $generate_payslip['CONSAL']+$generate_payslip['GRPAY']+$generate_payslip['DA']+$generate_payslip['HRA']+$generate_payslip['MED']+$generate_payslip['SPLPAY']);
 
@@ -288,28 +290,20 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				  <br><br><br>
 	<?php }?>
 </div>
-<script type="text/javascript">
-
-	// $(document).ready(function(){
-	// 	var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
-	// 	var html=$('#print_page').html();
-	// 	$(w.document.body).html(html);
-	// 	w.print();
-	// })
-    $('.print-btn').click(function() {
-        alert('aaaaa');
-        var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
-        var html=$('#print_page').html();
-        $(w.document.body).html(html);
-        w.print();
-});
-</script>
 <?php	
 	}
 }
 ?>
 
 <script type="text/javascript">
+
+	$('.printdata').click(function() {
+        //alert('aaaaa');
+        var w=window.open("","","height=600,width=700,status=yes,toolbar=no,menubar=no,location=no");
+        var html=$('#print_page').html();
+        $(w.document.body).html(html);
+        w.print();
+});
      $('.selectall').click(function() {
     if ($(this).is(':checked')) {
         $('div input').attr('checked', true);
