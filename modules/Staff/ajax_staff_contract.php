@@ -12,24 +12,24 @@ catch(PDOException $e) {
 }
 if($_POST){  
 	extract($_POST);
-	if($action=='left'){ 
-		try {
-			$data=array(); 
-		   /*$sql="SELECT gibbonperson.gibbonPersonID,gibbonperson.dateEnd,gibbonstaff.gibbonStaffID, status, surname, preferredName, initials,	type,gibbonstaff.jobTitle, gibbonstaff.priority
-			FROM gibbonperson
-			JOIN gibbonstaff ON (gibbonstaff.gibbonPersonID=gibbonperson.gibbonPersonID)
-			WHERE 1 ORDER BY gibbonstaff.priority" ; 
-			*/
-      	$sql="SELECT * from gibbonstaff WHERE 1 ORDER BY gibbonstaff.priority" ;
-			$result=$connection2->prepare($sql);
-			$result->execute($data);
+	// if($action=='left'){ 
+	// 	try {
+	// 		$data=array(); 
+	// 	   $sql="SELECT gibbonperson.gibbonPersonID,gibbonperson.dateEnd,gibbonstaff.gibbonStaffID, status, surname, preferredName, initials,	type,gibbonstaff.jobTitle, gibbonstaff.priority
+	// 		FROM gibbonperson
+	// 		JOIN gibbonstaff ON (gibbonstaff.gibbonPersonID=gibbonperson.gibbonPersonID)
+	// 		WHERE 1 ORDER BY gibbonstaff.priority" ; 
+			
+ //      	$sql="SELECT * from gibbonstaff WHERE 1 ORDER BY gibbonstaff.priority" ;
+	// 		$result=$connection2->prepare($sql);
+	// 		$result->execute($data);
 		
-		}
-		catch(PDOException $e) { 
-			print "<div class='error'>" . $e->getMessage() . "</div>" ; 
-		}
-	}
-	else if($action=='full'){
+	// 	}
+	// 	catch(PDOException $e) { 
+	// 		print "<div class='error'>" . $e->getMessage() . "</div>" ; 
+	// 	}
+	// }
+	//else if($action=='full'){
 		try {
 			$data=array(); 
 			/*$sql="SELECT gibbonperson.gibbonPersonID,gibbonperson.dateEnd,gibbonstaff.gibbonStaffID, status, surname, preferredName, initials,	type,gibbonstaff.jobTitle, gibbonstaff.priority
@@ -45,7 +45,7 @@ if($_POST){
 		catch(PDOException $e) { 
 			print "<div class='error'>" . $e->getMessage() . "</div>" ; 
 		}
-	}
+	//}
 	
 	
 
