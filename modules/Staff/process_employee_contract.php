@@ -43,9 +43,14 @@ if($_POST){
 
 		// Update Expired field of previous data //
 
-		$sql_update_contract = "UPDATE staff_contract_detail SET expired = 'Y' WHERE contract_id = ".$contract_id['contract_id']."";
-		$result_update_contract=$connection2->prepare($sql_update_contract);
-		$result_update_contract->execute();
+		if($contract_id !='')
+		{
+			$sql_update_contract = "UPDATE staff_contract_detail SET expired = 'Y' WHERE contract_id = ".$contract_id['contract_id']."";
+			$result_update_contract=$connection2->prepare($sql_update_contract);
+			$result_update_contract->execute();
+		}
+
+		
 
 
 		// Insert New Data //
