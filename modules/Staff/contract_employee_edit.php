@@ -56,10 +56,10 @@ date_default_timezone_set($_SESSION[$guid]["timezone"]);
 				<?php echo $i++; ?>
 				</td>
 				<td>
-				<?php echo $countContract['starting_date']; ?>
+				<?php echo date("d/m/Y", strtotime($countContract['starting_date']));?>
 				</td>
 				<td>
-				<?php echo $countContract['ending_date']; ?>
+				<?php echo date("d/m/Y", strtotime($countContract['ending_date']));?>
 				</td>
 				<td>
 				<?php echo $countContract['expired']; ?>
