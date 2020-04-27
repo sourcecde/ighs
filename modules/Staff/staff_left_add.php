@@ -88,10 +88,10 @@ date_default_timezone_set($_SESSION[$guid]["timezone"]);
 					foreach ($data as $k => $value) {
   						if(isset($value['preferredName'])){
     					$preferredName    = $value['preferredName'];?>
-							<option value="<?php echo $value['preferredName'];?>"><?php echo $preferredName;?></option>
+							<option value="<?php echo $value['gibbonStaffID'];?>"><?php echo $preferredName;?></option>
 				<?php   }}?>
 								</select></td></tr>
-	<input type="hidden" name="staff_id" value="<?php echo $value['gibbonStaffID'];?>">
+	<!-- <input type="hidden" name="staff_id" value="<?php echo $value['gibbonStaffID'];?>"> -->
 	
 	<tr><td><b>Date of Leaving: </b><input name='dateEnd' id='dateEnd' type='text' style='width:250px;' value='<?php echo @$data['dateEnd']>0?date("d/m/Y", strtotime($data['dateEnd'])):''; ?>'></td></tr>
 	<tr><td><b>Reason Of Leaving: </b>	<select name='reasonOL' id='reasonOL' style='width:250px;'>

@@ -147,6 +147,7 @@ $(document).ready(function(){
  		});
 		}
 	})
+
 	/* Manage salary Rule */
 	/*create Pay structure */
 	var url2='modules/Staff/process_pay_structure.php';
@@ -457,4 +458,88 @@ $(document).ready(function(){
 						this.target = 'formpopup';
 					});
 	/* PF ECR */
+
+	/* Manage Employee Contract */
+		var linkurlcontract='modules/Staff/process_employee_contract.php';
+	$('.close_contract').click(function(){
+		$('#hide_body').hide();
+		$('#create_employee_contract').fadeOut();
+	})
+	$('#add_contract_employee').click(function(){
+		$('#hide_body').show();
+		$('#create_employee_contract').fadeIn();
+		$('#add_contract').val('ADD');
+		$('#action').val('add');
+	})
+	$('#add_contract').click(function(){
+		var action=$('#action').val();
+		add_new_contract(action);
+	})
+	$('.edit_contract').click(function(){
+		var id_s=$(this).attr("id");
+		var id_a=id_s.split('_');
+		var id=id_a[1];
+		$('#hide_body').show();
+		$('#create_employee_contract').fadeIn();
+		$('#add_contract').val('UPDATE');
+		$('#action').val('update');
+		$('#contract_id').val(id);
+		$.ajax
+ 		({
+ 			type: "POST",
+ 			url: linkurlcontract,
+ 			data: {action:'fetch_data',id:id},
+ 			success: function(msg)
+ 			{
+				var s=msg.split("_");
+				var ns = s[0].split("-");
+				var es = s[1].split("-");
+				//alert(ns[0]);
+				$('#sdate').val(ns[2]+'/'+ns[1]+'/'+ns[0]);
+				$('#edate').val(es[2]+'/'+es[1]+'/'+es[0]);
+				//$('#impact option[value="' + s[1] + '"]').prop('selected', true);
+ 				//$('#active option[value="' + s[2] + '"]').prop('selected', true);
+ 			}
+ 		});
+	})
+	function add_new_contract(action){
+		var sdate=$('#sdate').val();
+		var edate=$('#edate').val();
+		var staff_id=$('#staff_id').val();
+		var contract_id=$('#contract_id').val();
+		$.ajax
+ 		({
+ 			type: "POST",
+ 			url: linkurlcontract,
+ 			data: {action:action, sdate:sdate, edate:edate, staff_id:staff_id, contract_id:contract_id},
+ 			success: function(msg)
+ 			{
+				//alert(msg);
+				alert(action=='add'?'Added Sucessfully':'Updated Sucessfully');
+				location.reload();
+				$('#hide_body').hide();
+		        $('#create_employee_contract').fadeOut();
+ 			}
+ 		});
+	}
+	$('.delete_contract').click(function(){
+		var id_s=$(this).attr("id");
+		var id_a=id_s.split('_');
+		var id=id_a[1];
+		//alert(id);
+		var n =confirm("Are you really want to delete this entry?");
+		if(n) {
+		$.ajax
+ 		({
+ 			type: "POST",
+ 			url: linkurlcontract,
+ 			data: {action:'delete',id:id},
+ 			success: function(msg)
+ 			{
+				alert("Deleted successfully!!");
+				location.reload();
+ 			}
+ 		});
+		}
+	})
 })

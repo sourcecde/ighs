@@ -286,7 +286,18 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				  		<td style='border: 1px solid black; border-collapse: collapse;'>Total Salary (A - B)</td>
 				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $total_in_hand?></td>
 				  	</tr>
+				  	
 				  </table>
+				  <table width='100%'>
+				  <tr>
+				  		<td></td>
+				  		<td><a href='#'><img src='./themes/Default/img/plus.png'/></a></td>
+				  	</tr>
+				  	<tr>
+				  		<td><b>Date:<?php echo date('d/m/Y');?></b></td>
+				  		<td><b>Signature<br>(Manager, Accounts)</b></td>
+				  	</tr>
+				  	</table>
 				  <br><br><br>
 	<?php }?>
 </div>

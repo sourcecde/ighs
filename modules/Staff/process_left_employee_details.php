@@ -74,7 +74,7 @@ if($_POST){
 		$sql="UPDATE `gibbonstaff` SET `reasonOfLeaving`='".$reasonOL."' WHERE `gibbonStaffID`= '".$_REQUEST['gibbonStaffID']."'";
 
 	}else{
-		$sql="UPDATE `gibbonstaff` SET `dateEnd`='NULL', `status`='Full'WHERE `gibbonStaffID`= '".$_REQUEST['gibbonStaffID']."'";
+		$sql="UPDATE `gibbonstaff` SET `dateEnd`= NULL, `status`='Full' WHERE `gibbonStaffID`= '".$_REQUEST['gibbonStaffID']."'";
 	}
 			// if($attachment!='')
 			// 	$sql.=",image_240='".$attachment."'";

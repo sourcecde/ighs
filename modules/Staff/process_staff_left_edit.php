@@ -71,13 +71,13 @@ if($_POST){
 	*/
 	
 	$sql="UPDATE `gibbonstaff` SET  
-				preferredName='".$p_name."',reasonOfLeaving='".$reasonOL."',status='Left'";
+				reasonOfLeaving='".$reasonOL."',status='Left'";
 				if($dateEnd!='') {
 					$tDate = str_replace('/', '-', $dateEnd);
 					$dateE=date("Y-m-d",strtotime($tDate));
 					$sql.=",dateEnd='".$dateE."'";
 				}
-				$sql.=" WHERE `gibbonStaffID`=".$_REQUEST['staff_id'];
+				$sql.=" WHERE `gibbonStaffID`=".$_REQUEST['p_name'];
 			//echo $sql;exit;
 			$result=$connection2->prepare($sql);
 			$result->execute();
