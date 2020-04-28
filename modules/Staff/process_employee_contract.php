@@ -87,10 +87,9 @@ if($_POST){
 
 		// Get Contract ID //
 
-		$sql_select_contract = "SELECT contract_id FROM staff_contract_detail WHERE staff_id = (SELECT `staff_id` from staff_contract_detail where `contract_id` = $id) ORDER BY contract_id DESC LIMIT 1, 1";
-		$result_select_contract=$connection2->prepare($sql_select_contract);
-		$result_select_contract->execute();
-		$contract_id=$result_select_contract->fetch();
+		// $sql_select_contract = "SELECT contract_id FROM staff_contract_detail WHERE staff_id = (SELECT `staff_id` from staff_contract_detail where `contract_id` = $id) ORDER BY contract_id DESC LIMIT 1, 1";
+
+
 //print_r($contract_id);
 		$sql="DELETE FROM `staff_contract_detail` WHERE `contract_id`=".$id;
 		$result=$connection2->prepare($sql);
@@ -98,6 +97,12 @@ if($_POST){
 
 		//print_r($contract_id);exit;
 
+
+		$sql_select_contract = "SELECT contract_id FROM staff_contract_detail  ORDER BY contract_id DESC LIMIT 1";
+
+		$result_select_contract=$connection2->prepare($sql_select_contract);
+		$result_select_contract->execute();
+		$contract_id=$result_select_contract->fetch();
 		// Update Expired field of previous data //
 
 		$sql_update_contract = "UPDATE staff_contract_detail SET expired = 'N' WHERE contract_id = ".$contract_id['contract_id']."";
