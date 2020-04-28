@@ -50,9 +50,18 @@ else {
 <form name="notification" id="notification" method="POST">
 			<select name='days' id='days' style="float:left;">
 				<option value=''> Select Days </option>
-				<option value='30'>30 Days</option>
-				<option value='60'>60 Days</option>
-				<option value='90'>90 Days</option>
+				<option value='30' 
+						<?php if(@$_REQUEST['days'] == 30)
+                    			echo 'selected';?>>30 Days
+                </option>
+				<option value='60'
+						<?php if(@$_REQUEST['days'] == 60)
+                    			echo 'selected';?>>60 Days
+                </option>
+				<option value='90'
+						<?php if(@$_REQUEST['days'] == 90)
+                    			echo 'selected';?>>90 Days
+                </option>
 			</select>
 	<input type='submit' value='Submit' name="no_of_days" id="no_of_days"  style="float:left;">
 </form>
@@ -88,7 +97,7 @@ else {
 		<?php } ?>
 		</tbody>
 	</table>
-	
+
 	<table width="80%" cellpadding="0" cellspacing="0" id='myTable'>
 	  <thead>
 	  <tr>
