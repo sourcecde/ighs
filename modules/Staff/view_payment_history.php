@@ -27,7 +27,7 @@ if (isset($_GET["search"])){
 	try{
 	    
 	    
-		$sql="SELECT * FROM `lakshyasalaryrule` ORDER BY `impact`";
+		$sql="SELECT * FROM `lakshyasalaryrule` where active=1 ORDER BY `impact`";
 		$result=$connection2->prepare($sql);
 		$result->execute();
 		$rule=$result->fetchAll();
@@ -184,7 +184,6 @@ if (isset($_GET["search"])){
 	  <tr>
 		<th rowspan='2' style='display:none'>#</th>
 		<th rowspan='2'>Staff Name</th>
-		<th rowspan='2'>Gross Salary Pay</th>
 		<th rowspan='2'>W.Day</th>
 			<?php 
 						$p_l=sizeOf($positive_rule);
@@ -241,7 +240,7 @@ if (isset($_GET["search"])){
 			if($secCode!='' && $secCode!=$sn['sec_code']){
 				?>
 				<tr style="font-weight: bold;">
-					<td style='text-align:right; height:50px;' colspan='3'><b>Sub Total for Section <?php echo $secCode; ?>:</b></td>
+					<td style='text-align:right; height:50px;' colspan='2'><b>Sub Total for Section <?php echo $secCode; ?>:</b></td>
 					<?php 
 								$gap_col=abs(sizeOf($positive_rule)-sizeOf($negative_rule));
 						
@@ -332,9 +331,7 @@ if (isset($_GET["search"])){
 					?>
 				</td>
 				
-				<td>
-					<span class='gross' id='g<?= $sn['gibbonStaffID']."_".$m;?>'></span>
-				</td>
+
 				<td>
 					<?php echo $attendance[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0];?>
 				</td>
@@ -497,7 +494,7 @@ if (isset($_GET["search"])){
 		
 		
 		<tr style="font-weight: bold;">
-					<td style='text-align:right; height:50px;' colspan='3'><b>Sub Total for Section <?php echo $secCode; ?>:</b></td>
+					<td style='text-align:right; height:50px;' colspan='2'><b>Sub Total for Section <?php echo $secCode; ?>:</b></td>
 					<?php 
 								$gap_col=abs(sizeOf($positive_rule)-sizeOf($negative_rule));
 						
@@ -570,7 +567,7 @@ if (isset($_GET["search"])){
 		
 		<tfoot>
 		<tr style="font-weight: bold;">
-			<td style='text-align:right; height:50px;' colspan='3'><b>Sub Total:</b></td>
+			<td style='text-align:right; height:50px;' colspan='2'><b>Total:</b></td>
 			
 			
 			<?php 

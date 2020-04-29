@@ -1,0 +1,22 @@
+			$('.'+c_name).each(function(){
+				var id_s=$(this).attr("id");
+				
+			
+				
+				var ov=$('#'+id_s+'_old').val();
+				var wd=$('#'+sid+'_working_day').val();
+    /*-----------------------------------------------------------------------------------------*/								
+	/*Added by Shiva to Calculate PTax on Flat basis, i.e. not on based on attendance days */				
+				if (id_s.includes("_7")==false) 
+				{
+				    //alert(id_s.includes("_7"));
+				    var nv=Math.round(ov*(ad/wd));
+				    $(this).val(nv);
+				}
+    /*-----------------------------------------------------------------------------------------*/								
+			});
+			
+			
+			
+			
+			Line no 253 (in and around)

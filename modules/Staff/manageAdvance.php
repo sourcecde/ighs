@@ -9,10 +9,9 @@ if (isActionAccessible($guid, $connection2, "/modules/Staff/staff_view.php")==FA
 }
 else {
 		try{
-		$sql="SELECT `lakshyasalaryadvance`.*,`gibbonperson`.`preferredName`,`gibbonschoolyear`.`name`  
+		$sql="SELECT `lakshyasalaryadvance`.*,`gibbonstaff`.`preferredName`,`gibbonschoolyear`.`name`  
 				FROM `lakshyasalaryadvance` 
 				LEFT JOIN `gibbonstaff` ON `lakshyasalaryadvance`.`staffID`=`gibbonstaff`.`gibbonStaffID` 
-				LEFT JOIN `gibbonperson` ON `gibbonstaff`.`gibbonPersonID`=`gibbonperson`.`gibbonPersonID` 
 				LEFT JOIN `gibbonschoolyear` ON `lakshyasalaryadvance`.`schoolYearID`=`gibbonschoolyear`.`gibbonSchoolYearID` 
 				ORDER BY `lakshyasalaryadvance`.`schoolYearID` DESC,`gibbonstaff`.`priority`,`date`";
 		$result=$connection2->prepare($sql);

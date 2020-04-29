@@ -7,8 +7,6 @@ date_default_timezone_set($_SESSION[$guid]["timezone"]);
  <script src="<?php echo $_SESSION[$guid]["absoluteURL"] ;?>/modules/Staff/js/jquery.dataTables.min.js"></script>
  <script src="<?php echo $_SESSION[$guid]["absoluteURL"] ;?>/modules/Staff/js/buttons.print.min.js"></script>
  <script src="<?php echo $_SESSION[$guid]["absoluteURL"] ;?>/modules/Staff/js/dataTables.buttons.min.js"></script>
-
- 
 <?php
 if (isActionAccessible($guid, $connection2, "/modules/Staff/staff_view_details.php")==FALSE) {
 	//Acess denied
@@ -41,7 +39,7 @@ if (isset($_GET["search"])) {
 	   
 }
 	try{
-		$sql="SELECT * FROM `lakshyasalaryrule` where active=1";
+		$sql="SELECT * FROM `lakshyasalaryrule`";
 		$result=$connection2->prepare($sql);
 		$result->execute();
 		$rule=$result->fetchAll();
@@ -141,14 +139,26 @@ if (isset($_GET["search"])) {
 			<h3>View Pay Structure:</h3>
 		<?php
 		
-		$sql5="SELECT * FROM `lakshyasalarymaster` WHERE 1";
+		$sql_year="SELECT * FROM `lakshyasalarymaster` ORDER BY master_id DESC LIMIT 1";
+		$resultYear=$connection2->prepare($sql_year);
+		$resultYear->execute();
+		$resultYear=$resultYear->fetch(PDO::FETCH_ASSOC);
+		$yearCode=$resultYear['year_id'];
+		$currentMonth=$resultYear['month'];
 
-		if($staff_f!='')
-		$sql5.=" AND (staff_id=".$staff_f." OR staff_id=0)";
-		if($month_f!='')
-		$sql5.=" AND month=".$month_f;
-		if($year_f!='')
-		$sql5.=" AND year_id=".$year_f;
+		if($staff_f == '' && $month_f == '' && $year_f == ''){
+			$sql5="SELECT * FROM `lakshyasalarymaster` 
+					WHERE month = $currentMonth AND year_id= $yearCode";	
+		}
+		else{
+			$sql5="SELECT * FROM `lakshyasalarymaster` WHERE 1";
+			if($staff_f!='')
+			$sql5.=" AND (staff_id=".$staff_f." OR staff_id=0)";
+			if($month_f!='')
+			$sql5.=" AND month=".$month_f;
+			if($year_f!='')
+			$sql5.=" AND year_id=".$year_f;
+		}
 		
 		
 		$result5=$connection2->prepare($sql5);
@@ -174,6 +184,163 @@ if (isset($_GET["search"])) {
 		<a href="#"><span class="button-print" id="<?php echo $m;?>_<?php echo $y['gibbonSchoolYearID']; ?>">Print</span></a>
 		<a href="#"><span class="button-add" id="add_<?php echo $m;?>_<?php echo $y['gibbonSchoolYearID']; ?>" style='float:left; border: 1px; padding: 5px 10px; background: #ff731b; color: white;'>Add</span></a><br><br>
     <div style="width:1173px; height:707px; overflow:auto;">
+    <?php if($staff_f == '' && $month_f == '' && $year_f == ''){?>
+    <table width="100%" cellpadding="0" cellspacing="0">
+	  <thead>
+	  <tr>
+	   	<th style='display:none'>Sec_code</th>
+	
+		<th style='display:none'>Priority</th>
+		
+		<th>Staff Name</th>
+		<?php 
+		//echo "<pre>pp=";print_r($rule);die;
+		foreach($rule as $a) {
+			print "<th>".$a['caption']."</th>";
+		} ?>
+		<th>Gross PF</th>
+		<th>Total</th>
+		<th>PF (<span id='PF_per'></span>%)</th>
+		<th>ESI (<span id='ESI_per'></span>%)</th>
+		<th>Advance</th>
+		<th>Net Amount</th>
+		<th>Action</th>
+		</tr>
+	  </thead>   
+		<tbody>
+		<?php 
+		$total=0;
+		foreach($staff_n as $sn) {
+		//echo "<pre>";print_r($sn);die;
+		$total_sql="SELECT SUM(`amount`) AS TOTAL FROM `lakshyasalarymaster` 
+        WHERE `staff_id` = '".$sn['gibbonStaffID']."' AND `rule_id` IN (1,10,11,12,13,14) 
+        AND `month` = '".$m."' AND `year_id` ='".$y['gibbonSchoolYearID']."'";
+        
+	    $result_t=$connection2->prepare($total_sql);
+		$result_t->execute();
+		$total=$result_t->fetchAll();
+		
+		$total_sql="SELECT  `amount` AS spl_amount FROM `lakshyasalarymaster` 
+        WHERE `staff_id` = '".$sn['gibbonStaffID']."' AND `rule_id` = '14'
+        AND `month` = '".$m."' AND `year_id` ='".$y['gibbonSchoolYearID']."'";
+        
+        $result_t=$connection2->prepare($total_sql);
+		$result_t->execute();
+		$spl_amount=$result_t->fetchAll();
+		
+		 $n_amount=0;
+		 if(!array_key_exists($sn['gibbonStaffID']+0,$structure_d[$y['gibbonSchoolYearID']+0][$m]))
+		  continue;
+		?>
+			<tr>
+				<td style='display:none'>
+					<?php echo $sn['sec_code'];?>
+				</td>
+            	<td style='display:none'>
+					<?php echo $sn['priority'];?>
+				</td>
+			
+				<td>
+					<?php echo $sn['preferredName']."<br><small>".$sn['type']."</small>";?>
+				</td>
+				
+				<?php
+					foreach($rule as $r){
+				?>
+				<td style="text-align:right;" class='PAYBAND'>
+					<?php
+					if(array_key_exists($r['rule_id']+0,$structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0])){
+						echo $structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][$r['rule_id']+0];
+						if($rule_impact[$r['rule_id']+0]=='+')
+							$n_amount+=$structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][$r['rule_id']+0]; 
+						else
+							$n_amount-=$structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][$r['rule_id']+0];
+							
+						//$total+=$n_amount;	
+					}
+					else
+						echo "-";
+					?>
+				</td>
+				
+				<?php }
+				           ?>
+				<td  style="text-align:right;">
+					<?php 
+					echo $structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][98];
+					?>
+				</td >
+				<td>
+					<?php 
+					//$a=$total[0]['TOTAL'];
+					//$b=$structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][98];
+					//$c=$a+$b;
+					  echo $total[0]['TOTAL'];    
+					?>
+				</td>
+				<td  style="text-align:right;">
+					<?php 
+						$pf=($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][98]+0)*($structure_d[$y['gibbonSchoolYearID']+0][$m][0][97]+0)/100;
+						echo round($pf);
+						$n_amount-=round($pf);
+					?>
+				</td >
+				<td  style="text-align:right;">
+					<?php 
+				//-----------------Commented by Shiva	
+				//		$esi=($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][98]+0)<=21000?ceil(($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][98]+0)*($structure_d[$y['gibbonSchoolYearID']+0][$m][0][96]+0)/100):0;
+                //-----------------Correction by Shiva Start
+                        $pfmem=($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][98]+0);
+	                    $esi=(($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][01]+0) +
+	                          ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][04]+0) + 
+	                          ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][10]+0) + 
+	                          ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][11]+0) + 
+	                          ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][12]+0) + 
+	                          ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][13]+0) + 
+	                          ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][14]+0) )<=21000 
+	                          ?ceil((($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][01]+0) +
+	                                 ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][04]+0) +
+	                                 ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][10]+0) +
+	                                 ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][11]+0) + 
+	                                 ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][12]+0) + 
+	                                 ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][13]+0) + 
+	                                 ($structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][14]+0) )
+	                                 *($structure_d[$y['gibbonSchoolYearID']+0][$m][0][96]+0)/100):0;						
+	            //-----------------Correction by Shiva Start        
+
+					    //echo $esi+=$spl_amount;
+					    //echo "<pre>";print_r($spl_amount);
+					    
+                        if ($pfmem<=1)  {
+                            $esi=0 ;
+                        }
+                        
+                        
+						echo $esi;
+						
+						$n_amount-=$esi;
+						
+						?>
+				</td >
+				
+				<td  style="text-align:right;">
+					<?php 
+					echo $structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][99];
+					$n_amount-=$structure_d[$y['gibbonSchoolYearID']+0][$m][$sn['gibbonStaffID']+0][99];
+						?>
+				</td >
+				<td  style="text-align:right;">
+					<?php echo $n_amount; ?>
+				</td>
+				<td>
+					<a href='#' id='id_<?php echo $sn['gibbonStaffID']."_".$m."_".$y['gibbonSchoolYearID']; ?>' class='edit_rule_ps' ><img style="width: 16px" title='Edit' src='./themes/Default/img/config.png'/></a>
+					<a href='#'  id='delid_<?php echo $sn['gibbonStaffID']."_".$m."_".$y['gibbonSchoolYearID']; ?>' class='delete_rule_ps'><img  style="width: 17px"  title='Edit' src='./themes/Default/img/garbage.png'/></a>
+				</td>
+			</tr>
+		<?php } ?>
+		</tbody>
+	</table>
+	<?php }else{?>
 	<table width="100%" cellpadding="0" cellspacing="0" class='myTable'>
 	  <thead>
 	  <tr>
@@ -329,6 +496,7 @@ if (isset($_GET["search"])) {
 		<?php } ?>
 		</tbody>
 	</table>
+	<?php }?>
 	</div>
 	<input type='hidden' id='pf_per' value='<?php echo $structure_d[$y['gibbonSchoolYearID']+0][$m][0][97]+0;?>'>
 	<input type='hidden' id='esi_per' value='<?php echo $structure_d[$y['gibbonSchoolYearID']+0][$m][0][96]+0;?>'>

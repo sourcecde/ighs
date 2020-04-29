@@ -177,8 +177,9 @@ else {
 			$structure_d=array();
 				foreach($structure as $sd){
 					if($sd['staff_id']!=0)
-					  if ($structure_d[$sd['staff_id']][$sd['rule_id']]!=7)
+					  if ($structure_d[$sd['staff_id']][$sd['rule_id']]<>7)
 					      $structure_d[$sd['staff_id']][$sd['rule_id']]=round($sd['amount']*$attendance[$sd['staff_id']]/$numOfDays);
+					      
 					  if ($structure_d[$sd['staff_id']][$sd['rule_id']] =7)
 					      $structure_d[$sd['staff_id']][$sd['rule_id']]=round($sd['amount']);
 				}

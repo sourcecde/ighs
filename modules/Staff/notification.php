@@ -21,7 +21,7 @@ else {
 				$contract=$result_contract_end->fetchAll();
 
 				// Retirement Data //
-				$sql_retire="SELECT * FROM GIBBONSTAFF WHERE `date_of_returment` >= NOW() AND TO_DAYS( `date_of_returment` ) - TO_DAYS( NOW() ) < ".$_REQUEST['days']."";
+				$sql_retire="SELECT * FROM gibbonstaff WHERE `date_of_returment` >= NOW() AND TO_DAYS( `date_of_returment` ) - TO_DAYS( NOW() ) < ".$_REQUEST['days']."";
 				$result_retire=$connection2->prepare($sql_retire);
 				$result_retire->execute();
 				$dot=$result_retire->fetchAll();
@@ -35,7 +35,7 @@ else {
 				$contract=$result_contract_end->fetchAll();
 
 				// Retirement Data //
-				$sql_retire="SELECT * FROM GIBBONSTAFF WHERE `date_of_returment` >= NOW() AND TO_DAYS( `date_of_returment` ) - TO_DAYS( NOW() ) < 30";
+				$sql_retire="SELECT * FROM gibbonstaff WHERE `date_of_returment` >= NOW() AND TO_DAYS( `date_of_returment` ) - TO_DAYS( NOW() ) < 30";
 				$result_retire=$connection2->prepare($sql_retire);
 				$result_retire->execute();
 				$dot=$result_retire->fetchAll();

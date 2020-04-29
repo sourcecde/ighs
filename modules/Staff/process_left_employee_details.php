@@ -91,7 +91,7 @@ if($_POST){
 				// $sql.=" WHERE `gibbonStaffID`=".$_REQUEST['gibbonStaffID'];
 			$result=$connection2->prepare($sql);
 			$result->execute();
-		//echo $sql;
+		echo $sql;
 		
 		// if($pf_date!='') {
 		// 			$tDate = str_replace('/', '-', $pf_date);

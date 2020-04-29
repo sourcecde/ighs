@@ -31,9 +31,8 @@ else {
 			echo $e;
 		}
 		try{
-		$sql="SELECT `gibbonStaffID`,priority,gibbonperson.preferredName FROM `gibbonstaff`
-		LEFT JOIN gibbonperson on gibbonperson.gibbonPersonID=gibbonstaff.gibbonPersonID";
-		$sql.=" WHERE (gibbonperson.dateEnd IS NULL OR gibbonperson.dateEnd>'".date('Y-m-d')."')"; 
+		$sql="SELECT `gibbonStaffID`,priority,preferredName FROM `gibbonstaff`";
+		$sql.=" WHERE (dateEnd IS NULL OR dateEnd>'".date('Y-m-d')."') and status='Full"; 
 		$sql.=" ORDER BY gibbonstaff.priority";
 		$result1=$connection2->prepare($sql);
 		$result1->execute();

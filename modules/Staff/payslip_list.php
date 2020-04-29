@@ -73,7 +73,7 @@ if(isset($_REQUEST['print']))
 					}?>
 				</select></td>
 
-                <td><input  type='submit' value='search' name='print'></td>
+                <td><input  type='submit' value='Search' name='print'></td>
 			<td><input  type='submit' value='Submit' name='printing' ></td>
 		</tr>
 	</table>
@@ -183,121 +183,113 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 		?>
 			<table width="100%" cellpadding="2" cellspacing="0" border="0">
 				  <tr>
-					<th align="center" style="padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:25px; color:#000000;">Indra Gopal High School</th>
+					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;">Indra Gopal High School</td>
 				  </tr>
 				  <tr>
-					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;">Jheel Bagan, P.O. Ghuni, Hatiara, Kolkata - 700 157</td>
+					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000;">Jheel Bagan, P.O. Ghuni, Hatiara, Kolkata - 700 157</td>
 				  </tr>
-				  <tr>
-					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> </td>
-				  </tr>
-	<tr>
-		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Salary For  the Month: <?php echo $month_name[($month_f-1)];?> of Year: <?php echo $y['name'];?></td>
-	</tr>
+                  <tr>
+		             <td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000;"> Salary For  the Month: <?php echo $month_name[($month_f-1)];?> of Year: <?php echo $y['name'];?></td>
+	              </tr>
 
-	<tr>
-		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Name: <?php echo $generate_payslip['name'];?></td>
-	</tr>	
-				  
-				   <tr>
-				  </tr>
+	           <tr>
+         		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000;"> Name: <?php echo $generate_payslip['name'];?></td>
+	           </tr>	
+			
 				  <tr>
-				  </table><br>
-				  <table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;'>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  </table>
+				  <table width='100%' cellpadding='5px' style='border: 1px solid black; '>
+				  	<tr style='border: 1px solid black; '>
 				  		<th>Particulars</th>
 				  		<th>Amount</th>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<th>Salary Structure (A)</th>
+				  	<tr style='border: 1px solid black; '>
+				  		<th>Salary Structure (A) [Earnings]</th>
 				  		<th></th>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>PAYBAND</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['PAYBAND'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>PAYBAND</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['PAYBAND'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>CONSAL</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['CONSAL'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>CONSAL</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['CONSAL'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>GRPAY</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['GRPAY'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>GRPAY</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['GRPAY'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>DA</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['DA'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>DA</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['DA'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>HRA</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['HRA'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>HRA</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['HRA'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>MEDICAL</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['MED'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>MEDICAL</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['MED'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>SPECIAL PAY</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['SPLPAY'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>SPECIAL PAY</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['SPLPAY'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>Total</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $total_salary;?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>Total</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $total_salary;?></td>
 				  	</tr>
 				  </table>
-				  <table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;'>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<th></th>
-				  		<th></th>
-				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<th>Salary Structure (B)</th>
+				  <table width='100%' cellpadding='5px' style='border: 1px solid black; '>
+				  	<tr style='border: 1px solid black; '>
+				  		<th>Salary Structure (B) [Deduction]</th>
 				  		<th></th>
 				  	</tr>
 
 				  	
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>P TAX</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['P TAX'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>P TAX</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['P TAX'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>I TAX</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['I TAX'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>I TAX</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['I TAX'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>ESI</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>
-				  			<?php echo $esi;?>
-				  		</td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>ESI</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $esi;?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>PF GROS</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $pf;?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>PF</td>
+				  		<td style='border: 1px solid black; text-align: right; '><?php echo $pf;?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>ADVANCE</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $generate_payslip['ADVANCE'];?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>ADVANCE</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $generate_payslip['ADVANCE'];?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>Total</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $total_deduction?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>Total</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $total_deduction?></td>
 				  	</tr>
-				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'>Total Salary (A - B)</td>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $total_in_hand?></td>
+				  	<tr style='border: 1px solid black; '>
+				  		<td style='border: 1px solid black; '>Total Salary (A - B)</td>
+				  		<td style='border: 1px solid black; text-align: right;'><?php echo $total_in_hand?></td>
 				  	</tr>
-				  	
+				  </table>
+				  
 				  </table>
 				  <table width='100%'>
 				  <tr>
 				  		<td></td>
-				  		<td><a href='#'><img src='./themes/Default/img/plus.png'/></a></td>
+				  	    <td><img src="http://ighs.in/ighs_lakshya_sr//themes/Default/img/ki85Ed5dT.jpg" alt="Signature" width="150" height="75" align="right"></td>	
 				  	</tr>
 				  	<tr>
-				  		<td><b>Date:<?php echo date('d/m/Y');?></b></td>
-				  		<td><b>Signature<br>(Manager, Accounts)</b></td>
+				  		<td><b>Date:<?php echo date('d/m/Y');?></b> </td>
+				  		<td style="text-align:right ;font-weight: bold;">Signature<br>(Manager, Accounts)</td>
 				  	</tr>
 				  	</table>
+
+				  
 				  <br><br><br>
 	<?php }?>
 </div>
@@ -305,6 +297,7 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 	}
 }
 ?>
+
 
 <script type="text/javascript">
 
@@ -322,4 +315,6 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
         $('div input').attr('checked', false);
     }
 });
+
+
 </script>

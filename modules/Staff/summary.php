@@ -179,19 +179,16 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 	<div id="print_page">
 		<table width="100%" cellpadding="2" cellspacing="0" border="0">
 				  <tr>
-					<th align="center" style="padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:25px; color:#000000;">Indra Gopal High School</th>
-				  </tr>
+					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;">Indra Gopal High School</td>
+				  </tr>				  
 				  <tr>
-					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;">Jheel Bagan, P.O. Ghuni, Hatiara, Kolkata - 700 157</td>
+					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:14; color:#000000;">Jheel Bagan, P.O. Ghuni, Hatiara, Kolkata - 700 157</td>
 				  </tr>
-				  <tr>
-					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> </td>
-				  </tr>
-	<tr>
-		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Summary For  the Month: <?php echo $month_name[($month_f-1)];?> of Year: <?php echo ($y['name']-1);?></td>
-	</tr>				  
+	               <tr>
+		           <td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000;">Summary For  the Month: <?php echo $month_name[($month_f-1)];?> of Year: <?php echo ($y['name']);?></td>
+	               </tr>				  
 				   <tr>
-				   	<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Group: <?php if($staff_type == 1){echo "Sr. Section";}if($staff_type == 2){echo "Jr. Section";}if($staff_type == 3){echo "All";}?></td>
+				   	<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000;"> Group: <?php if($staff_type == 1){echo "Sr. Section";}if($staff_type == 2){echo "Jr. Section";}if($staff_type == 3){echo "All";}?></td>
 				  </tr>
 				  <tr>
 				  </table>
@@ -201,7 +198,7 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				  		<th>Amount</th>
 				  	</tr>
 				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<th>Salary Structure (A)</th>
+				  		<th>Salary Structure (A) [Earnings]</th>
 				  		<th></th>
 				  	</tr>
 				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
@@ -243,7 +240,7 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				  		<th></th>
 				  	</tr>
 				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
-				  		<th>Salary Structure (B)</th>
+				  		<th>Salary Structure (B) [Deductions]</th>
 				  		<th></th>
 				  	</tr>
 

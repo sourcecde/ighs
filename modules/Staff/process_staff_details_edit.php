@@ -114,9 +114,9 @@ if($_POST){
 			$result3->execute();	
 		*/	
 			
-			// header("Location: http://13.233.101.108/ighs_lakshya_sr//index.php?q=/modules/Staff/staff_view.php");
+			header("Location: http://ighs.in/ighs_lakshya_sr//index.php?q=/modules/Staff/staff_view.php");
+			                  
 			
-			header("Location: http://13.233.101.108/ighs_lakshya_sr//index.php?q=/modules/Staff/staff_view.php");
 	/*	if(!$fail)
 		    return false;
 		else

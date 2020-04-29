@@ -72,22 +72,21 @@ if($_POST){
 						print _("Name") . "<br/>" ;
 					//	print "<span style='font-size: 85%; font-style: italic'>" . _('Initials') . "</span>" ;
 					print "</th>" ;
-			//		print "<th>" ;
-			//			print _("Staff Type") ;
-			//		print "</th>" ;
+					print "<th>" ;
+						print _("Staff Type") ;
+					print "</th>" ;
 					
 					print "<th>" ;
 						print _("Designation") ;
 					print "</th>" ;
 					
-					print "<th>" ;
-						print _("Contact No.") ;
+				/*	print "<th>" ;
+						print _("Job Title") ;
 					print "</th>" ;
-					
+				*/	
 					print "<th>" ;
-						print _("Actions   ") ;
-						print "<a style='font-weight: bold;' href='".$_SESSION[$guid]["absoluteURL"]."/index.php?q=/modules/".$_SESSION[$guid]["module"]."/staff_info.php'><span >  Add New</span></a> " ;
-					
+						print _("Actions | ") ;
+						print "<a style='font-weight: bold;' href='".$_SESSION[$guid]["absoluteURL"]."/index.php?q=/modules/".$_SESSION[$guid]["module"]."/staff_info.php'><span >Add</span></a> " ; 
 					    print "</th>" ;
 				print "</tr>" ;
 				print "</thead>" ;
@@ -132,24 +131,24 @@ if($_POST){
 							echo $row["gibbonStaffID"];
 						print "</td>" ;
 						print "<td>" ;
-							print formatName("", $row["preferredName"],@$row["surname"], "Student", true) . "<br/>" ;
+							print formatName("", $row["preferredName"],$row["surname"], "Student", true) . "<br/>" ;
 							//print "<span style='font-size: 85%; font-style: italic'>" . $row["initials"] . "</span>" ;
 						print "</td>" ;
-				//		print "<td>" ;
-				//			print $row["staff_type"] ;
-				//		print "</td>" ;
+						print "<td>" ;
+							print $row["staff_type"] ;
+						print "</td>" ;
 						
 						print "<td>" ;
 							print $row["jobTitle"] ;
 						print "</td>" ;
-						print "<td>" ;
-							print $row["phone1"] ;
+					/*	print "<td>" ;
+							print $row["jobTitle"] ;
 						print "</td>" ;
-						
+					*/	
 						print "<td>" ;
 							//print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/staff_view_details.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img title='" . _('View Details') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/plus.png'/></a> " ;
 					        print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/staff_details_edit.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img title='" . _('Edit Details') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/config.png'/></a> " ;
-					      //  print "<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/staff_view.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img id='delete_staff' style='height: 7%' title='" . _('Delete') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/delete-button.jpg'/></a>" ;
+					        print "  |<a href='" . $_SESSION[$guid]["absoluteURL"] . "/index.php?q=/modules/" . $_SESSION[$guid]["module"] . "/staff_view.php&gibbonStaffID=" . $row["gibbonStaffID"] . "'><img id='delete_staff' style='height: 7%' title='" . _('Delete') . "' src='./themes/" . $_SESSION[$guid]["gibbonThemeName"] . "/img/delete-button.jpg'/></a>" ;
 					        
 						print "</td>" ;
 					print "</tr>" ;

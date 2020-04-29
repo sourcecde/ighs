@@ -14,12 +14,10 @@ else {
 	$mode='';
 	$month_f='';
 	$year_f='';
-	$staff_type ='';
 	if(isset($_REQUEST['type'])){
 		$mode=$_REQUEST['type'];
 		$month_f=$_REQUEST['month'];
 		$year_f=$_REQUEST['year'];
-		$staff_type = $_REQUEST['staff_type'];
     }
 		$sql2="SELECT * FROM `gibbonschoolyear` ORDER BY `gibbonSchoolYearID` ";
 		$result2=$connection2->prepare($sql2);
@@ -56,11 +54,6 @@ else {
 						print "<option value='".$y['gibbonSchoolYearID']."' $s>".$y['name']."</option>";
 					}?>
 				</select></td>
-			<td><select name='staff_type' required><option value=''> Select Group </option>
-				<option value='0' <?php echo $staff_type==0?'selected':''; ?>>All</option>			    
-				<option value='1' <?php echo $staff_type==1?'selected':''; ?>>Sr. Section</option>
-				<option value='2' <?php echo $staff_type==2?'selected':''; ?>>Jr. Section</option>
-				</select></td>
 			<td><input  type='submit' value='Print' name='print-btn'></td>
 		</tr>
 	</table>
@@ -77,21 +70,14 @@ else {
 	
 
 		$sql="SELECT gibbonstaff.gibbonStaffID,gibbonstaff.type,gibbonstaff.bank_ac,gibbonstaff.preferredName FROM gibbonstaff
-				 WHERE payment_mode='{$_REQUEST['type']}' ";
-				 
-		if ($staff_type > 0)
-		{
-		    $sql.=" AND sec_code = {$staff_type}";
-		    
-		}
-		
+				 WHERE payment_mode='{$_REQUEST['type']}'";
 		$sql.=" ORDER BY gibbonstaff.priority, gibbonstaff.category DESC";
 
 		$result=$connection2->prepare($sql);
 		$result->execute();
 		$staff=$result->fetchAll();
 		
-		$sql="SELECT * FROM `lakshyasalaryrule` where active=1 ORDER BY `impact`";
+		$sql="SELECT * FROM `lakshyasalaryrule` ORDER BY `impact`";
 		$result=$connection2->prepare($sql);
 		$result->execute();
 		$rule=$result->fetchAll();
@@ -128,15 +114,7 @@ else {
 		foreach($structure as $s){
 			$pf_arr[$s['rule_id']+0]=$s['amount'];
 		} 
-
-if($staff_type == 0)
-       {$shiva= "All";}
-elseif ($staff_type == 1)
-       {$shiva= "Senior Section";}
-else   {$shiva= "Junior Section";}
-
-$counter = 0;
-
+		
 		echo "<div id='print_page' style='display:none'>";
 		?>
 			<table width="100%" cellpadding="2" cellspacing="0" border="0">
@@ -150,10 +128,7 @@ $counter = 0;
 					<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> </td>
 				  </tr>
 	<tr>
-		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Salary For  the Month: <?php echo $month_name[($month_f-1)];?> of Year: <?php echo $y['name'];?></td>
-	</tr>
-	<tr>
-		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Group: <?php echo $shiva;?></td>
+		<td align="center" colspan=15 style="font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#000000;"> Salary For  the Month: <?php echo $month_name[($month_f[0]-1)];?> of Year: <?php echo $y['name'];?></td>
 	</tr>	
 				  
 				   <tr>
@@ -162,16 +137,13 @@ $counter = 0;
 				  </table>
 				  <br>
 		<?php
-		echo "<table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;' id='table'>";
-		echo "<thead>";
+		echo "<table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;'>";
 		echo "<tr style='border: 1px solid black; border-collapse: collapse;'>";
-		    echo "<th>Sl No.</th>";
 			echo "<th>Staff</th>";
 			if($mode=='Cheque')
 				echo "<th>Bank a/c</th>";
 			echo "<th>Amount</th>";
 		echo "</tr>";
-		echo "</thead>";
 		foreach($staff as $s){
 			if (!array_key_exists($s['gibbonStaffID']+0,$structure_d))
 				continue;
@@ -191,26 +163,17 @@ $counter = 0;
 				$n+=$pf;
 				$advance=$structure_d[$s['gibbonStaffID']+0][99];
 				$n+=$advance;
-				$esi=($structure_d[$s['gibbonStaffID']+0][98] + $structure_d[$s['gibbonStaffID']+0][12])<=21000?ceil(($structure_d[$s['gibbonStaffID']+0][98]+0 + $structure_d[$s['gibbonStaffID']+0][12]+0)*($pf_arr['96']+0)/100):0;
+				$esi=($structure_d[$s['gibbonStaffID']+0][98])<=21000?ceil(($structure_d[$s['gibbonStaffID']+0][98]+0)*($pf_arr['96']+0)/100):0;
 				$n+=$esi;
 				$total=$p-$n;
 						
 			echo "<tr style='border: 1px solid black; border-collapse: collapse;'>";
-			    $counter=$counter+1; 
-			    echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>$counter</td>";
 				echo "<td style='border: 1px solid black; border-collapse: collapse;'>{$s['preferredName']}<br><small>{$s['type']}</small></td>";
 				if($mode=='Cheque')
 					echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>{$s['bank_ac']}</td>";
 				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>{$total}</td>";
 			echo "</tr>";
 		}
-		echo "<tr style='border: 1px solid black; border-collapse: collapse;'>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse;'></td>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse;'></td>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>Total</td>";
-				echo "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'><span id='total_value'></span></td>";
-			echo "</tr>";
-
 		echo "</table>";
 		echo "</div>";
 	?>
@@ -221,23 +184,6 @@ $counter = 0;
 		$(w.document.body).html(html);
 		w.print();
 	})
-
-	// Total Calculation of the table
-	var table = document.getElementById("table");
-
-	var sumVal = 0;
-
-	for(var i =1; i<table.rows.length; i++)
-	{
-		var cellValue = table.rows[i].cells[3].innerHTML;
-
-		// check that the value is a number before adding it to the total
-		if (!isNaN(cellValue)) {
-		    sumVal = sumVal + parseFloat(cellValue);
-		}
-	}
-	//console.log(sumVal);
-	document.getElementById('total_value').innerHTML = sumVal;
 	</script>
 <?php	
 	}

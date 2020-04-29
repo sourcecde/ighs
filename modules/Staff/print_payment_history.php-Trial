@@ -203,81 +203,9 @@ if(isset($_REQUEST['sid'])){
 			if($secCode!='' && $secCode!=$sn['sec_code']){
 				$counter = 0;				
 				?>
-				<tr style="font-weight: bold;">		
-					<td style='text-align:right; height:50px;' colspan='4'><b>Sub Total for Section <?php echo 'Secondary Section' ; ?>:</b></td>
-					
-					<?php 
-								$gap_col=abs(sizeOf($positive_rule)-sizeOf($negative_rule));
-						
-					?>
-					<?php
-					if(sizeOf($positive_rule)>sizeOf($negative_rule)){
-								$i=0;
-								foreach($positive_rule as $r){
-						?>
-						<td style='position: relative; width:200px; margin:0; padding:0;'>
-							<span style='position:absolute; top:0; left:0; padding:5px;'>
-							<?php
-							if (array_key_exists($r['caption'],$SubTotalSectionWise[$secCode])){
-							echo "<b>{$SubTotalSectionWise[$secCode][$r['caption']]}</b>";
-							}
-							else
-								echo "-";
-							?>
-							</span><hr>
-							<span style='position:absolute; bottom:0; right:0; padding:5px;'>
-							<?php
-							if(--$gap_col<2 && $i<sizeOf($negative_rule)){
-								/*if (array_key_exists($negative_rule[$i++]['rule_id'],$sub_rule)){
-									echo "<b>{$sub_rule[$r['rule_id']+0]}</b>";
-								}*/
-								if (array_key_exists($negative_rule[$i]['caption'],$SubTotalSectionWise[$secCode])){
-									echo "<b>{$SubTotalSectionWise[$secCode][$negative_rule[$i++]['caption']]}</b>";
-								}
-								else
-									echo "-";
-							}
-							else if($i==sizeOf($negative_rule))
-							{
-                                echo "<b>{$SubTotalSectionWise[$secCode]['sub_pf']}</b>";
-								
-								$i++;
-							}
-							else if($i==sizeOf($negative_rule)+1)
-							{
-								echo "<b>{$SubTotalSectionWise[$secCode]['sub_esi']}</b>";
-								
-							}
-							else
-									echo "-";
-							?>
-							</span>
-						</td>
-						<?php 
-								}
-							} 
-					?>
-					<td style='position: relative; width:200px; margin:0; padding:0;'>
-							<span style='position:absolute; top:0; left:0; padding:5px;'>	
-							<b><?php echo $SubTotalSectionWise[$secCode]['sub_grossPF'];?></b>
-							</span><hr>
-							<span style='position:absolute; bottom:0; right:0; padding:5px;'>	
-							<b><?php echo $SubTotalSectionWise[$secCode]['sub_deduction'];?></b></span>
-					</td>
-					<td style='position: relative; width:200px; margin:0; padding:0;'>
-							<span style='position:absolute; top:0; left:0; padding:5px;'>
-								<?php echo $SubTotalSectionWise[$secCode]['sub_ern'];?>
-							</span><hr>
-							<span style='position:absolute; bottom:0; right:0; padding:5px;'>	
-								<?php  echo $SubTotalSectionWise[$secCode]['sub_ded'];?>
-							</span>	
-                    
-					</td>
-					
-					<td style='text-align:right;'><b><?php echo $SubTotalSectionWise[$secCode]['sub_n_amount'];?></b></td>					
 				<?php
 			}
-			$secCode=$sn['sec_code'];			
+			$secCode=$sn['sec_code'];		
 		?>       
 			<tr>
 		        <td style="border: 1px solid black; border-collapse: collapse;">
@@ -290,10 +218,6 @@ if(isset($_REQUEST['sid'])){
 					<?php echo " ";?><br>
 					<?php echo "<small>DOJ: ".date('d/m/y',strtotime($sn['dateStart']))."</small>"; ?>
 					<?php echo " ";?><br>
-					
-					
-					
-	
 				</td>
 				<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>
 					<span class='gross' id='g<?php echo $sn['gibbonStaffID'];?>'></span>
@@ -316,15 +240,8 @@ if(isset($_REQUEST['sid'])){
 					if (array_key_exists($r['rule_id']+0,$structure_d[$sn['gibbonStaffID']+0])){
 						echo $a=$structure_d[$sn['gibbonStaffID']+0][$r['rule_id']+0];
 						$n_amount+=$a;
-						$sub_rule[$r['rule_id']]+=$a;
+						$sub_rule[$a['rule_id']]+=$a;
 						$total_ern+=$a;
-					if(!array_key_exists($r['caption'], $SubTotalSectionWise[$sn['sec_code']])){
-							$SubTotalSectionWise[$sn['sec_code']][$r['caption']]=$a;
-						}
-						else{
-							$SubTotalSectionWise[$sn['sec_code']][$r['caption']]+=$a;
-						}
-												
 					}
 					else
 						echo "-";
@@ -336,16 +253,9 @@ if(isset($_REQUEST['sid'])){
 						if (array_key_exists($negative_rule[$i]['rule_id'],$structure_d[$sn['gibbonStaffID']+0])){
 							echo $a=$structure_d[$sn['gibbonStaffID']+0][$negative_rule[$i]['rule_id']+0];
 							$n_amount-=$a;
-						//	$sub_rule[$r['rule_id']]-=$a;
-						// Findout here
-							$total_ded+=$a;
-						if(!array_key_exists($negative_rule[$i]['caption'], $SubTotalSectionWise[$sn['sec_code']])){
-								$SubTotalSectionWise[$sn['sec_code']][$negative_rule[$i]['caption']]=$a;
-							}
-							else{
-								$SubTotalSectionWise[$sn['sec_code']][$negative_rule[$i]['caption']]+=$a;
-							}							
-							$i++;
+                            $sub_rule[$a['rule_id']]-=$a;
+                            $total_ded+=$a;
+						$i++;
 						}
 						else
 							echo "-";
@@ -398,12 +308,6 @@ if(isset($_REQUEST['sid'])){
 					<?php 
 						echo $gross_pf=$structure_d[$sn['gibbonStaffID']+0][98];
 						$sub_grossPF+=$gross_pf;
-						if(!array_key_exists('sub_grossPF', $SubTotalSectionWise[$sn['sec_code']])){
-								$SubTotalSectionWise[$sn['sec_code']]['sub_grossPF']=$gross_pf;
-							}
-							else{
-								$SubTotalSectionWise[$sn['sec_code']]['sub_grossPF']+=$gross_pf;
-							}						
 					?>
 					</span><hr style="height:0; border-top:1px solid;">
 					<span style='position:absolute; bottom:0; right:0; padding:5px;'>	
@@ -412,12 +316,6 @@ if(isset($_REQUEST['sid'])){
 						$n_amount-=$adv;
 						$sub_deduction+=$adv;
 						$total_ded+=$adv;
-						if(!array_key_exists('sub_deduction', $SubTotalSectionWise[$sn['sec_code']])){
-							$SubTotalSectionWise[$sn['sec_code']]['sub_deduction']=$adv;
-						}
-						else{
-							$SubTotalSectionWise[$sn['sec_code']]['sub_deduction']+=$adv;
-						}
 					?>
 					</span>
 				</td>
@@ -426,24 +324,12 @@ if(isset($_REQUEST['sid'])){
 					<?php
 						echo $total_ern;
 						$sub_ern+=$total_ern;
-							if(!array_key_exists('sub_ern', $SubTotalSectionWise[$sn['sec_code']])){
-								$SubTotalSectionWise[$sn['sec_code']]['sub_ern']=$total_ern;
-							}
-							else{
-								$SubTotalSectionWise[$sn['sec_code']]['sub_ern']+=$total_ern;
-							}						
 					?>
 					</span><hr style="height:0; border-top:1px solid;">
 					<span style='position:absolute; bottom:0; right:0; padding:5px;'>	
 					<?php
 						echo $total_ded;
 						$sub_ded+=$total_ded;
-								if(!array_key_exists('sub_ded', $SubTotalSectionWise[$sn['sec_code']])){
-									$SubTotalSectionWise[$sn['sec_code']]['sub_ded']=$total_ded;
-								}
-								else{
-									$SubTotalSectionWise[$sn['sec_code']]['sub_ded']+=$total_ded;
-								}						
 					?>
 					</span>
 				</td>
@@ -451,12 +337,6 @@ if(isset($_REQUEST['sid'])){
 					<?php
 					echo $n_amount;
 					$sub_n_amount+=$n_amount;
-								if(!array_key_exists('sub_n_amount', $SubTotalSectionWise[$sn['sec_code']])){
-									$SubTotalSectionWise[$sn['sec_code']]['sub_n_amount']=$n_amount;
-								}
-								else{
-									$SubTotalSectionWise[$sn['sec_code']]['sub_n_amount']+=$n_amount;
-								}					
 					?>
 				</td>
 				
@@ -469,77 +349,6 @@ if(isset($_REQUEST['sid'])){
 		<?php } ?>
 
 		
-		<tr style="font-weight: bold;">		
-					<td style='text-align:right; height:50px;' colspan='4'><b>Sub Total for <?php echo 'Primary Section'; ?>:</b></td>					
-					
-					<?php 
-						$gap_col=abs(sizeOf($positive_rule)-sizeOf($negative_rule));
-					?>
-					<?php
-					if(sizeOf($positive_rule)>sizeOf($negative_rule)){
-								$i=0;
-								foreach($positive_rule as $r){
-						?>
-						<td style='position: relative; width:200px; margin:0; padding:0;'>
-							<span style='position:absolute; top:0; left:0; padding:5px;'>
-							<?php
-							if (array_key_exists($r['caption'],$SubTotalSectionWise[$secCode])){
-							echo "<b>{$SubTotalSectionWise[$secCode][$r['caption']]}</b>";
-							}
-							else
-								echo "-";
-							?>
-							</span><hr>
-							<span style='position:absolute; bottom:0; right:0; padding:5px;'>
-							<?php
-							if(--$gap_col<2 && $i<sizeOf($negative_rule)){
-								/*if (array_key_exists($negative_rule[$i++]['rule_id'],$sub_rule)){
-									echo "<b>{$sub_rule[$r['rule_id']+0]}</b>";
-								}*/
-								if (array_key_exists($negative_rule[$i]['caption'],$SubTotalSectionWise[$secCode])){
-									echo "<b>{$SubTotalSectionWise[$secCode][$negative_rule[$i++]['caption']]}</b>";
-								}
-								else
-									echo "-";
-							}
-							else if($i==sizeOf($negative_rule))
-							{
-								echo "<b>{$SubTotalSectionWise[$secCode]['sub_pf']}</b>";
-								
-								$i++;
-							}
-							else if($i==sizeOf($negative_rule)+1)
-							{
-						    	echo "<b>{$SubTotalSectionWise[$secCode]['sub_esi']}</b>";	
-								
-							}
-							else
-									echo "-";
-							?>
-							</span>
-						</td>
-						<?php 
-								}
-							} 
-					?>
-					<td style='position: relative; width:200px; margin:0; padding:0;'>
-							<span style='position:absolute; top:0; left:0; padding:5px;'>	
-							<b><?php echo $SubTotalSectionWise[$secCode]['sub_grossPF'];?></b>
-							</span><hr>
-							<span style='position:absolute; bottom:0; right:0; padding:5px;'>	
-							<b><?php echo $SubTotalSectionWise[$secCode]['sub_deduction'];?></b></span>
-					</td>
-					<td style='position: relative; width:200px; margin:0; padding:0;'>
-							<span style='position:absolute; top:0; left:0; padding:5px;'>
-								<?php echo $SubTotalSectionWise[$secCode]['sub_ern'];?>
-							</span><hr>
-							<span style='position:absolute; bottom:0; right:0; padding:5px;'>	
-								<?php  echo $SubTotalSectionWise[$secCode]['sub_ded'];?>
-							</span>	
-					</td>
-					<td style='text-align:right;'><b><?php echo $SubTotalSectionWise[$secCode]['sub_n_amount'];?></b></td>
-				</tr>
-
 		<tr >
 			<td style='border: 1px solid black; border-collapse: collapse; text-align:right;' colspan='4' rowspan='2'>Total:</td>
 			<?php 
@@ -563,8 +372,7 @@ if(isset($_REQUEST['sid'])){
 					echo "<td style='border: 1px solid black; border-collapse: collapse;'></td>";
 				}
 			foreach($negative_rule as $r){
-				print "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>{$sub_rule[$r['rule_id']]}</td>";
-				
+				print "<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'>{$sub_rule[$a['rule_id']]}</td>";
 			} ?>		
 			<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'><b><?php echo $sub_pf; ?></b></td>
 			<td style='border: 1px solid black; border-collapse: collapse; text-align:right;'><b><?php echo $sub_esi; ?></b></td>
