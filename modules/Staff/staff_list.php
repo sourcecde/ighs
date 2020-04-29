@@ -107,9 +107,9 @@ date_default_timezone_set($_SESSION[$guid]["timezone"]);
 				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $staffList['jobTitle'];?></td>
 				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $staffList['phone1'];?></td>
 				  		<?php if(isset($_REQUEST['doj'])){?>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $staffList['dateStart'];?></td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo date("d/m/Y", strtotime($staffList['dateStart']));?></td>
 				  		<?php }if(isset($_REQUEST['dob'])){?>
-				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $staffList['dob'];?></td>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo date("d/m/Y", strtotime($staffList['dob']));?></td>
 				  		<?php }if(isset($_REQUEST['aadhar'])){?>
 				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $staffList['nationalIDCardNumber'];?></td>
 				  	<?php }?>
