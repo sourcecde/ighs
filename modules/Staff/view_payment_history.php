@@ -47,6 +47,7 @@ if (isset($_GET["search"])){
 			else
 				$negative_rule[]=$r;
 		}
+		if (isset($_GET["search"])){
 		$sql1="SELECT gibbonstaff.gibbonStaffID,gibbonstaff.jobTitle,gibbonstaff.priority,gibbonstaff.preferredName,gibbonstaff.dateStart,sec_code FROM gibbonstaff
 				LEFT JOIN gibbonperson on gibbonperson.gibbonPersonID=gibbonstaff.gibbonPersonID";
 		//$sql1.=" WHERE (dateEnd IS NULL  OR dateEnd>='" . date("Y-m-d") ."')";		
@@ -57,7 +58,7 @@ if (isset($_GET["search"])){
 		$result1=$connection2->prepare($sql1);
 		$result1->execute();
 		$staff_n=$result1->fetchAll();
-		
+		}
 		$staff_name=array();
 		$sql2="SELECT * FROM `gibbonschoolyear` ORDER BY `gibbonSchoolYearID` DESC";
 		$result2=$connection2->prepare($sql2);
@@ -174,11 +175,12 @@ if (isset($_GET["search"])){
 					
 ?>	
 
-
+<?php if (isset($_GET["search"])){?>
 	<center><b>Month: </b><i><?php echo $month_name[$m-1];?></i><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year: </b><i><?php echo $y['name']; ?></i></center>
+<?php //}?>
 		<a href="#"><span class="button-print" id="<?php echo $m;?>_<?php echo $y['gibbonSchoolYearID']; ?>">Print</span></a><br><br>
 	<div style='width:1154px; height:586px; overflow:auto;'>
-	
+	<?php //if (isset($_GET["search"])){?>
 	<table width="100%" cellpadding="0" cellspacing="0" class='myTable'>
 	  <thead>
 	  <tr>
@@ -641,6 +643,7 @@ if (isset($_GET["search"])){
 		</tbody>
 	</table>
 	</div>
+<?php }?>
 	<input type='hidden' id='pf_per<?php echo $m; ?>' value='<?php echo $pf_arr[$y['gibbonSchoolYearID']+0][$m][0][97];?>'>
 	<input type='hidden' id='esi_per<?php echo $m; ?>' value='<?php echo $pf_arr[$y['gibbonSchoolYearID']+0][$m][0][96];?>'>
 <?php

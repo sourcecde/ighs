@@ -87,7 +87,9 @@ date_default_timezone_set($_SESSION[$guid]["timezone"]);
 				  <tr>
 				  </table>
 	<table width='100%' cellpadding='5px' style='border: 1px solid black; border-collapse: collapse;'>
+			<thead>
 				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<th>Sl No.</th>
 				  		<th>Staff ID</th>
 				  		<th>Name</th>
 				  		<th>Designation</th>
@@ -100,8 +102,12 @@ date_default_timezone_set($_SESSION[$guid]["timezone"]);
 				  		<th>Aadhar</th>
 				  	<?php }?>
 				  	</tr>
-				  	<?php foreach($staff_list as $staffList){?>
+			</thead>
+				  	<?php 
+				  	$i=1;
+				  	foreach($staff_list as $staffList){?>
 				  	<tr style='border: 1px solid black; border-collapse: collapse;'>
+				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $i++; ?></td>
 				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $staffList['gibbonStaffID'];?></td>
 				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $staffList['preferredName'];?></td>
 				  		<td style='border: 1px solid black; border-collapse: collapse;'><?php echo $staffList['jobTitle'];?></td>
