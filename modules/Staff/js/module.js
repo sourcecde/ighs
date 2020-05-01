@@ -470,6 +470,7 @@ $(document).ready(function(){
 
 	/* Manage Employee Contract */
 		var linkurlcontract='modules/Staff/process_employee_contract.php';
+		var linkurlmail = 'modules/Staff/process_payslip_mail.php';
 	$('.close_contract').click(function(){
 		$('#hide_body').hide();
 		$('#create_employee_contract').fadeOut();
@@ -546,6 +547,30 @@ $(document).ready(function(){
  			success: function(msg)
  			{
 				alert("Deleted successfully!!");
+				location.reload();
+ 			}
+ 		});
+		}
+	})
+	$('.send_mail').click(function(){
+		var id_s=$(this).attr("id");
+		var id_a=id_s.split('_');
+		var id=id_a[1];
+		var month=$('#month').val();
+		var year=$('#year').val();
+		// alert(id);
+		// alert(month);
+		// alert(year);
+		var n =confirm("Are you really want to send payslip?");
+		if(n) {
+		$.ajax
+ 		({
+ 			type: "POST",
+ 			url: linkurlmail,
+ 			data: {action:'mail',id:id,month:month,year:year},
+ 			success: function(msg)
+ 			{
+				alert("Mail sent successfully!!");
 				location.reload();
  			}
  		});
