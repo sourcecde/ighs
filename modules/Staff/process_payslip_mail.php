@@ -42,8 +42,10 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 			echo $e;
 		}
 	}
+	print_r($staff_payslip_details);
 	foreach ($staff_payslip_details as $staffPayslip) {
 			$payslip[$staffPayslip['gibbonStaffID']]['name'] =  $staffPayslip['preferredName'];
+			$payslip[$staffPayslip['gibbonStaffID']]['email'] =  $staffPayslip['email'];
 			$payslip[$staffPayslip['gibbonStaffID']][$staffPayslip['caption']] =  $staffPayslip['paid_amount'];
 		}
 		//print_r($payslip);
@@ -75,10 +77,10 @@ FROM lakshyasalarypayment,lakshyasalarymaster,lakshyasalaryrule,gibbonstaff
 				$total_deduction = ($pf+$generate_payslip['P TAX']+$generate_payslip['I TAX']+$generate_payslip['ADVANCE']+$esi);
 				$total_in_hand = ($total_salary - $total_deduction);
 foreach ($year as $y) {
-	print_r($y);
+	//print_r($y);
 }
-				$to = "dbrj.ghosh@gmail.com";
-				$subject = "HTML email";
+				$to = $generate_payslip['email'];
+				$subject = "Payslip Details";
 				$msg = "<html><body>
 				<table width='100%' cellpadding='2' cellspacing='0' border='0'>
 				  <tr>
