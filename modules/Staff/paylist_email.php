@@ -80,6 +80,7 @@ if(isset($_REQUEST['print']))
 		<?php foreach($staff as $s){
             $newStaff[$s['gibbonStaffID']]['name'] =  $s['preferredName'];
             $newStaff[$s['gibbonStaffID']]['id'] =  $s['gibbonStaffID'];
+            $newStaff[$s['gibbonStaffID']]['email'] =  $s['email'];
         }
         $i=1;
         foreach($newStaff as $newStaffs){
@@ -88,7 +89,7 @@ if(isset($_REQUEST['print']))
 			<td>
 				<?php echo $i++; ?>
 				<th><?php echo $newStaffs['name'];?></th>
-
+				<th><?php echo $newStaffs['email'];?></th>
 			</td>
 			<td><a href="javascript:void(0);" id="id_<?php echo $newStaffs["id"]; ?>" class="send_mail">Send</a></td>
 		</tr>
