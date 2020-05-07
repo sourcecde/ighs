@@ -162,7 +162,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 						</td>
 						<td>
 							<input type="checkbox" id="doj" name="doj" value="doj" <?=(isset($_REQUEST['doj'])?' checked':'')?>>
-							<label for="doj">Date of Joining</label><br>
+							<label for="doj">Date of Admission</label><br>
 						</td>
 						<td>
 							<input type="checkbox" id="dob" name="dob" value="dob" <?=(isset($_REQUEST['dob'])?' checked':'')?>>
@@ -206,7 +206,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 					</tr>
 				</table>
 			</form>
-			<input  type='button' value='Print' class='printdata' >
+			<!-- <input  type='button' value='Print' class='printdata' > -->
 <?php 
 if($filterClass !='' && $filterSection !='')
 {
@@ -229,8 +229,12 @@ catch(PDOException $e) {
 			echo "<div id='print_page'>";
 				print "<table cellspacing='0' style='width: 100% border: 1px solid black;' class='myTable'>" ;
 				print "<thead>";
+			print "<h1 style='text-align:left;''>Student Register as on :".date('d/m/Y')."</h1>";
 					print "<tr class='head'>" ;
-					print "<th>" ;
+						print "<th>" ;
+							print _("Sl. No") ;
+						print "</th>" ;
+						print "<th>" ;
 							print _("Acc No") ;
 						print "</th>" ;
 						print "<th>" ;
@@ -250,7 +254,7 @@ catch(PDOException $e) {
 						print "</th>" ;
 						if(isset($_REQUEST['doj'])){
 						print "<th>" ;
-							print _("DOJ") ;
+							print _("DOA") ;
 						print "</th>" ;
 						}if(isset($_REQUEST['dob'])){
 						print "<th>" ;
@@ -300,6 +304,7 @@ catch(PDOException $e) {
 					catch(PDOException $e) { 
 						print "<div class='error'>" . $e->getMessage() . "</div>" ; 
 					}
+					$i=1;
 					while ($row=$resultPage->fetch()) {
 						if ($count%2==0) {
 							$rowNum="even" ;
@@ -312,7 +317,14 @@ catch(PDOException $e) {
 						// }
 						$count++ ;
 						//COLOR ROW BY STATUS!
+
 						print "<tr class=$rowNum>" ;
+						print "<td>" ;
+									print "<span>";
+									print $i++ ;
+									print "</span>";
+								
+						print "</td>" ;
 						print "<td>" ;
 									print "<span>";
 									print _(substr($row["AccNo"], 5)) ;
@@ -459,23 +471,6 @@ catch(PDOException $e) {
 			}
 		  });
 	});
-	function print_page(){
-	var mywindow = window.open('', 'PRINT', 'height=400,width=600');
-
-    mywindow.document.write('<html><head><title>' + document.title  + '</title>');
-    mywindow.document.write('</head><body >');
-	mywindow.document.write("<h1 style='text-align:center;'>Calcutta Public School</h1>");
-	mywindow.document.write("<h4 style='text-align:center;'>AshwiniNagar, Baguiati, Kolkata-159</h4>");
-    mywindow.document.write(document.getElementById("printable").innerHTML);
-	mywindow.document.write('<style>td,th{border:1px solid #000}.hide{display:none;}</style>');
-    mywindow.document.write('</body></html>');
-
-    mywindow.document.close(); // necessary for IE >= 10
-    mywindow.focus(); // necessary for IE >= 10*/
-
-    mywindow.print();
-    mywindow.close();
-	}
 	
  </script>
  
